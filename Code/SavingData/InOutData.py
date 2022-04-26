@@ -1,5 +1,5 @@
-from Code.Classes.People import Adventurer
-import Code.Classes.Monsters as Monsters
+from Code.Classes.People.People import Adventurer
+import Code.Classes.Monsters.Monsters as Monsters
 
 
 class GetData:

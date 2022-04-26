@@ -1,6 +1,7 @@
 import Code.Checking.CheckClassFunctions as CheckClassFunction
 import Code.Checking.Errors as Errors
 import Code.Checking.SOS as SOS
+from Code.Checking.Attention import AttentionMessages
 
 
 class BattleMod:
@@ -68,4 +69,5 @@ class BattleMod:
         self.hero_passive_skills = self.checker.skills_add(self.hero_passive_skills, equipment.key)
         self.hero_passive_skills[equipment.key].extend(equipment.passive_skills)
 
+        AttentionMessages.successfully_done()
         return True

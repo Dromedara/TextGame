@@ -4,6 +4,10 @@ class AttentionMessages:
         pass
 
     @staticmethod
+    def successfully_done():
+        print('Done!')
+
+    @staticmethod
     def win():
         print('You win! Take your loot!')
 
@@ -17,8 +21,8 @@ class AttentionMessages:
 
     @staticmethod
     def monster_step():
-        print('Monsters step')
+        print('Monsters step!')
 
     @staticmethod
     def your_step():
-        print('Your step')
+        print('Your step!')

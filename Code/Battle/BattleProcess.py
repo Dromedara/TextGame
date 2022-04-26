@@ -1,6 +1,6 @@
 import Code.Battle.Preparing as Preparing
-import Code.Classes.AdventurerSkills as AdventurerSkills
-import Code.Classes.MonsterSkills as MonsterSkills
+import Code.Classes.People.AdventurerSkills as AdventurerSkills
+import Code.Classes.Monsters.MonsterSkills as MonsterSkills
 import random
 import Code.Checking.SOS as SOS
 from Code.Checking.Attention import AttentionMessages
@@ -46,19 +46,14 @@ def Battle(hero, adventure):
         'charmed_sword_attack': hero_actives_activator.charmed_sword_attack
     }
 
-    hero_passives = {
-        'passive_magic_attack': hero_passives_activator.passive_magic_attack,
-        'simple_magic_baff': hero_passives_activator.simple_magic_baff
-    }
+    hero_passives = [hero_passives_activator.passive_magic_attack, hero_passives_activator.simple_magic_baff]
     
     monster_actives = {
         1: monster_actives_activator.strait_physical_attack,
         2: monster_actives_activator.straight_magic_attack
     }
     
-    monster_passives = {
-        'healing_itself': monster_passives_activator.healing_itself
-    }
+    monster_passives = [monster_passives_activator.healing_itself]
 
     AttentionMessages.battle_start()
     while True:
@@ -66,8 +61,8 @@ def Battle(hero, adventure):
         AttentionMessages.your_step()
         # hero
         
-        for key in hero_passives.keys():
-            hero_passives[key](hero, monster)
+        for pas in hero_passives:
+            pas(hero, monster)
     
         show(hero)
         
@@ -80,8 +75,8 @@ def Battle(hero, adventure):
         AttentionMessages.monster_step()
         # monster
         
-        for key in monster_passives.keys():
-            monster_passives[key](hero, monster)
+        for pas in monster_passives:
+            pas(hero, monster)
             
         action = random.randrange(1, 2, 1)
 

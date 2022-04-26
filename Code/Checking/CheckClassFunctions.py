@@ -26,3 +26,14 @@ class CheckAdventurerFuncs:
         return skills
 
 
+class CheckSkills:
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def battle_params_change(param, val):
+        if param - val > 0.000000001:
+            return param - val
+        else:
+            return 0

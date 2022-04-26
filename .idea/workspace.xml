@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91c92e02-5cf8-485d-ae4a-e44f49b02cfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Code/Classes/DrinkingPotions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Battle/Preparing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/MonsterSkills.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Battle/BattleProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Battle/BattleProcess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Battle/Prepearing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Checking/Attention.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Checking/CheckClassFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Checking/CheckClassFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Checking/SOS.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Checking/SOS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Artefacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Artefacts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/BattleMod.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/BattleMod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Monsters.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Monsters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/People.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/People.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Classes/Potions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Potions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Skills.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/AdventurerSkills.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/SavingData/Characters.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/SavingData/Characters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/SavingData/adventures.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Code/SavingData/adventures.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/SavingData/hero_passive_skills.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Code/SavingData/hero_passive_skills.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/SavingData/main_hero.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Code/SavingData/main_hero.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +56,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Notebook" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -50,7 +65,7 @@
       <recent name="C:\Users\Ira\PycharmProjects\TextGame" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="CheckClassFunctions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TextGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -93,6 +108,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TextGame" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TextGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,7 +141,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Ira\PycharmProjects\TextGame\Code\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,6 +152,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.CheckClassFunctions" />
         <item itemvalue="Python.People" />

@@ -11,24 +11,24 @@ class BattleMod:
     mana: float
     magic_attack: float
 
-    warrior_active_skills: {}
-    warrior_passive_skills: {}
+    hero_active_skills: {}
+    hero_passive_skills: {}
 
     checker = CheckClassFunction.CheckAdventurerFuncs
 
     def __init__(self, adventurer):
         self.attack = (adventurer.power + adventurer.speed) * adventurer.attack_coeff
-        self.defence = adventurer.endurance * adventurer.defence_coeff
-        self.hp = adventurer.endurance + adventurer.power
-        self.mana = (adventurer.wisdom+adventurer.intellect) * adventurer.mana_coeff
-        self.magic_attack = self.mana * self.attack
+        self.defence = adventurer.stamina * adventurer.defence_coeff
+        self.hp = (adventurer.stamina + adventurer.power) * 10
+        self.mana = (adventurer.wisdom + adventurer.intellect) * adventurer.mana_coeff
+        self.magic_attack = (self.mana * self.attack) / 2
 
-        self.warrior_active_skills = {}
-        self.warrior_active_skills = self.checker.skills_add(self.warrior_active_skills, 'basic')
-        self.warrior_active_skills['basic'].extend(adventurer.active_skills)
-        self.warrior_passive_skills = {}
-        self.warrior_passive_skills = self.checker.skills_add(self.warrior_passive_skills, 'basic')
-        self.warrior_passive_skills['basic'].extend(adventurer.passive_skills)
+        self.hero_active_skills = {}
+        self.hero_active_skills = self.checker.skills_add(self.hero_active_skills, 'basic')
+        self.hero_active_skills['basic'].extend(adventurer.active_skills)
+        self.hero_passive_skills = {}
+        self.hero_passive_skills = self.checker.skills_add(self.hero_passive_skills, 'basic')
+        self.hero_passive_skills['basic'].extend(adventurer.passive_skills)
 
     def get_equipment(self, equipment):
 
@@ -62,10 +62,10 @@ class BattleMod:
             SOS.SOSMessages.impossible_to_use()
             return False
 
-        self.warrior_active_skills = self.checker.skills_add(self.warrior_active_skills, equipment.key)
-        self.warrior_active_skills[equipment.key].extend(equipment.active_skills)
+        self.hero_active_skills = self.checker.skills_add(self.hero_active_skills, equipment.key)
+        self.hero_active_skills[equipment.key].extend(equipment.active_skills)
 
-        self.warrior_passive_skills = self.checker.skills_add(self.warrior_passive_skills, equipment.key)
-        self.warrior_passive_skills[equipment.key].extend(equipment.passive_skills)
+        self.hero_passive_skills = self.checker.skills_add(self.hero_passive_skills, equipment.key)
+        self.hero_passive_skills[equipment.key].extend(equipment.passive_skills)
 
         return True

@@ -22,7 +22,8 @@ class Adventurer(Human):
     speed: float
     wisdom: float
     intellect: float
-    endurance: float
+    stamina: float
+    free: float
 
     attack_coeff: float
     defence_coeff: float
@@ -34,8 +35,8 @@ class Adventurer(Human):
 
     checker = Code.Checking.CheckClassFunctions.CheckAdventurerFuncs()
 
-    def __init__(self, _name='?', lvl=1, gold=10, exp=0, lvl_ch_ed=5, rise_coeff=2, power=1, speed=1, wisdom=1, intellect=1, endurance=1,
-                 attack_coeff=1.5, defence_coeff=1.5, hp_coeff=1.5, mana_coeff=1.5):
+    def __init__(self, _name='?', lvl=1, gold=10, exp=0, lvl_ch_ed=5, rise_coeff=2, power=1, speed=1, wisdom=1, intellect=1, stamina=1,
+                 free=0, attack_coeff=1.5, defence_coeff=1.5, hp_coeff=1.5, mana_coeff=1.5):
 
         super().__init__(_name)
         self.lvl = lvl
@@ -47,8 +48,9 @@ class Adventurer(Human):
         self.power = power
         self.speed = speed
         self.wisdom = wisdom
-        self.endurance = endurance
+        self.stamina = stamina
         self.intellect = intellect
+        self.free = free
 
         self.attack_coeff = attack_coeff
         self.defence_coeff = defence_coeff
@@ -64,8 +66,8 @@ class Adventurer(Human):
     def speed_change(self, val):
         self.speed += val
 
-    def endurance_change(self, val):
-        self.endurance += val
+    def stamina_change(self, val):
+        self.stamina += val
 
     def wisdom_change(self, val):
         self.wisdom += val
@@ -73,17 +75,13 @@ class Adventurer(Human):
     def intellect_change(self, val):
         self.intellect += val
 
-    def param_increase(self, lvl):
-        self.power_change(lvl)
-        self.speed_change(lvl)
-        self.endurance_change(lvl)
-        self.wisdom_change(lvl)
-        self.intellect_change(lvl)
+    def free_change(self, lvl):
+        self.free += (lvl / 10) + (lvl % 10)
 
     def change_lvl(self):
         self.exp = self.exp - self.lvl_changing_edge
         self.lvl_changing_edge *= self.rise_coeff
-        self.param_increase(self.lvl)
+        self.free_change(self.lvl)
 
     def change_exp(self, val):
         self.exp = self.checker.possible_change(self.exp, val)
@@ -91,10 +89,12 @@ class Adventurer(Human):
             self.change_lvl()
 
     def add_active_skill(self, name_of_skill=''):
-        self.active_skills.append(name_of_skill)
+        if name_of_skill not in self.active_skills:
+            self.active_skills.append(name_of_skill)
 
     def add_passive_skill(self, name_of_skill=''):
-        self.passive_skills.append(name_of_skill)
+        if name_of_skill not in self.passive_skills:
+            self.passive_skills.append(name_of_skill)
 
 
 class Merchant(Human):

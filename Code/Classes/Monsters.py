@@ -10,7 +10,8 @@ class Monster:
     mana: float
     magic_attack: float
 
-    attacks: []
+    active_skill: []
+    passive_skill: []
     loot: []
 
     def __init__(self, lvl):
@@ -21,11 +22,19 @@ class Monster:
         self.mana = random.randrange(lvl*9, lvl*11, 1)
         self.magic_attack = self.mana * self.attack
 
+        self.active_skill = []
+        self.passive_skill = []
+        self.loot = []
+
 
 class Chupakabra(Monster):
 
+    chupakabra_active_skills = {'strait_physical_attack', 'straight_magic_attack'}
+    chupakabra_passive_skills = {'healing_itself'}
+
     def __init__(self, lvl):
         super().__init__(lvl)
-
+        print(self.attack)
         self.loot = ['loot1', 'loot2']
-        self.attacks = ['boom1', 'boom2']
+        self.active_skill.extend(self.chupakabra_active_skills)
+        self.passive_skill.extend(self.chupakabra_passive_skills)

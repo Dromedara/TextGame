@@ -1,9 +1,10 @@
-import random
+from Code.Subfunctions.HelperFunc import ForArtefacts
 
 
 class Potion:
 
-
+    key: str
+    rarity: int
     attack: float
     defence: float
     hp: float
@@ -11,6 +12,7 @@ class Potion:
     magic_attack: float
 
     def __init__(self):
+        self.rarity = 0
         self.attack = 0
         self.defence = 0
         self.hp = 0
@@ -20,14 +22,18 @@ class Potion:
 
 class HealingPotion(Potion):
 
-    def __init__(self, _):
+    def __init__(self, _rarity=1, hp=-1, **kwargs):
         super().__init__()
-        self.hp = random.randrange(3, 5, 1)
+        self.key = 'healing_potion'
+        self.rarity = _rarity
+        self.hp = ForArtefacts.check_input_data(hp, self.rarity+1, self.rarity+3)
 
 
 class BoostingPotion(Potion):
 
-    def __init__(self):
+    def __init__(self, _rarity, hp=-1, attack=-1, **kwargs):
         super().__init__()
-        self.hp = random.randrange(-3, -1, 1)
-        self.attack = random.randrange(10, 15, 1)
+        self.key = 'boosting_potion'
+        self.rarity = _rarity
+        self.hp = ForArtefacts.check_input_data(hp, self.rarity+1, self.rarity+3)
+        self.attack = ForArtefacts.check_input_data(attack, self.rarity+1, self.rarity+3)

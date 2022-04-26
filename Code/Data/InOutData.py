@@ -1,6 +1,7 @@
 from Code.Classes.People.People import Adventurer
 import Code.Classes.Monsters.Monsters as Monsters
 import Code.Classes.Equipment.Artefacts as Artefacts
+import Code.Classes.Equipment.Potions as Potions
 
 
 class GetData:
@@ -106,6 +107,27 @@ class GetData:
             f.close()
         return artefacts
 
+    @staticmethod
+    def potions():
+        potions = []
+
+        dict_of_links = {
+            'healing_potion': Potions.HealingPotion,
+            'boosting_potion`': Potions.BoostingPotion
+        }
+
+        with open('Data/DataBase/potions.txt', 'r') as f:
+            while True:
+                line = f.readline()
+                if not line:
+                    break
+                vals = list(map(str, line.split()))
+                potion = dict_of_links[vals[0]](_rarity=int(vals[1]), attack=float(vals[2]), defence=float(vals[3]),
+                                                hp=float(vals[4]), mana=float(vals[5]), magic_attack=float(vals[6]))
+                potions.append(potion)
+            f.close()
+        return potions
+
 
 class PassData:
 
@@ -149,7 +171,7 @@ class PassData:
             f.close()
 
     @staticmethod
-    def artefacts(artefacts=[]):
+    def artefacts(artefacts):
         with open('Data/DataBase/artefacts.txt', 'w') as f:
             f.seek(0)
             for artefact in artefacts:
@@ -165,8 +187,18 @@ class PassData:
                 f.write('\n')
             f.close()
 
-
-
-
-
-
+    @staticmethod
+    def potions(potions):
+        with open('Data/DataBase/potions.txt', 'w') as f:
+            f.seek(0)
+            for potion in potions:
+                line = str(potion.key) + ' '
+                line += str(potion.rarity) + ' '
+                line += str(potion.attack) + ' '
+                line += str(potion.defence) + ' '
+                line += str(potion.hp) + ' '
+                line += str(potion.mana) + ' '
+                line += str(potion.magic_attack)
+                f.write(line)
+                f.write('\n')
+            f.close()

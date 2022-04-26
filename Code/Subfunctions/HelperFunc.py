@@ -1,7 +1,8 @@
-from Code.Checking.Errors import ImpossibleChange
+from Code.Subfunctions.Errors import ImpossibleChange
+import random
 
 
-class CheckAdventurerFuncs:
+class ForAdventurerFuncs:
 
     def __init__(self):
         pass
@@ -26,7 +27,7 @@ class CheckAdventurerFuncs:
         return skills
 
 
-class CheckSkills:
+class ForSkills:
 
     def __init__(self):
         pass
@@ -37,3 +38,16 @@ class CheckSkills:
             return param - val
         else:
             return 0
+
+
+class ForArtefacts:
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def check_input_data(val, _min, _max):
+        if val == -1:
+            return random.randrange(_min, _max, 1)
+        else:
+            return val

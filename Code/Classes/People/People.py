@@ -1,5 +1,5 @@
 import random
-import Code.Checking.CheckClassFunctions
+import Code.Subfunctions.HelperFunc
 
 
 class Human:
@@ -33,10 +33,10 @@ class Adventurer(Human):
     active_skills = []
     passive_skills = []
 
-    checker = Code.Checking.CheckClassFunctions.CheckAdventurerFuncs()
+    checker = Code.Subfunctions.HelperFunc.ForAdventurerFuncs()
 
-    def __init__(self, _name='?', lvl=1, gold=10, exp=0, lvl_ch_ed=5, rise_coeff=2, power=1, speed=1, wisdom=1, intellect=1, stamina=1,
-                 free=0, attack_coeff=1.5, defence_coeff=1.5, hp_coeff=1.5, mana_coeff=1.5):
+    def __init__(self, _name='?', lvl=1, gold=10, exp=0, lvl_ch_ed=5, rise_coeff=2, power=1, speed=1, wisdom=1,
+                 intellect=1, stamina=1, free=0, attack_coeff=1.5, defence_coeff=1.5, hp_coeff=1.5, mana_coeff=1.5):
 
         super().__init__(_name)
         self.lvl = lvl

@@ -2,8 +2,8 @@ import Code.Battle.Preparing as Preparing
 import Code.Classes.People.AdventurerSkills as AdventurerSkills
 import Code.Classes.Monsters.MonsterSkills as MonsterSkills
 import random
-import Code.Checking.SOS as SOS
-from Code.Checking.Attention import AttentionMessages
+import Code.Subfunctions.Messages.SOS as SOS
+from Code.Subfunctions.Messages.Attention import AttentionMessages
 
 
 def end(hero):

@@ -3,6 +3,7 @@ import random
 
 class Potion:
 
+
     attack: float
     defence: float
     hp: float
@@ -19,7 +20,7 @@ class Potion:
 
 class HealingPotion(Potion):
 
-    def __init__(self):
+    def __init__(self, _):
         super().__init__()
         self.hp = random.randrange(3, 5, 1)
 

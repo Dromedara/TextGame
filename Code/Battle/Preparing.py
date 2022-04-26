@@ -1,5 +1,5 @@
 from Code.Classes.Battle.BattleMod import BattleMod
-import Code.SavingData.InOutData as Characters
+import Code.Data.InOutData as Characters
 import Code.Classes.Equipment.Artefacts as Artefacts
 
 

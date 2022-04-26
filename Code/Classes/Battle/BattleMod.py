@@ -1,7 +1,7 @@
-import Code.Checking.CheckClassFunctions as CheckClassFunction
-import Code.Checking.Errors as Errors
-import Code.Checking.SOS as SOS
-from Code.Checking.Attention import AttentionMessages
+import Code.Subfunctions.HelperFunc as HelperFunc
+import Code.Subfunctions.Errors as Errors
+import Code.Subfunctions.Messages.SOS as SOS
+from Code.Subfunctions.Messages.Attention import AttentionMessages
 
 
 class BattleMod:
@@ -15,7 +15,7 @@ class BattleMod:
     hero_active_skills: {}
     hero_passive_skills: {}
 
-    checker = CheckClassFunction.CheckAdventurerFuncs
+    checker = HelperFunc.ForAdventurerFuncs()
 
     def __init__(self, adventurer):
         self.attack = (adventurer.power + adventurer.speed) * adventurer.attack_coeff

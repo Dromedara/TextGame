@@ -1,5 +1,5 @@
-import Code.Checking.Errors as Errors
-import Code.Checking.SOS as SOS
+import Code.Subfunctions.Errors as Errors
+import Code.Subfunctions.Messages.SOS as SOS
 
 
 class Drinking:

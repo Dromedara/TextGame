@@ -1,6 +1,6 @@
 import Code.Battle.Preparing as Preparing
-import Code.Classes.People.AdventurerSkills as AdventurerSkills
 import Code.Classes.Monsters.MonsterSkills as MonsterSkills
+import Code.Classes.Artefacts.Artefacts as Artefacts
 import random
 import Code.Subfunctions.Messages.SOS as SOS
 from Code.Subfunctions.Messages.Attention import AttentionMessages
@@ -33,6 +33,8 @@ def Battle(hero, adventure):
 
     monster = Preparing.prepare_monster(adventure)
 
+
+    '''
     hero_actives_activator = AdventurerSkills.ActiveSkills()
     hero_passives_activator = AdventurerSkills.PassiveSkills()
     
@@ -90,3 +92,4 @@ def Battle(hero, adventure):
     AttentionMessages.battle_end()
 
     return end(hero)
+    '''

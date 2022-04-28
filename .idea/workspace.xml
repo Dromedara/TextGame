@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91c92e02-5cf8-485d-ae4a-e44f49b02cfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Code/Data/DataBase/potions.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/Artefacts/CreateArtefact.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/Artefacts/WearingArtefacts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/People/BattleMod.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/Potions/CreatePotion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/Potions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/Potions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/artefacts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Data/DataBase/artefacts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Battle/BattleProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Battle/BattleProcess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Battle/Preparing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Battle/Preparing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Battle/BattleMod.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/Artefacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Artefacts/Artefacts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/DrinkingPotions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Potions/DrinkingPotions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/Potions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Potions/Potions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Monsters/MonsterSkills.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Monsters/Monsters.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Monsters/Monsters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/People/AdventurerSkills.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/hero_passive_skills.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Data/DataBase/hero_passive_skills.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/main_hero.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Data/DataBase/main_hero.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Data/InOutData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Data/InOutData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Subfunctions/HelperFunc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Subfunctions/HelperFunc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,11 +62,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes\Potions" />
+      <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes\Artefacts" />
+      <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes" />
       <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\SavingData\DataBase" />
       <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Checking\Messages" />
-      <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes\Battle" />
-      <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes\Monsters" />
-      <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes\People" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main (1)">

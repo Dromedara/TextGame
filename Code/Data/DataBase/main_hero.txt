@@ -1,4 +1,4 @@
-name: Alan
+name: ?
 lvl: 1
 gold: 10
 exp: 0
@@ -9,8 +9,8 @@ speed: 1.0
 wisdom: 1.0
 intellect: 1.0
 stamina: 1.0
-free: 1.0
+free: 0.0
 attack_coeff: 1.5
-defence_coeff: 1.0
+defence_coeff: 1.5
 hp_coeff: 1.5
-mana_coeff: 2.0
+mana_coeff: 1.5

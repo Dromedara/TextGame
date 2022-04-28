@@ -1,7 +1,7 @@
 from Code.Classes.People.People import Adventurer
 import Code.Classes.Monsters.Monsters as Monsters
-import Code.Classes.Equipment.Artefacts as Artefacts
-import Code.Classes.Equipment.Potions as Potions
+from Code.Classes.Artefacts.CreateArtefact import Creator as ArtefactCreator
+from Code.Classes.Potions.CreatePotion import Creator as PotionCreator
 
 
 class GetData:
@@ -85,24 +85,12 @@ class GetData:
     def artefacts():
         artefacts = []
 
-        dict_of_links = {
-            'simple_iron_armor': Artefacts.SimpleIronArmor,
-            'charmed_iron_armor': Artefacts.CharmedIronArmor,
-            'simple_amulet': Artefacts.SimpleMagicAmulet,
-            'super_amulet': Artefacts.SuperMagicAmulet,
-            'simple_sword': Artefacts.SimpleSword,
-            'charmed_sword': Artefacts.CharmedSword
-        }
-
         with open('Data/DataBase/artefacts.txt', 'r') as f:
             while True:
                 line = f.readline()
                 if not line:
                     break
-                vals = list(map(str, line.split()))
-                artefact = dict_of_links[vals[0]](_id=int(vals[1]), _rarity=int(vals[2]), attack=float(vals[3]),
-                                                  defence=float(vals[4]), hp=float(vals[5]), mana=float(vals[6]),
-                                                  magic_attack=float(vals[7]))
+                artefact = ArtefactCreator.create_artefact(line)
                 artefacts.append(artefact)
             f.close()
         return artefacts
@@ -111,19 +99,12 @@ class GetData:
     def potions():
         potions = []
 
-        dict_of_links = {
-            'healing_potion': Potions.HealingPotion,
-            'boosting_potion`': Potions.BoostingPotion
-        }
-
         with open('Data/DataBase/potions.txt', 'r') as f:
             while True:
                 line = f.readline()
                 if not line:
                     break
-                vals = list(map(str, line.split()))
-                potion = dict_of_links[vals[0]](_rarity=int(vals[1]), attack=float(vals[2]), defence=float(vals[3]),
-                                                hp=float(vals[4]), mana=float(vals[5]), magic_attack=float(vals[6]))
+                potion = PotionCreator.create_potion(line)
                 potions.append(potion)
             f.close()
         return potions

@@ -1,6 +1,6 @@
 from Code.Classes.Battle.BattleMod import BattleMod
 import Code.Data.InOutData as Characters
-import Code.Classes.Equipment.Artefacts as Artefacts
+import Code.Classes.Artefacts.Artefacts as Artefacts
 
 
 def prepare_hero(adventurer):

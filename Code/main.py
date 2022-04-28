@@ -1,16 +1,28 @@
 import Code.Data.InOutData as Data
-import Code.Battle.BattleProcess as Battlewar
-from Code.Classes.Equipment.Artefacts import SimpleMagicAmulet
-from Code.Classes.Equipment.Potions import HealingPotion
+from Code.Classes.Potions.DrinkingPotions import Drinking
+import Code.Classes.Potions.Potions as Potion
+from Code.Classes.People.BattleMod import BattleMod
+from Code.Classes.People.People import Adventurer
 
 
 def main():
+
+    # hero = Adventurer()
 
     hero = Data.GetData.main_hero()
 
     print(hero.name)
 
-    '''
+    warr = BattleMod(hero)
+
+    print(warr.tiks)
+
+    potion = Potion.ProtectingPotion(_rarity=1)
+
+    warr = Drinking.drink_potion(warr, potion)
+    print(warr.tiks)
+
+    '''    
     potion = HealingPotion()
     p = Data.GetData.potions()
     p.append(potion)

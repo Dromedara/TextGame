@@ -20,14 +20,8 @@ class ForAdventurerFuncs:
             return False
         return True
 
-    @staticmethod
-    def skills_add(skills, key):
-        if skills.get(key) is None:
-            skills[key] = []
-        return skills
 
-
-class ForSkills:
+class ForBattle:
 
     def __init__(self):
         pass
@@ -51,3 +45,21 @@ class ForArtefacts:
             return random.randrange(_min, _max, 1)
         else:
             return val
+
+    @staticmethod
+    def skills_add(skills, key):
+        if skills.get(key) is None:
+            skills[key] = []
+        return skills
+
+
+class ForPotions:
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def tiks_add(tiks, key):
+        if tiks.get(key) is None:
+            tiks[key] = 0
+        return tiks

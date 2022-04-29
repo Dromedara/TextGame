@@ -1,4 +1,4 @@
-import Code.Classes.PotionsServices.Potions as Potions
+import Code.PotionsServices.Potions as Potions
 
 
 potions_dict = {
@@ -14,7 +14,7 @@ class Creator:
         pass
 
     @staticmethod
-    def create_potion(key, rarity, tik, attack, defence, hp, mana, magic_attack):
+    def create_potion(key, rarity=1, tik=0, attack=0, defence=0, hp=0, mana=0, magic_attack=0):
         global potions_dict
 
         potion = potions_dict[key](_rarity=rarity,

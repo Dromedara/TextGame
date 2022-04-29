@@ -10,4 +10,15 @@ class Starter:
 
         Attention.Mover.first_game_activation()
 
-        return hero
+        return hero, [], []
+
+    @staticmethod
+    def lets_start_again():
+        hero = GetData.main_hero(1)
+
+        artefacts = GetData.artefacts()
+
+        potions = GetData.potions()
+
+        return hero, artefacts, potions
+

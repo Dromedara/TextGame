@@ -21,6 +21,17 @@ class ForAdventurerFuncs:
         return True
 
 
+class ForShop:
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def possible_to_buy(gold, cost):
+        if gold - cost < 0:
+            return False
+        return True
+
+
 class ForBattle:
 
     def __init__(self):

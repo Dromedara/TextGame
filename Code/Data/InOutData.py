@@ -1,7 +1,7 @@
-from Code.Classes.MainCharacter.Adventurer import Adventurer
-from Code.Classes.Monsters.CreateMonster import Creator as MonsterCreator
-from Code.Classes.ArtefactsServices.CreateArtefact import Creator as ArtefactCreator
-from Code.Classes.PotionsServices.CreatePotion import Creator as PotionCreator
+from Code.MainCharacter.Adventurer import Adventurer
+from Code.Monsters.CreateMonster import Creator as MonsterCreator
+from Code.ArtefactsServices.CreateArtefact import Creator as ArtefactCreator
+from Code.PotionsServices.CreatePotion import Creator as PotionCreator
 import pandas as pd
 
 
@@ -38,7 +38,7 @@ class GetData:
                           float(df.iloc[index]['hp_coeff']),
                           float(df.iloc[index]['mana_coeff']))
 
-        df = df.drop(df.shape[0] - 1, axis=0)
+        #df = df.drop(df.shape[0]-1, axis=0)
         df.to_csv('Data/DataBase/main_hero.csv')
 
         # active skills
@@ -71,7 +71,7 @@ class GetData:
     def artefacts():
         artefacts = []
 
-        df = pd.read_csv('DataBase/artefacts.csv', index_col=0)
+        df = pd.read_csv('Data/DataBase/artefacts.csv', index_col=0)
         for i in range(len(df)):
             artefact = ArtefactCreator.create_artefact(key=df.iloc[i]['key'],
                                                        id=int(df.iloc[i]['id']),
@@ -89,7 +89,7 @@ class GetData:
     def potions():
         potions = []
 
-        df = pd.read_csv('DataBase/potions.csv', index_col=0)
+        df = pd.read_csv('Data/DataBase/potions.csv', index_col=0)
         for i in range(len(df)):
             potion = PotionCreator.create_potion(key=int(df.iloc[i]['key']),
                                                  rarity=int(df.iloc[i]['rarity']),
@@ -171,7 +171,7 @@ class PassData:
             param_dict['magic_attack'].append(artefact.magic_attack)
 
         df = pd.DataFrame(param_dict)
-        df.to_csv('DataBase/artefacts.csv')
+        df.to_csv('Data/DataBase/artefacts.csv')
 
     @staticmethod
     def potions(potions):
@@ -197,7 +197,7 @@ class PassData:
             param_dict['magic_attack'].append(potion.magic_attack)
 
         df = pd.DataFrame(param_dict)
-        df.to_csv('DataBase/potions.csv')
+        df.to_csv('Data/DataBase/potions.csv')
 
 
 if __name__ == '__main__':

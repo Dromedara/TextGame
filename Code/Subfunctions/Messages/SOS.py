@@ -11,3 +11,11 @@ class SOSMessages:
     @staticmethod
     def lose_battle():
         print('Oops! You died!')
+
+    @staticmethod
+    def not_enough_money():
+        print('Oops! You do not have enough money to buy it!')
+
+    @staticmethod
+    def no_equip_slot():
+        print('No equipment slot for this!')

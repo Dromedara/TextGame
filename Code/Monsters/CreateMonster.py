@@ -1,4 +1,4 @@
-import Code.Classes.Monsters.Monsters as Monsters
+import Code.Monsters.Monsters as Monsters
 
 monsters = {
             'Chupakabra': Monsters.Chupakabra

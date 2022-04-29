@@ -26,3 +26,13 @@ class AttentionMessages:
     @staticmethod
     def your_step():
         print('Your step!')
+
+
+class Mover:
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def first_game_activation():
+        print('You have no equipment. Do you want to buy anything in the shop?')

@@ -1,0 +1,3 @@
+,name,lvl,gold,exp,lvl_ch_edge,rise_coeff,power,speed,wisdom,intellect,stamina,free,attack_coeff,defence_coeff,hp_coeff,mana_coeff
+0,?,1,10,0,5,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.5,1.5,1.5,1.5
+1,Bet,1,10,0,5,2.0,1.0,1.0,1.0,1.0,1.0,1.0,1.5,1.5,1.5,1.5

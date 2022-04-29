@@ -1,7 +1,13 @@
-from Code.Classes.People.People import Adventurer
-import Code.Classes.Monsters.Monsters as Monsters
-from Code.Classes.Artefacts.CreateArtefact import Creator as ArtefactCreator
-from Code.Classes.Potions.CreatePotion import Creator as PotionCreator
+from Code.Classes.MainCharacter.Adventurer import Adventurer
+from Code.Classes.Monsters.CreateMonster import Creator as MonsterCreator
+from Code.Classes.ArtefactsServices.CreateArtefact import Creator as ArtefactCreator
+from Code.Classes.PotionsServices.CreatePotion import Creator as PotionCreator
+import pandas as pd
+
+
+def main():
+    artefacts = GetData.artefacts()
+    print(artefacts)
 
 
 class GetData:
@@ -10,103 +16,91 @@ class GetData:
         pass
 
     @staticmethod
-    def main_hero():
-        f = open('Data/DataBase/main_hero.txt', 'r')
-        name_of_val, name = f.readline().split()
-        name_of_val, lvl = f.readline().split()
-        name_of_val, gold = f.readline().split()
-        name_of_val, exp = f.readline().split()
-        name_of_val, lvl_ch_ed = f.readline().split()
-        name_of_val, rise_coeff = f.readline().split()
-        name_of_val, power = f.readline().split()
-        name_of_val, speed = f.readline().split()
-        name_of_val, wisdom = f.readline().split()
-        name_of_val, intellect = f.readline().split()
-        name_of_val, stamina = f.readline().split()
-        name_of_val, free = f.readline().split()
-        name_of_val, attack_coeff = f.readline().split()
-        name_of_val, defence_coeff = f.readline().split()
-        name_of_val, hp_coeff = f.readline().split()
-        name_of_val, mana_coeff = f.readline().split()
+    def main_hero(index=0):
 
-        hero = Adventurer(name, int(lvl), int(gold), int(exp), float(lvl_ch_ed), float(rise_coeff), float(power),
-                          float(speed), float(wisdom), float(intellect), float(stamina), float(free),
-                          float(attack_coeff), float(defence_coeff), float(hp_coeff), float(mana_coeff))
-        f.close()
+        # parameters
+        df = pd.read_csv('Data/DataBase/main_hero.csv', index_col=0)
 
-        with open('Data/DataBase/hero_active_skills.txt', 'r') as f:
-            while True:
-                line = f.readline()
-                if not line:
-                    break
-                hero.active_skills.append(line[:-1])
-            f.close()
+        hero = Adventurer(df.iloc[index]['name'],
+                          int(df.iloc[index]['lvl']),
+                          int(df.iloc[index]['gold']),
+                          int(df.iloc[index]['exp']),
+                          int(df.iloc[index]['lvl_ch_edge']),
+                          float(df.iloc[index]['rise_coeff']),
+                          float(df.iloc[index]['power']),
+                          float(df.iloc[index]['speed']),
+                          float(df.iloc[index]['wisdom']),
+                          float(df.iloc[index]['intellect']),
+                          float(df.iloc[index]['stamina']),
+                          float(df.iloc[index]['free']),
+                          float(df.iloc[index]['attack_coeff']),
+                          float(df.iloc[index]['defence_coeff']),
+                          float(df.iloc[index]['hp_coeff']),
+                          float(df.iloc[index]['mana_coeff']))
 
-        with open('Data/DataBase/hero_passive_skills.txt', 'r') as f:
-            while True:
-                line = f.readline()
-                if not line:
-                    break
-                hero.passive_skills.append(line[:-1])
-            f.close()
+        df = df.drop(df.shape[0] - 1, axis=0)
+        df.to_csv('Data/DataBase/main_hero.csv')
+
+        # active skills
+        if index:
+            df = pd.DataFrame({'active_skills': []})
+        else:
+            df = pd.read_csv('Data/DataBase/hero_active_skills.csv', index_col=0)
+
+        hero.active_skills = df.active_skills.tolist()
+
+        # passive skills
+        if index:
+            df = pd.DataFrame({'passive_skills': []})
+        else:
+            df = pd.read_csv('Data/DataBase/hero_passive_skills.csv', index_col=0)
+
+        hero.passive_skills = df.passive_skills.tolist()
 
         return hero
 
     @staticmethod
-    def monster(monster_name):
+    def monster(adventure_name='FisrtAdventure', serial_num=1):
 
-        monsters = {
-            'Chupakabra': Monsters.Chupakabra
-        }
-
-        with open('Data/DataBase/monsters.txt', 'r') as f:
-            while True:
-                line = f.readline()
-                if not line:
-                    break
-                name, lvl = line.split()
-                if name == monster_name:
-                    f.close()
-                    return monsters[monster_name](int(lvl))
-
-    @staticmethod
-    def monster_for_adventure(adventure_name):
-        with open('Data/DataBase/adventures.txt', 'r') as f:
-            while True:
-                line = f.readline()
-                if not line:
-                    break
-                adventure, monster_name = line.split()
-                if adventure == adventure_name:
-                    f.close()
-                    return monster_name
+        df = pd.read_csv('Data/DataBase/monsters.csv', index_col=0)
+        for i in range(len(df)):
+            if df.iloc[i]['adventure'] == adventure_name and df.iloc[i]['serial_number'] == serial_num:
+                return MonsterCreator.create_monster(df.iloc[i]['name'], (int(df.iloc[i]['lvl'])))
 
     @staticmethod
     def artefacts():
         artefacts = []
 
-        with open('Data/DataBase/artefacts.txt', 'r') as f:
-            while True:
-                line = f.readline()
-                if not line:
-                    break
-                artefact = ArtefactCreator.create_artefact(line)
-                artefacts.append(artefact)
-            f.close()
+        df = pd.read_csv('DataBase/artefacts.csv', index_col=0)
+        for i in range(len(df)):
+            artefact = ArtefactCreator.create_artefact(key=df.iloc[i]['key'],
+                                                       id=int(df.iloc[i]['id']),
+                                                       rarity=int(df.iloc[i]['rarity']),
+                                                       attack=float(df.iloc[i]['attack']),
+                                                       defence=float(df.iloc[i]['defence']),
+                                                       hp=float(df.iloc[i]['hp']),
+                                                       mana=float(df.iloc[i]['mana']),
+                                                       magic_attack=float(df.iloc[i]['magic_attack']))
+            artefacts.append(artefact)
+
         return artefacts
 
     @staticmethod
     def potions():
         potions = []
 
-        with open('Data/DataBase/potions.txt', 'r') as f:
-            while True:
-                line = f.readline()
-                if not line:
-                    break
-                potion = PotionCreator.create_potion(line)
-                potions.append(potion)
-            f.close()
+        df = pd.read_csv('DataBase/potions.csv', index_col=0)
+        for i in range(len(df)):
+            potion = PotionCreator.create_potion(key=int(df.iloc[i]['key']),
+                                                 rarity=int(df.iloc[i]['rarity']),
+                                                 tik=int(df.iloc[i]['tik']),
+                                                 attack=float(df.iloc[i]['attack']),
+                                                 defence=float(df.iloc[i]['defence']),
+                                                 hp=float(df.iloc[i]['hp']),
+                                                 mana=float(df.iloc[i]['mana']),
+                                                 magic_attack=float(df.iloc[i]['magic_attack']))
+            potions.append(potion)
+
         return potions
 
 
@@ -117,69 +111,94 @@ class PassData:
 
     @staticmethod
     def main_hero(hero):
-        with open('Data/DataBase/main_hero.txt', 'w') as f:
-            f.seek(0)
-            f.write('name: ' + str(hero.name) + '\n')
-            f.write('lvl: ' + str(hero.lvl) + '\n')
-            f.write('gold: ' + str(hero.gold) + '\n')
-            f.write('exp: ' + str(hero.exp) + '\n')
-            f.write('lvl_ch_edge: ' + str(hero.lvl_changing_edge) + '\n')
-            f.write('rise_coeff: ' + str(hero.rise_coeff) + '\n')
-            f.write('power: ' + str(hero.power) + '\n')
-            f.write('speed: ' + str(hero.speed) + '\n')
-            f.write('wisdom: ' + str(hero.wisdom) + '\n')
-            f.write('intellect: ' + str(hero.intellect) + '\n')
-            f.write('stamina: ' + str(hero.stamina) + '\n')
-            f.write('free: ' + str(hero.free) + '\n')
-            f.write('attack_coeff: ' + str(hero.attack_coeff) + '\n')
-            f.write('defence_coeff: ' + str(hero.defence_coeff) + '\n')
-            f.write('hp_coeff: ' + str(hero.hp_coeff) + '\n')
-            f.write('mana_coeff: ' + str(hero.mana_coeff) + '\n')
-            f.close()
+        df = pd.read_csv('Data/DataBase/main_hero.csv', index_col=0)
+        save_hero = {
+            'name': hero.name,
+            'lvl': hero.lvl,
+            'gold': hero.gold,
+            'exp': hero.exp,
+            'lvl_ch_edge': hero.lvl_changing_edge,
+            'rise_coeff': hero.rise_coeff,
+            'power': hero.power,
+            'speed': hero.speed,
+            'wisdom': hero.wisdom,
+            'intellect': hero.intellect,
+            'stamina': hero.stamina,
+            'free': hero.stamina,
+            'attack_coeff': hero.attack_coeff,
+            'defence_coeff': hero.defence_coeff,
+            'hp_coeff': hero.hp_coeff,
+            'mana_coeff': hero.mana_coeff
+        }
 
-        with open('Data/DataBase/hero_active_skills.txt', 'w') as f:
-            f.seek(0)
-            for i in hero.active_skills:
-                f.write(str(i))
-                f.write('\n')
-            f.close()
+        df = df.append(save_hero, ignore_index=True)
+        df.to_csv('Data/DataBase/main_hero.csv')
 
-        with open('Data/DataBase/hero_passive_skills.txt', 'w') as f:
-            f.seek(0)
-            for i in hero.passive_skills:
-                f.write(str(i))
-                f.write('\n')
-            f.close()
+        # active skills
+        df = pd.DataFrame({
+          'active_skills': hero.active_skills
+        })
+        df.to_csv('Data/DataBase/hero_active_skills.csv')
+
+        # passive skills
+        df = pd.DataFrame({
+            'passive_skills': hero.active_skills
+        })
+        df.to_csv('Data/DataBase/hero_passive_skills.csv')
 
     @staticmethod
     def artefacts(artefacts):
-        with open('Data/DataBase/artefacts.txt', 'w') as f:
-            f.seek(0)
-            for artefact in artefacts:
-                line = str(artefact.key) + ' '
-                line += str(artefact.id) + ' ' 
-                line += str(artefact.rarity) + ' ' 
-                line += str(artefact.attack) + ' '
-                line += str(artefact.defence) + ' '
-                line += str(artefact.hp) + ' ' 
-                line += str(artefact.mana) + ' ' 
-                line += str(artefact.magic_attack)
-                f.write(line)
-                f.write('\n')
-            f.close()
+
+        param_dict = {
+            'key': [],
+            'id': [],
+            'rarity': [],
+            'attack': [],
+            'defence': [],
+            'hp': [],
+            'mana': [],
+            'magic_attack': []
+        }
+
+        for artefact in artefacts:
+            param_dict['key'].append(artefact.key)
+            param_dict['id'].append(artefact.id)
+            param_dict['rarity'].append(artefact.rarity)
+            param_dict['attack'].append(artefact.attack)
+            param_dict['defence'].append(artefact.defence)
+            param_dict['hp'].append(artefact.hp)
+            param_dict['mana'].append(artefact.mana)
+            param_dict['magic_attack'].append(artefact.magic_attack)
+
+        df = pd.DataFrame(param_dict)
+        df.to_csv('DataBase/artefacts.csv')
 
     @staticmethod
     def potions(potions):
-        with open('Data/DataBase/potions.txt', 'w') as f:
-            f.seek(0)
-            for potion in potions:
-                line = str(potion.key) + ' '
-                line += str(potion.rarity) + ' '
-                line += str(potion.attack) + ' '
-                line += str(potion.defence) + ' '
-                line += str(potion.hp) + ' '
-                line += str(potion.mana) + ' '
-                line += str(potion.magic_attack)
-                f.write(line)
-                f.write('\n')
-            f.close()
+        param_dict = {
+            'key': [],
+            'rarity': [],
+            'tik': [],
+            'attack': [],
+            'defence': [],
+            'hp': [],
+            'mana': [],
+            'magic_attack': []
+        }
+
+        for potion in potions:
+            param_dict['key'].append(potion.key)
+            param_dict['rarity'].append(potion.rarity)
+            param_dict['tik'].append(potion.tik)
+            param_dict['attack'].append(potion.attack)
+            param_dict['defence'].append(potion.defence)
+            param_dict['hp'].append(potion.hp)
+            param_dict['mana'].append(potion.mana)
+            param_dict['magic_attack'].append(potion.magic_attack)
+
+        df = pd.DataFrame(param_dict)
+        df.to_csv('DataBase/potions.csv')
+
+
+if __name__ == '__main__':
+    main()

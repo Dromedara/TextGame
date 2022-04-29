@@ -2,24 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91c92e02-5cf8-485d-ae4a-e44f49b02cfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Code/Classes/Artefacts/CreateArtefact.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Classes/Artefacts/WearingArtefacts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Classes/People/BattleMod.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Classes/Potions/CreatePotion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Battle/BattleRunner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/Artefacts/Armors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/Artefacts/Swords.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/ArtefactsLinks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/CreateArtefact.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/MainCharacter/AdventurerLinks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/Monsters/CreateMonster.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/PotionsServices/CreatePotion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/PotionsServices/Potions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/PotionsServices/PotionsLinks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Data/DataBase/artefacts.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Data/DataBase/hero_active_skills.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Data/DataBase/hero_passive_skills.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Data/DataBase/main_hero.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Data/DataBase/monsters.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Data/DataBase/potions.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/MainRepository/Equipping.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/StartAndFinish/FinishGame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/StartAndFinish/StartGame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Battle/BattleProcess.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Battle/BattleProcess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Battle/Preparing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Battle/Preparing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Battle/BattleMod.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/Artefacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Artefacts/Artefacts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/DrinkingPotions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Potions/DrinkingPotions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/Potions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Potions/Potions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Monsters/MonsterSkills.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Monsters/Monsters.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Monsters/Monsters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/People/AdventurerSkills.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/hero_passive_skills.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Data/DataBase/hero_passive_skills.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/main_hero.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Data/DataBase/main_hero.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Battle/BattleProcess.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Battle/Preparing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Battle/BattleFuncs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Artefacts/Artefacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/Artefacts/Artefact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Artefacts/CreateArtefact.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Artefacts/WearingArtefacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/WearingArtefacts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/People/BattleMod.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/MainCharacter/BattleMod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/People/People.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/MainCharacter/Adventurer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Potions/CreatePotion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Potions/DrinkingPotions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/PotionsServices/DrinkingPotions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Potions/Potions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/adventures.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/artefacts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/hero_active_skills.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Battle/BattleSubFuncs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/hero_passive_skills.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/Artefacts/Amulets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/main_hero.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/monsters.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/potions.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Data/InOutData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Data/InOutData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Subfunctions/HelperFunc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Subfunctions/HelperFunc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Subfunctions/Messages/Attention.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Subfunctions/Messages/Attention.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,27 +72,52 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="28D4yFnv61yt4N1LbWPIt82WKIs" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../pythonProject" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes\ArtefactsServices\Artefacts" />
       <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes\Potions" />
       <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes\Artefacts" />
       <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes" />
       <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\SavingData\DataBase" />
-      <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Checking\Messages" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
+  <component name="RunManager" selected="Python.InOutData">
+    <configuration name="Adventurer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TextGame" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code/Classes" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes\People\Adventurer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="CheckClassFunctions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TextGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,7 +139,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="People" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="InOutData" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TextGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -99,11 +147,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code/Classes" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code/Data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes\People\People.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/Data/InOutData.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,10 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.InOutData" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.CheckClassFunctions" />
-        <item itemvalue="Python.People" />
+        <item itemvalue="Python.Adventurer" />
       </list>
     </recent_temporary>
   </component>
@@ -211,5 +260,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

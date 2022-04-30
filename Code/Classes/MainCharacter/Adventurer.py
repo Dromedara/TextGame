@@ -1,6 +1,4 @@
-import random
-import Code.Subfunctions.HelperFunc
-import Code.Subfunctions.HelperFunc as HelperFunc
+from Code.Classes.MainCharacter.AdventurerSubFuncs import Checker
 
 
 class Human:
@@ -34,7 +32,7 @@ class Adventurer(Human):
     active_skills = []
     passive_skills = []
 
-    checker = Code.Subfunctions.HelperFunc.ForAdventurerFuncs()
+    checker = Checker()
 
     def __init__(self, _name='?', lvl=1, gold=10, exp=0, lvl_ch_ed=5, rise_coeff=2, power=1, speed=1, wisdom=1,
                  intellect=1, stamina=1, free=0, attack_coeff=1.5, defence_coeff=1.5, hp_coeff=1.5, mana_coeff=1.5):
@@ -96,12 +94,3 @@ class Adventurer(Human):
     def add_passive_skill(self, name_of_skill=''):
         if name_of_skill not in self.passive_skills:
             self.passive_skills.append(name_of_skill)
-
-
-class AdventurerFuncs:
-
-    @staticmethod
-    def simple_punch(hero, monster):
-        monster.hp -= (hero.attack - 0.8 * monster.defence)
-        monster.defence = HelperFunc.ForBattle.battle_params_change(monster.defence, 0.2 * hero.attack)
-        return hero, monster

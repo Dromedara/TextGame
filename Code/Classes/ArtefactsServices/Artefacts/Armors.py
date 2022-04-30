@@ -1,4 +1,4 @@
-import Code.Subfunctions.HelperFunc as HelperFunc
+from Code.Classes.ArtefactsServices.ArtefactsSubFuncs import Checker
 from Code.Classes.ArtefactsServices.Artefacts.Artefact import Artefact
 
 
@@ -10,7 +10,7 @@ class SimpleIronArmor(Artefact):
         self.rarity = _rarity
         self.key = 'simple_iron_armor'
         self.cost = self.rarity * 5
-        self.defence += HelperFunc.ForArtefacts.check_input_data(defence, self.rarity, self.rarity * 3)
+        self.defence += Checker.check_input_data(defence, self.rarity, self.rarity * 3)
 
 
 class CharmedIronArmor(SimpleIronArmor):
@@ -23,10 +23,10 @@ class CharmedIronArmor(SimpleIronArmor):
         self.rarity = _rarity
         self.cost = self.rarity * 10
         self.key = 'simple_iron_armor'
-        self.defence += HelperFunc.ForArtefacts.check_input_data(defence, self.rarity * 5, self.rarity * 10)
+        self.defence += Checker.check_input_data(defence, self.rarity * 5, self.rarity * 10)
 
-        self.mana += HelperFunc.ForArtefacts.check_input_data(mana, -(self.rarity * 2), -self.rarity)
-        self.magic_attack += HelperFunc.ForArtefacts.check_input_data(magic_atack, self.rarity * 2, self.rarity * 3)
+        self.mana += Checker.check_input_data(mana, -(self.rarity * 2), -self.rarity)
+        self.magic_attack += Checker.check_input_data(magic_atack, self.rarity * 2, self.rarity * 3)
         self.passive_skills.extend(self.passive_charmed_iron_armor)
 
     @staticmethod

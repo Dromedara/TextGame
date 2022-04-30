@@ -1,4 +1,4 @@
-import Code.Subfunctions.HelperFunc as HelperFunc
+from Code.Classes.ArtefactsServices.ArtefactsSubFuncs import Checker
 from Code.Classes.ArtefactsServices.Artefacts.Artefact import Artefact
 
 
@@ -12,7 +12,7 @@ class SimpleSword(Artefact):
         self.rarity = _rarity
         self.key = 'simple_sword'
         self.cost = self.rarity * 5
-        self.attack += HelperFunc.ForArtefacts.check_input_data(attack, self.rarity, self.rarity * 2)
+        self.attack += Checker.check_input_data(attack, self.rarity, self.rarity * 2)
         self.active_skills.extend(self.active_simple_sword_skills)
 
     @staticmethod
@@ -33,8 +33,8 @@ class CharmedSword(SimpleSword):
         self.rarity = _rarity
         self.key = 'charmed_sword'
         self.cost = self.rarity * 10
-        self.attack += HelperFunc.ForArtefacts.check_input_data(attack, self.rarity * 2, self.rarity * 4)
-        self.magic_attack += HelperFunc.ForArtefacts.check_input_data(magic_attack, self.rarity, self.rarity * 2)
+        self.attack += Checker.check_input_data(attack, self.rarity * 2, self.rarity * 4)
+        self.magic_attack += Checker.check_input_data(magic_attack, self.rarity, self.rarity * 2)
         self.active_skills.extend(self.active_charmed_sword_skills)
 
     @staticmethod

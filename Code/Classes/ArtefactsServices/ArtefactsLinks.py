@@ -4,9 +4,9 @@ import Code.Classes.ArtefactsServices.Artefacts.Swords
 
 
 artefact_battle_slots = {
-            'armor': '',
-            'sword': '',
-            'amulet': []
+            'armor': None,
+            'sword': None,
+            'amulets': []
         }
 
 armors = ['simple_iron_armor', 'simple_iron_armor']

@@ -1,5 +1,5 @@
 import Code.Locations.Shop.CreateStaff as CreateStaff
-from Code.Subfunctions.HelperFunc import ForShop
+from Code.Locations.Shop.ShopSubFuncs import Checker
 from Code.Subfunctions.Messages.SOS import SOSMessages
 
 
@@ -27,7 +27,7 @@ def buy_smth(hero):
                 choice = input()
                 if choice == 'stop':
                     break
-                elif ForShop.possible_to_buy(hero.gold, selling_artefacts[choice].cost):
+                elif Checker.possible_to_buy(hero.gold, selling_artefacts[choice].cost):
                    bought_artefacts[choice] = selling_artefacts[choice]
                    hero.gold -= selling_artefacts[choice].cost
                    del selling_artefacts[choice]
@@ -43,7 +43,7 @@ def buy_smth(hero):
                 choice = input()
                 if choice == 'stop':
                     break
-                elif ForShop.possible_to_buy(hero.gold, selling_potions[choice].cost):
+                elif Checker.possible_to_buy(hero.gold, selling_potions[choice].cost):
                     bought_potions[choice] = selling_potions[choice]
                     hero.gold -= selling_potions[choice].cost
                     del selling_potions[choice]

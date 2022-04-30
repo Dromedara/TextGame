@@ -1,4 +1,4 @@
-import Code.Subfunctions.HelperFunc as HelperFunc
+from Code.Classes.ArtefactsServices.ArtefactsSubFuncs import Checker
 from Code.Classes.ArtefactsServices.Artefacts.Artefact import Artefact
 
 
@@ -12,7 +12,7 @@ class SimpleMagicAmulet(Artefact):
         self.rarity = _rarity
         self.key = 'simple_amulet'
         self.cost = self.rarity * 5
-        self.mana += HelperFunc.ForArtefacts.check_input_data(mana, -(self.rarity * 3), -self.rarity)
+        self.mana += Checker.check_input_data(mana, -(self.rarity * 3), -self.rarity)
         self.passive_skills.extend(self.passive_simple_magic_amulet)
 
     @staticmethod
@@ -32,7 +32,7 @@ class SuperMagicAmulet(SimpleMagicAmulet):
         self.rarity = _rarity
         self.key = 'super_amulet'
         self.cost = self.rarity * 10
-        self.mana += HelperFunc.ForArtefacts.check_input_data(mana, -(self.rarity * 4), -(self.rarity * 2))
+        self.mana += Checker.check_input_data(mana, -(self.rarity * 4), -(self.rarity * 2))
         self.passive_skills.extend(self.passive_super_magic_amulet)
         self.active_skills.extend(self.active_super_magic_amulet)
 

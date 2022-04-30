@@ -1,4 +1,4 @@
-from Code.Subfunctions.HelperFunc import ForPotions
+from Code.Classes.PotionsServices.PotionsSubFuncs import Checker
 
 
 class Potion:
@@ -33,7 +33,7 @@ class HealingPotion(Potion):
         self.key = 'healing_potion'
         self.rarity = _rarity
         self.cost = 5
-        self.hp += ForPotions.check_input_data(hp, self.rarity+1, self.rarity+3)
+        self.hp += Checker.check_input_data(hp, self.rarity+1, self.rarity+3)
 
 
 class BoostingPotion(Potion):
@@ -43,16 +43,25 @@ class BoostingPotion(Potion):
         self.key = 'boosting_potion'
         self.rarity = _rarity
         self.cost = 5
-        self.attack += ForPotions.check_input_data(attack, self.rarity+1, self.rarity+3)
-        self.defence += ForPotions.check_input_data(defence, self.rarity+1, self.rarity+3)
+        self.attack += Checker.check_input_data(attack, self.rarity+1, self.rarity+3)
+        self.defence += Checker.check_input_data(defence, self.rarity+1, self.rarity+3)
 
 
 class ProtectingPotion(Potion):
 
-    def __init__(self, _rarity=1, _tik=0, **kwargs):
+    def __init__(self, _rarity=1, _tik=1, **kwargs):
         super().__init__()
         self.key = 'protecting_potion'
         self.rarity = _rarity
         self.tik = _tik
         self.cost = 5
 
+    @staticmethod
+    def super_protector(hero, val):
+        hero.attack = Checker.protection_change(hero.attack, hero.param_savior['attack'][-val])
+        hero.defence = Checker.protection_change(hero.defence, hero.param_savior['defence'][-val])
+        hero.hp = Checker.protection_change(hero.hp, hero.param_savior['hp'][-val])
+        hero.mana = Checker.protection_change(hero.mana, hero.param_savior['mana'][-val])
+        hero.magic_attack = Checker.protection_change(hero.magic_attack, hero.param_savior['magic_attack'][-val])
+
+        return hero

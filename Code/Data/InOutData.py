@@ -1,7 +1,7 @@
-from Code.MainCharacter.Adventurer import Adventurer
-from Code.Monsters.CreateMonster import Creator as MonsterCreator
-from Code.ArtefactsServices.CreateArtefact import Creator as ArtefactCreator
-from Code.PotionsServices.CreatePotion import Creator as PotionCreator
+from Code.Classes.MainCharacter.Adventurer import Adventurer
+from Code.Classes.Monsters.CreateMonster import Creator as MonsterCreator
+from Code.Classes.ArtefactsServices.CreateArtefact import Creator as ArtefactCreator
+from Code.Classes.PotionsServices.CreatePotion import Creator as PotionCreator
 import pandas as pd
 
 
@@ -38,7 +38,7 @@ class GetData:
                           float(df.iloc[index]['hp_coeff']),
                           float(df.iloc[index]['mana_coeff']))
 
-        #df = df.drop(df.shape[0]-1, axis=0)
+        df = df.drop(df.shape[0]-1, axis=0)
         df.to_csv('Data/DataBase/main_hero.csv')
 
         # active skills
@@ -160,15 +160,15 @@ class PassData:
             'magic_attack': []
         }
 
-        for artefact in artefacts:
-            param_dict['key'].append(artefact.key)
-            param_dict['id'].append(artefact.id)
-            param_dict['rarity'].append(artefact.rarity)
-            param_dict['attack'].append(artefact.attack)
-            param_dict['defence'].append(artefact.defence)
-            param_dict['hp'].append(artefact.hp)
-            param_dict['mana'].append(artefact.mana)
-            param_dict['magic_attack'].append(artefact.magic_attack)
+        for key in artefacts.keys():
+            param_dict['key'].append(artefacts[key].key)
+            param_dict['id'].append(artefacts[key].id)
+            param_dict['rarity'].append(artefacts[key].rarity)
+            param_dict['attack'].append(artefacts[key].attack)
+            param_dict['defence'].append(artefacts[key].defence)
+            param_dict['hp'].append(artefacts[key].hp)
+            param_dict['mana'].append(artefacts[key].mana)
+            param_dict['magic_attack'].append(artefacts[key].magic_attack)
 
         df = pd.DataFrame(param_dict)
         df.to_csv('Data/DataBase/artefacts.csv')
@@ -186,15 +186,15 @@ class PassData:
             'magic_attack': []
         }
 
-        for potion in potions:
-            param_dict['key'].append(potion.key)
-            param_dict['rarity'].append(potion.rarity)
-            param_dict['tik'].append(potion.tik)
-            param_dict['attack'].append(potion.attack)
-            param_dict['defence'].append(potion.defence)
-            param_dict['hp'].append(potion.hp)
-            param_dict['mana'].append(potion.mana)
-            param_dict['magic_attack'].append(potion.magic_attack)
+        for key in potions.keys():
+            param_dict['key'].append(potions[key].key)
+            param_dict['rarity'].append(potions[key].rarity)
+            param_dict['tik'].append(potions[key].tik)
+            param_dict['attack'].append(potions[key].attack)
+            param_dict['defence'].append(potions[key].defence)
+            param_dict['hp'].append(potions[key].hp)
+            param_dict['mana'].append(potions[key].mana)
+            param_dict['magic_attack'].append(potions[key].magic_attack)
 
         df = pd.DataFrame(param_dict)
         df.to_csv('Data/DataBase/potions.csv')

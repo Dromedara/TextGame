@@ -7,3 +7,9 @@ class Checker:
         if gold - cost < 0:
             return False
         return True
+
+    @staticmethod
+    def add(artefacts, artefact):
+        if artefacts.get(artefact) is None:
+            artefacts[artefact] = []
+        return artefacts

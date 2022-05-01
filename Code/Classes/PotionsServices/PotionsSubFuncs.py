@@ -14,12 +14,6 @@ class Checker:
             return val
 
     @staticmethod
-    def tiks_add(tiks, key):
-        if tiks.get(key) is None:
-            tiks[key] = 0
-        return tiks
-
-    @staticmethod
     def protection_change(val, edge):
         if val < edge:
             return edge

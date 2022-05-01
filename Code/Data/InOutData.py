@@ -2,6 +2,7 @@ from Code.Classes.MainCharacter.Adventurer import Adventurer
 from Code.Classes.Monsters.CreateMonster import Creator as MonsterCreator
 from Code.Classes.ArtefactsServices.CreateArtefact import Creator as ArtefactCreator
 from Code.Classes.PotionsServices.CreatePotion import Creator as PotionCreator
+from Code.Locations.Shop.ShopSubFuncs import Checker
 import pandas as pd
 
 
@@ -38,7 +39,7 @@ class GetData:
                           float(df.iloc[index]['hp_coeff']),
                           float(df.iloc[index]['mana_coeff']))
 
-        df = df.drop(df.shape[0]-1, axis=0)
+        # df = df.drop(df.shape[0]-1, axis=0)
         df.to_csv('Data/DataBase/main_hero.csv')
 
         # active skills
@@ -69,7 +70,7 @@ class GetData:
 
     @staticmethod
     def artefacts():
-        artefacts = []
+        artefacts = {}
 
         df = pd.read_csv('Data/DataBase/artefacts.csv', index_col=0)
         for i in range(len(df)):
@@ -81,7 +82,9 @@ class GetData:
                                                        hp=float(df.iloc[i]['hp']),
                                                        mana=float(df.iloc[i]['mana']),
                                                        magic_attack=float(df.iloc[i]['magic_attack']))
-            artefacts.append(artefact)
+
+            artefacts = Checker.add(artefacts, df.iloc[i]['key'])
+            artefacts[df.iloc[i]['key']].append(artefact)
 
         return artefacts
 
@@ -99,7 +102,8 @@ class GetData:
                                                  hp=float(df.iloc[i]['hp']),
                                                  mana=float(df.iloc[i]['mana']),
                                                  magic_attack=float(df.iloc[i]['magic_attack']))
-            potions.append(potion)
+            potions = Checker.add(potions, df.iloc[i]['key'])
+            potions[df.iloc[i]['key']].append(potion)
 
         return potions
 

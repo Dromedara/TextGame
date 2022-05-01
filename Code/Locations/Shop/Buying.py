@@ -1,11 +1,10 @@
 import Code.Locations.Shop.CreateStaff as CreateStaff
 from Code.Locations.Shop.ShopSubFuncs import Checker
 from Code.Subfunctions.Messages.SOS import SOSMessages
+import Code.Locations.Warehouse.Equipping as Equipping
 
 
 def buy_smth(hero):
-    bought_artefacts = {}
-    bought_potions = {}
 
     selling_artefacts = CreateStaff.create_artefacts(hero.lvl)
     selling_potions = CreateStaff.create_potions(hero.lvl)
@@ -28,9 +27,9 @@ def buy_smth(hero):
                 if choice == 'stop':
                     break
                 elif Checker.possible_to_buy(hero.gold, selling_artefacts[choice].cost):
-                   bought_artefacts[choice] = selling_artefacts[choice]
-                   hero.gold -= selling_artefacts[choice].cost
-                   del selling_artefacts[choice]
+                    Equipping.artefacts_dict = Checker.add(Equipping.artefacts_dict, choice)
+                    Equipping.artefacts_dict[choice].append(selling_artefacts[choice])
+                    hero.gold -= selling_artefacts[choice].cost
                 else:
                     SOSMessages.not_enough_money()
 
@@ -44,10 +43,10 @@ def buy_smth(hero):
                 if choice == 'stop':
                     break
                 elif Checker.possible_to_buy(hero.gold, selling_potions[choice].cost):
-                    bought_potions[choice] = selling_potions[choice]
+                    Equipping.potions_dict = Checker.add(Equipping.potions_dict, choice)
+                    Equipping.potions_dict[choice] = selling_potions[choice]
                     hero.gold -= selling_potions[choice].cost
-                    del selling_potions[choice]
                 else:
                     SOSMessages.not_enough_money()
         else:
-            return hero, bought_artefacts, bought_potions
+            return hero

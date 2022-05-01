@@ -1,4 +1,4 @@
-import Code.Subfunctions.HelperFunc as HelperFunc
+from Code.Locations.Battle.BattleSubFuncs import Checker
 
 
 class BattleMod:
@@ -15,8 +15,6 @@ class BattleMod:
     tiks: {}
     param_savior: {}
 
-    checker = HelperFunc.ForArtefacts()
-
     def __init__(self, adventurer):
         self.attack = (adventurer.power + adventurer.speed) * adventurer.attack_coeff
         self.defence = adventurer.stamina * adventurer.defence_coeff
@@ -25,11 +23,14 @@ class BattleMod:
         self.magic_attack = (self.mana * self.attack) / 2
 
         self.hero_active_skills = {}
-        self.hero_active_skills = self.checker.skills_add(self.hero_active_skills, 'basic')
+        self.hero_active_skills = Checker.skills_add(self.hero_active_skills, 'basic')
+        self.hero_active_skills = Checker.skills_add(self.hero_active_skills, 'artefacts')
         self.hero_active_skills['basic'].extend(adventurer.active_skills)
 
-        self.hero_passive_skills = []
-        self.hero_passive_skills.extend(adventurer.passive_skills)
+        self.hero_passive_skills = {}
+        self.hero_passive_skills = Checker.skills_add(self.hero_passive_skills, 'basic')
+        self.hero_passive_skills = Checker.skills_add(self.hero_passive_skills, 'artefacts')
+        self.hero_passive_skills['basic'].extend(adventurer.passive_skills)
 
         self.hero_long_baffs = {}
         self.tiks = {}

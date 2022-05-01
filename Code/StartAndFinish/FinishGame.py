@@ -1,13 +1,14 @@
 from Code.Data.InOutData import PassData
+import Code.Locations.Warehouse.Equipping as Equipping
 
 
 class Finisher:
 
     @staticmethod
-    def lets_finish(hero, artefacts, potions):
+    def lets_finish(hero):
 
         PassData.main_hero(hero)
 
-        PassData.artefacts(artefacts)
+        PassData.artefacts(Equipping.artefacts_dict)
 
-        PassData.potions(potions)
+        PassData.potions(Equipping.potions_dict)

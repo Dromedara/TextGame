@@ -1,5 +1,8 @@
 from Code.Data.InOutData import GetData
 from Code.Subfunctions.Messages import Attention
+from Code.Classes.ArtefactsServices.CreateArtefact import Creator
+from Code.Classes.PotionsServices.CreatePotion import Creator
+import Code.Locations.Warehouse.Equipping as Equipping
 
 
 class Starter:
@@ -10,15 +13,15 @@ class Starter:
 
         Attention.Mover.first_game_activation()
 
-        return hero, [], []
+        return hero
 
     @staticmethod
     def lets_start_again():
         hero = GetData.main_hero(1)
 
-        artefacts = GetData.artefacts()
+        Equipping.artefacts_dict = GetData.artefacts()
 
-        potions = GetData.potions()
+        Equipping.potions_dict = GetData.potions()
 
-        return hero, artefacts, potions
+        return hero
 

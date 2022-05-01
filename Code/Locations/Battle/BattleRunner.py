@@ -1,5 +1,7 @@
 import Code.Locations.Battle.BattleFuncs as BattleFuncs
 import Code.Locations.Battle.BattleSubFuncs as BattleSubFuncs
+from Code.Subfunctions.Errors import NoHP
+
 
 curr_artefacts = {}
 
@@ -8,29 +10,26 @@ curr_potions = {}
 
 def Battle(adventurer, adventure):
 
-
-    global curr_potions
-    global curr_artefacts
-
     hero = BattleFuncs.Prepearing.prepare_hero(adventurer)
 
     monster = BattleFuncs.Prepearing.prepare_monster(adventure)
 
     hero.remember_params()
 
-    while hero.hp > 0 and monster.hp > 0:
+    try:
+        while True:
 
-        # hero
+            # hero
 
-        BattleFuncs.PotionsActions.run_it(hero)
+            hero.remember_params()
 
-        BattleSubFuncs.Show.show_potions(curr_potions)
+            hero = BattleFuncs.PotionsActions.run_it(hero)
 
+            hero, monster = BattleFuncs.PassiveActions.run_it(hero, monster)
 
-        # выпить зелье - проверка
-        # пассивки - проверк
-        # баффы - проверка
-        # выбор атаки - проверка
+            # баффы - проверка
+            # выбор атаки - проверка
 
-
+    except NoHP:
+        print('You died')
 

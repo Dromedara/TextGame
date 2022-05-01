@@ -1,4 +1,4 @@
-from Code.Subfunctions.Errors import ImpossibleChange
+from Code.Subfunctions.Errors import NoHP
 
 
 class Checker:
@@ -7,15 +7,7 @@ class Checker:
         pass
 
     @staticmethod
-    def possible_change(param, val):
-        res = param + val
-        if res < 0:
-            raise ImpossibleChange
-        return res
-
-    @staticmethod
     def exp_change(param, edge):
         if param < edge:
             return False
         return True
-

@@ -7,16 +7,23 @@ from Code.Locations.Battle import BattleRunner
 
 def main():
 
-    hero, Equipping.artefacts_list, Equipping.potions_list = Starter.lets_start_new()
-    # hero, artefacts, potions = Starter.lets_start_again()
+    #hero = Starter.lets_start_new()
+    hero = Starter.lets_start_again()
 
-    hero, artefacts, potions = Buying.buy_smth(hero=hero)
+    print(hero)
 
-    BattleRunner.curr_artefacts = Equipping.Choose.choose_artifacts(artefacts=Equipping.artefacts_list)
+    hero = Buying.buy_smth(hero=hero)
 
-    BattleRunner.curr_potions = Equipping.Choose.choose_potions(potions=Equipping.potions_list)
+    print('CHOOSE')
+    BattleRunner.curr_artefacts = Equipping.Choose.choose_artifacts()
 
-    Finisher.lets_finish(hero=hero, artefacts=Equipping.artefacts_list, potions=Equipping.potions_list)
+    BattleRunner.curr_potions = Equipping.Choose.choose_potions()
+
+    print('BATTLE')
+
+    BattleRunner.Battle(hero, 'FirstAdventure')
+
+    Finisher.lets_finish(hero=hero)
 
 
 if __name__ == '__main__':

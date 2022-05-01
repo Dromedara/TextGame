@@ -1,5 +1,7 @@
-import Code
+import Code.Classes.MainCharacter.BasicSkills
 
-active_adventurer_links = {
-    'simple_punch': Code.Classes.MainCharacter.Adventurer.AdventurerFuncs.simple_punch
+active_adventurer_dict = {
+    'simple_punch': Code.Classes.MainCharacter.BasicSkills.AdventurerFuncs.simple_punch
 }
+
+passive_adventurer_dict = {}

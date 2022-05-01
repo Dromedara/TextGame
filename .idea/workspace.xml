@@ -2,28 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91c92e02-5cf8-485d-ae4a-e44f49b02cfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/ArtefactsSubFuncs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Classes/MainCharacter/AdventurerSubFuncs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Classes/MainCharacter/BasicSkills.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Classes/PotionsServices/PotionsSubFuncs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Locations/Shop/ShopSubFuncs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/Locations/Warehouse/EquipSubFuncs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Locations/Battle/Prepareing/DrinkingPotions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Locations/Battle/Prepareing/WearingArtefacts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/Artefacts/Amulets.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/Artefacts/Amulets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/Artefacts/Armors.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/Artefacts/Armors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/Artefacts/Swords.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/Artefacts/Swords.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/ArtefactsLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/ArtefactsLinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/WearingArtefacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/WearingArtefacts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/ArtefactsSubFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/ArtefactsSubFuncs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/ArtefactsServices/WearingArtefacts.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Classes/MainCharacter/Adventurer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/MainCharacter/Adventurer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/PotionsServices/DrinkingPotions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/PotionsServices/DrinkingPotions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/PotionsServices/Potions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/PotionsServices/Potions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/PotionsServices/PotionsLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/PotionsServices/PotionsLinks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/MainCharacter/AdventurerLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/MainCharacter/AdventurerLinks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/MainCharacter/AdventurerSubFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/MainCharacter/AdventurerSubFuncs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/MainCharacter/BasicSkills.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/MainCharacter/BasicSkills.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/MainCharacter/BattleMod.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Locations/Battle/Prepareing/BattleMod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Monsters/Monsters.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Monsters/Monsters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/PotionsServices/DrinkingPotions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/PotionsServices/PotionsSubFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/PotionsServices/PotionsSubFuncs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/hero_active_skills.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Data/DataBase/hero_active_skills.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/hero_passive_skills.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Data/DataBase/hero_passive_skills.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/DataBase/main_hero.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Data/DataBase/main_hero.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Data/InOutData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Data/InOutData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Locations/Battle/BattleFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Locations/Battle/BattleFuncs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Locations/Battle/BattleRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Locations/Battle/BattleRunner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Locations/Battle/BattleSubFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Locations/Battle/BattleSubFuncs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Locations/Shop/Buying.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Locations/Shop/Buying.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Locations/Shop/ShopSubFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Locations/Shop/ShopSubFuncs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Locations/Warehouse/Equipping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Locations/Warehouse/Equipping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Subfunctions/HelperFunc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/StartAndFinish/FinishGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/StartAndFinish/FinishGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/StartAndFinish/StartGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/StartAndFinish/StartGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Subfunctions/Errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Subfunctions/Errors.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,11 +74,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Locations\Battle\Prepareing" />
       <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Locations" />
       <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes" />
       <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes\ArtefactsServices\Artefacts" />
       <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code\Classes\ArtefactsServices" />
-      <recent name="C:\Users\Ira\PycharmProjects\TextGame\Code" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main (1)">

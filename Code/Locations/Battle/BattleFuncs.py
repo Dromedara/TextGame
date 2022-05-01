@@ -1,17 +1,11 @@
-from Code.Classes.MainCharacter.BattleMod import BattleMod
-from Code.Classes.ArtefactsServices.WearingArtefacts import Wearing
-from Code.Classes.PotionsServices.DrinkingPotions import Drinking
+from Code.Locations.Battle.Prepareing.BattleMod import BattleMod
+from Code.Locations.Battle.Prepareing.WearingArtefacts import Wearing
+from Code.Locations.Battle.Prepareing.DrinkingPotions import Drinking
 import Code.Locations.Battle.BattleRunner as BattleRunner
 import Code.Locations.Battle.BattleSubFuncs as BattleSubFuncs
 from Code.Data.InOutData import GetData
-
-
-class Other:
-    @staticmethod
-    def check(hero, monster):
-        if hero.hp <= 0 or monster.hp <= 0:
-            return True
-        return False
+import Code.Classes.MainCharacter.AdventurerLinks as AdventurerLinks
+import Code.Classes.ArtefactsServices.ArtefactsLinks as ArtefactsLinks
 
 
 class Prepearing:
@@ -43,15 +37,38 @@ class PotionsActions:
     def choose_it():
         choice = input()
         if choice == 'nothing':
-            return False
+            return None
         return choice
+
+    @staticmethod
+    def delete_it(choice):
+        BattleRunner.curr_potions[choice].pop()
 
     @staticmethod
     def run_it(hero):
 
         while True:
             BattleSubFuncs.Show.show_potions()
-            if PotionsActions.choose_it():
+            choice = PotionsActions.choose_it()
+            if choice is None:
                 break
-            hero = Drinking.drink_potion(hero, )
+            hero = Drinking.drink_potion(hero, choice)
+            PotionsActions.delete_it(choice)
 
+        print(hero)
+
+        return hero
+
+
+class PassiveActions:
+
+    @staticmethod
+    def run_it(hero, monster):
+
+        for skill in hero.passive_skills['basic']:
+            hero, monster = AdventurerLinks.passive_adventurer_dict[skill](hero, monster)
+
+        for skill in hero.passive_skills['artefacts']:
+            hero, monster = ArtefactsLinks.passive_artefact_dict[skill](hero, monster)
+
+        return hero, monster

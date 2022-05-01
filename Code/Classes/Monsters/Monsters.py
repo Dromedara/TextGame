@@ -1,5 +1,5 @@
 import random
-from Code.Subfunctions.HelperFunc import ForBattle
+from Code.Locations.Battle.BattleSubFuncs import Checker as BattleChecker
 
 
 class Monster:
@@ -43,13 +43,13 @@ class Chupakabra(Monster):
     @staticmethod
     def strait_physical_attack(hero, monster):
         hero.hp -= (monster.attack - 0.5 * hero.defence)
-        hero.defence = ForBattle.battle_params_change(hero.defence, (monster.lvl % 10) + (monster.lvl / 10))
+        hero.defence = BattleChecker.params_change(hero.defence, (monster.lvl % 10) + (monster.lvl / 10))
         return hero, monster
 
     @staticmethod
     def straight_magic_attack(hero, monster):
         hero.hp -= (monster.attack - 0.3 * hero.defence)
-        hero.mana = ForBattle.battle_params_change(hero.mana, (monster.lvl % 10) + (monster.lvl / 10))
+        hero.mana = BattleChecker.params_change(hero.mana, (monster.lvl % 10) + (monster.lvl / 10))
         return hero, monster
 
     @staticmethod

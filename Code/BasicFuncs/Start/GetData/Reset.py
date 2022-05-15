@@ -10,6 +10,7 @@ import Code.Classes.Equipment.IDCounter as ID
 
 import Code.BasicFuncs.Start.GetData.Paths as Paths
 from Code.Classes.Monster import CreateMonster
+from Code.BasicFuncs.Game.Guild import GuildLinks
 
 
 def adventurer_creator(first_activation=True):
@@ -112,6 +113,12 @@ def armors_creator(first_activation=True):
     return armor
 
 
+def id_creator(first_activation):
+    if not first_activation:
+        df = pd.read_csv(Paths.paths['id'], index_col=0)
+        ID.id_creator.id = int(df.iloc[0]['count'])
+
+
 def monster_creator(adventure_name, serial_num):
     df = pd.read_csv(Paths.paths['monster'])
     for i in range(len(df)):
@@ -120,8 +127,10 @@ def monster_creator(adventure_name, serial_num):
             return monster
 
 
-def id_creator(first_activation):
-    if not first_activation:
-        df = pd.read_csv(Paths.paths['id'])
-        ID.id_creator.id = int(df.iloc[0]['count'])
-
+def adventure_creator():
+    df = pd.read_csv(Paths.paths['adventures'])
+    for i in range(len(df)):
+        GuildLinks.adventures_list.append(df.iloc[i]['name'])
+        GuildLinks.gold_awards[df.iloc[i]['name']] = df.iloc[i]['gold_award']
+        GuildLinks.exp_awards[df.iloc[i]['name']] = df.iloc[i]['exp_award']
+        GuildLinks.descriptions[df.iloc[i]['name']] = df.iloc[i]['description']

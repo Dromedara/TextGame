@@ -12,7 +12,7 @@ class BattleInventory:
         self.curr_potions = {}
         self.curr_armors = {}
         for key in ArmorLinks.parts_dict.keys():
-            self.curr_armors[key] = {}
+            self.curr_armors[key] = None
 
     def add_artefact(self, artefact):
         self.curr_artefacts[artefact.id] = artefact

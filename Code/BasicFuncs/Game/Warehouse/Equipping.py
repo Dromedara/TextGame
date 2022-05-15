@@ -28,8 +28,11 @@ class Choose:
             choice = int(input())
             if choice == -1:
                 break
-
-            BattleInventory.battle_inventory.curr_potions[choice] = MainInventory.main_inventory.potions_dict[choice]
+            if choice == -2:
+                id = int(input())
+                del BattleInventory.battle_inventory.curr_potions[id]
+            else:
+                BattleInventory.battle_inventory.curr_potions[choice] = MainInventory.main_inventory.potions_dict[choice]
 
     @staticmethod
     def choose_armors():
@@ -43,10 +46,12 @@ class Choose:
 
             if choice == -1:
                 break
-
-            for key in MainInventory.main_inventory.armor_dict.keys():
-                if choice in MainInventory.main_inventory.armor_dict[key].keys():
-                    part = key
-                    break
-
-            BattleInventory.battle_inventory.curr_armors[part][choice] = MainInventory.main_inventory.armor_dict[part][choice]
+            if choice == -2:
+                part = input()
+                BattleInventory.battle_inventory.curr_armors[part] = None
+            else:
+                for key in MainInventory.main_inventory.armor_dict.keys():
+                    if choice in MainInventory.main_inventory.armor_dict[key].keys():
+                        part = key
+                        break
+                BattleInventory.battle_inventory.curr_armors[part] = MainInventory.main_inventory.armor_dict[part][choice]

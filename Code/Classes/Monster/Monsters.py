@@ -4,6 +4,8 @@ from Code.BasicFuncs.Game.BattelField.BattleSubFuncs import BattleChecker
 
 class Monster:
 
+    key: str
+
     lvl: int
     attack: float
     defence: float
@@ -35,7 +37,7 @@ class Chupakabra(Monster):
 
     def __init__(self, lvl):
         super().__init__(lvl)
-        print(self.attack)
+        self.key = 'Chupakabra'
         self.loot = ['loot1', 'loot2']
         self.active_skill.extend(self.chupakabra_active_skills)
         self.passive_skill.extend(self.chupakabra_passive_skills)

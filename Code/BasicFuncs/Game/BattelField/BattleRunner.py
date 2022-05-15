@@ -5,21 +5,19 @@ from Code.BasicFuncs.Game.HelperFuncs.Errors import NoHP
 def Battle(adventurer, adventure):
 
     hero = BattleFuncs.Preparing.prepare_hero(adventurer)
-
     monster = BattleFuncs.Preparing.prepare_monster(adventure)
 
-    hero.remember_params()
+    print(monster.key)
 
     try:
         while True:
 
-            # hero
-
             hero.remember_params()
-
-            hero = BattleFuncs.PotionsActions.run_it(hero)
+            print(hero.param_savior)
 
             hero, monster = BattleFuncs.PassiveActions.run_it(hero, monster)
+
+            hero = BattleFuncs.PotionsActions.run_it(hero)
 
             # баффы - проверка
             # выбор атаки - проверка

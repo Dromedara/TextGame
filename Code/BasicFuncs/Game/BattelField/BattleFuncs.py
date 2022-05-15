@@ -11,6 +11,8 @@ from Code.BasicFuncs.Start.GetData.Reset import monster_creator
 import Code.Classes.MainHero.AdventurerLinks as AdventurerLinks
 import Code.Classes.Equipment.ArtefactsService.ArtefactsLinks as ArtefactsLinks
 
+from Code.BasicFuncs.Game.Warehouse.Inventory import Battle
+
 
 class Preparing:
     @staticmethod
@@ -26,19 +28,17 @@ class Preparing:
 
     @staticmethod
     def prepare_armor(hero):
-        if hero.battle_armor['helmet'] is not None:
-            hero = Wearing.get_equipment(hero, hero.battle_armor['helmet'])
-        if hero.battle_armor['bib'] is not None:
-            hero = Wearing.get_equipment(hero, hero.battle_armor['bib'])
-        if hero.battle_armor['pants'] is not None:
-            hero = Wearing.get_equipment(hero, hero.battle_armor['pants'])
+
+        for part in Battle.battle_inventory.curr_armors.keys():
+            if Battle.battle_inventory.curr_armors[part] is not None:
+                hero = Wearing.get_equipment(hero, Battle.battle_inventory.curr_armors[part])
 
         return hero
 
     @staticmethod
     def prepare_artefacts(hero):
-        for key in hero.battle_artefacts.keys():
-            hero = Getting.get_equipment(hero, hero.battle_artefacts[key])
+        for key in Battle.battle_inventory.curr_artefacts.keys():
+            hero = Getting.get_equipment(hero, Battle.battle_inventory.curr_artefacts[key])
         return hero
 
     @staticmethod
@@ -55,7 +55,6 @@ class PotionsActions:
     def run_it(hero):
 
         while True:
-            print(* hero.battle_potions)
 
             choice = input()
 
@@ -73,10 +72,12 @@ class PassiveActions:
     @staticmethod
     def run_it(hero, monster):
 
-        for skill in hero.passive_skills['basic']:
+        print(hero.hero_passive_skills)
+
+        for skill in hero.hero_passive_skills['basic']:
             hero, monster = AdventurerLinks.passive_adventurer_dict[skill](hero, monster)
 
-        for skill in hero.passive_skills['artefacts']:
+        for skill in hero.hero_passive_skills['artefacts']:
             hero, monster = ArtefactsLinks.passive_artefact_dict[skill](hero, monster)
 
         return hero, monster

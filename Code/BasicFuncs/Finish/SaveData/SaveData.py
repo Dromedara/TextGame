@@ -1,8 +1,8 @@
 import pandas as pd
-import COde_1.BasicFuncs.Finish.SaveData.Paths as Paths
-import COde_1.BasicFuncs.Game.Warehouse.Inventory.Artefacts as Artefacts
-import COde_1.BasicFuncs.Game.Warehouse.Inventory.Potions as Potions
-import COde_1.BasicFuncs.Game.Warehouse.Inventory.Armor as Armors
+import Code.BasicFuncs.Finish.SaveData.Paths as Paths
+import Code.BasicFuncs.Game.Warehouse.Inventory.Artefacts as Artefacts
+import Code.BasicFuncs.Game.Warehouse.Inventory.Potions as Potions
+import Code.BasicFuncs.Game.Warehouse.Inventory.Armor as Armors
 
 
 def save_hero(hero):

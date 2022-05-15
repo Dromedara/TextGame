@@ -1,4 +1,4 @@
-from COde_1.Classes.MainHero.AdventurerSubFuncs import AdventurerChecker
+from Code.Classes.MainHero.AdventurerSubFuncs import AdventurerChecker
 
 
 class Adventurer:

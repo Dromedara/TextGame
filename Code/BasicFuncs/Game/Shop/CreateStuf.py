@@ -1,10 +1,10 @@
-import COde_1.Classes.Equipment.ArmorService.ArmorLinks as ArmorLinks
-import COde_1.Classes.Equipment.ArtefactsService.ArtefactsLinks as ArtefactsLinks
-import COde_1.Classes.Equipment.PotionsService.PotionsLinks as PotionsLinks
+import Code.Classes.Equipment.ArmorService.ArmorLinks as ArmorLinks
+import Code.Classes.Equipment.ArtefactsService.ArtefactsLinks as ArtefactsLinks
+import Code.Classes.Equipment.PotionsService.PotionsLinks as PotionsLinks
 
-from COde_1.Classes.Equipment.ArmorService.CreateArmor import ArmorCreator
-from COde_1.Classes.Equipment.PotionsService.CreatePotions import PotionsCreator
-from COde_1.Classes.Equipment.ArtefactsService.CreateArtefact import ArtefactCreator
+from Code.Classes.Equipment.ArmorService.CreateArmor import ArmorCreator
+from Code.Classes.Equipment.PotionsService.CreatePotions import PotionsCreator
+from Code.Classes.Equipment.ArtefactsService.CreateArtefact import ArtefactCreator
 
 
 def start_shop():

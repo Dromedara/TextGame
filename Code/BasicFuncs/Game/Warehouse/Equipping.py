@@ -1,27 +1,10 @@
+import Code.BasicFuncs.Game.Warehouse.BattleInvetory as BattleInvetory
+
+
 class Choose:
 
     @staticmethod
-    def get_out_artefact(slots):
-        print('Get out something?')
-
-        choice = input()
-        if choice == 'armor':
-            ButtleRunner.artefacts_dict[choice] = slots['armor']
-            slots['armor'] = None
-        elif choice == 'sword':
-            ButtleRunner.artefacts_dict[choice] = slots['sword']
-            slots['sword'] = None
-        elif choice == 'amulets':
-            choice = input()
-            ButtleRunner.artefacts_dict[choice] = slots['amulets']
-            slots['amulets'] = 0
-        elif choice == 'nothing':
-            return slots
-
-    @staticmethod
     def choose_artifacts():
-
-        slots = ArtefactsLinks.artefact_battle_slots
 
         print(* ButtleRunner.artefacts_dict)
 

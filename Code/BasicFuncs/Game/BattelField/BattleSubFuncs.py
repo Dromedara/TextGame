@@ -1,4 +1,5 @@
-from COde_1.BasicFuncs.Game.HelperFuncs.Errors import NoHP
+from Code.BasicFuncs.Game.HelperFuncs.Errors import NoHP
+from Code.BasicFuncs.Game.HelperFuncs.Errors import NotPossibleToUse
 
 
 class BattleChecker:
@@ -11,7 +12,7 @@ class BattleChecker:
         if param + val > 0.000000001:
             return param + val
         else:
-            return 0
+            raise NotPossibleToUse
 
     @staticmethod
     def hp_change(param, val):

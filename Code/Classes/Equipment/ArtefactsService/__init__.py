@@ -1,3 +1,3 @@
-from COde_1.Classes.Equipment.ArtefactsService.CreateArtefact import ArtefactCreator
-import COde_1.Classes.Equipment.ArtefactsService.Artefacts as Artefacts
-import COde_1.Classes.Equipment.ArtefactsService.ArtefactsLinks as ArtefactsLinks
+from Code.Classes.Equipment.ArtefactsService.CreateArtefact import ArtefactCreator
+import Code.Classes.Equipment.ArtefactsService.Artefacts as Artefacts
+import Code.Classes.Equipment.ArtefactsService.ArtefactsLinks as ArtefactsLinks

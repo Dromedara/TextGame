@@ -1,4 +1,5 @@
-from COde_1.Classes.Equipment.ArtefactsService.ArtefactsSubFuncs import ArtefactChecker
+from Code.Classes.Equipment.ArtefactsService.ArtefactsSubFuncs import ArtefactChecker
+from Code.BasicFuncs.Game.BattelField.BattleSubFuncs import BattleChecker
 
 
 class Artefact:
@@ -47,7 +48,7 @@ class SimpleSword(Artefact):
     @staticmethod
     def straight_sword_attack(hero, monster):
         monster.hp -= (hero.attack - 0.5 * monster.defence)
-        monster.defence = HelperFunc.ForBattle.battle_params_change(monster.defence, 0.3 * hero.attack)
+        monster.defence = BattleChecker.params_change(monster.defence, 0.3 * hero.attack)
         hero.hp -= 1
         return hero, monster
 
@@ -69,18 +70,18 @@ class CharmedSword(SimpleSword):
     @staticmethod
     def forced_sword_attack(hero, monster):
         monster.hp -= (hero.attack - 0.3 * monster.defence)
-        monster.defence = HelperFunc.ForBattle.battle_params_change(monster.defence, 0.5 * hero.attack)
+        monster.defence = BattleChecker.params_change(monster.defence, 0.5 * hero.attack)
         hero.hp -= 1.2
         return hero, monster
 
     @staticmethod
     def charmed_sword_attack(hero, monster):
         monster.hp -= (hero.attack - 0.2 * monster.defence)
-        monster.defence = HelperFunc.ForBattle.battle_params_change(monster.defence, 0.3 * hero.attack)
+        monster.defence = BattleChecker.params_change(monster.defence, 0.3 * hero.attack)
 
         if hero.mana == 0:
             hero.hp -= 2
-        hero.mana = HelperFunc.ForBattle.battle_params_change(hero.mana, 0.5)
+        hero.mana = BattleChecker.params_change(hero.mana, 0.5)
         return hero, monster
 
 
@@ -126,6 +127,6 @@ class SuperMagicAmulet(SimpleMagicAmulet):
     @staticmethod
     def super_magic_attack(hero, monster):
         monster.hp -= (hero.magic_attack - 0.3 * monster.defence)
-        monster.defence = HelperFunc.ForBattle.battle_params_change(monster.defence, 0.5 * hero.attack)
+        monster.defence = BattleChecker.params_change(monster.defence, 0.5 * hero.magic_attack)
         return hero, monster
 

@@ -1,33 +1,50 @@
-from COde_1.BasicFuncs.Game.BattelField.Prepare.BattleMod import BattleMod
-from COde_1.BasicFuncs.Game.BattelField.Prepare.WearArmor import Wearing
-from COde_1.BasicFuncs.Game.BattelField.Prepare.GetArtefacts import Getting
-from COde_1.BasicFuncs.Game.BattelField.Prepare.DrinkingPotions import Drinking
-import COde_1.BasicFuncs.Game.BattelField.BattleRunner as BattleRunner
-import COde_1.BasicFuncs.Game.BattelField.BattleSubFuncs as BattleSubFuncs
+from Code.BasicFuncs.Game.BattelField.Prepare.BattleMod import BattleMod
+from Code.BasicFuncs.Game.BattelField.Prepare.WearArmor import Wearing
+from Code.BasicFuncs.Game.BattelField.Prepare.GetArtefacts import Getting
+from Code.BasicFuncs.Game.BattelField.Prepare.DrinkingPotions import Drinking
 
-import COde_1.Classes.MainHero.AdventurerLinks as AdventurerLinks
-import COde_1.Classes.Equipment.ArtefactsService.ArtefactsLinks as ArtefactsLinks
+import Code.BasicFuncs.Game.BattelField.BattleRunner as BattleRunner
+import Code.BasicFuncs.Game.BattelField.BattleSubFuncs as BattleSubFuncs
+
+from Code.BasicFuncs.Start.GetData.Reset import monster_creator
+
+import Code.Classes.MainHero.AdventurerLinks as AdventurerLinks
+import Code.Classes.Equipment.ArtefactsService.ArtefactsLinks as ArtefactsLinks
 
 
-class Prepearing:
+class Preparing:
     @staticmethod
     def prepare_hero(adventurer):
 
         hero = BattleMod(adventurer)
 
-        if BattleRunner.curr_artefacts['armor'] is not None:
-            hero = Wearing.get_equipment(hero, BattleRunner.curr_artefacts['armor'])
-        if BattleRunner.curr_artefacts['sword'] is not None:
-            hero = Wearing.get_equipment(hero, BattleRunner.curr_artefacts['sword'])
-        for amulet in BattleRunner.curr_artefacts['amulets']:
-            hero = Wearing.get_equipment(hero, amulet)
+        hero = Preparing.prepare_armor(hero)
 
+        hero = Preparing.prepare_artefacts(hero)
+
+        return hero
+
+    @staticmethod
+    def prepare_armor(hero):
+        if hero.battle_armor['helmet'] is not None:
+            hero = Wearing.get_equipment(hero, hero.battle_armor['helmet'])
+        if hero.battle_armor['bib'] is not None:
+            hero = Wearing.get_equipment(hero, hero.battle_armor['bib'])
+        if hero.battle_armor['pants'] is not None:
+            hero = Wearing.get_equipment(hero, hero.battle_armor['pants'])
+
+        return hero
+
+    @staticmethod
+    def prepare_artefacts(hero):
+        for key in hero.battle_artefacts.keys():
+            hero = Getting.get_equipment(hero, hero.battle_artefacts[key])
         return hero
 
     @staticmethod
     def prepare_monster(adventure_name, serial_num=1):
 
-        monster = GetData.monster(adventure_name=adventure_name, serial_num=serial_num)
+        monster = monster_creator(adventure_name=adventure_name, serial_num=serial_num)
 
         return monster
 
@@ -35,26 +52,16 @@ class Prepearing:
 class PotionsActions:
 
     @staticmethod
-    def choose_it():
-        choice = input()
-        if choice == 'nothing':
-            return None
-        return choice
-
-    @staticmethod
-    def delete_it(choice):
-        BattleRunner.curr_potions[choice].pop()
-
-    @staticmethod
     def run_it(hero):
 
         while True:
-            BattleSubFuncs.Show.show_potions()
-            choice = PotionsActions.choose_it()
+            print(* hero.battle_potions)
+
+            choice = input()
+
             if choice is None:
                 break
             hero = Drinking.drink_potion(hero, choice)
-            PotionsActions.delete_it(choice)
 
         print(hero)
 

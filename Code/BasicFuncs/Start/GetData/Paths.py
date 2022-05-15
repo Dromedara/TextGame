@@ -6,5 +6,6 @@ paths = {
     'artefacts': '../Data/Artefacts/artefacts.csv',
     'potions': '../Data/Potions/potions.csv',
     'armor_first_activation': '../Data/Armor/basic_armor.csv',
-    'armor': '../Data/Armor/armor.csv'
+    'armor': '../Data/Armor/armor.csv',
+    'monster': '../Data/Monsters/monsters.csv'
 }

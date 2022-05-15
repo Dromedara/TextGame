@@ -1,4 +1,4 @@
-import COde_1.Classes.Equipment.ArmorService.Armor as Armor
+import Code.Classes.Equipment.ArmorService.Armor as Armor
 
 helmet_list = ['simple_helmet', 'super_helmet']
 bib_list = ['simple_bib', 'charmed_bib']

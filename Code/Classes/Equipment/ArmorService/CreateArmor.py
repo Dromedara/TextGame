@@ -1,4 +1,4 @@
-import COde_1.Classes.Equipment.ArmorService.ArmorLinks as ArmorLinks
+import Code.Classes.Equipment.ArmorService.ArmorLinks as ArmorLinks
 
 
 class ArmorCreator:

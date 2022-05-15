@@ -1,4 +1,4 @@
-import MonsterLinks
+from Code.Classes.Monster import MonsterLinks
 
 
 class Creator:

@@ -1,5 +1,5 @@
-from COde_1.BasicFuncs.Start.RecreateEverything import RecreateAdventurer
-from COde_1.BasicFuncs.Start.RecreateEverything import RecreateEquipment
+from Code.BasicFuncs.Start.RecreateEverything import RecreateAdventurer
+from Code.BasicFuncs.Start.RecreateEverything import RecreateEquipment
 
 
 def start_it():

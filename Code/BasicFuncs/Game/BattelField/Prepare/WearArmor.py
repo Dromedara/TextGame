@@ -1,4 +1,5 @@
-from COde_1.BasicFuncs.Game.BattelField.BattleSubFuncs import BattleChecker
+from Code.BasicFuncs.Game.BattelField.BattleSubFuncs import BattleChecker
+from Code.BasicFuncs.Game.HelperFuncs.Errors import NotPossibleToUse
 
 
 class Wearing:
@@ -8,18 +9,24 @@ class Wearing:
 
     @staticmethod
     def get_equipment(hero, equipment):
-        hero.attack = BattleChecker.params_change(hero.attack, equipment.attack)
+        old_hero = hero
 
-        hero.defence = BattleChecker.params_change(hero.defence, equipment.defence)
+        try:
+            hero.attack = BattleChecker.params_change(hero.attack, equipment.attack)
 
-        hero.hp = BattleChecker.hp_change(hero.hp, equipment.hp)
+            hero.defence = BattleChecker.params_change(hero.defence, equipment.defence)
 
-        hero.mana = BattleChecker.params_change(hero.mana, equipment.mana)
+            hero.hp = BattleChecker.hp_change(hero.hp, equipment.hp)
 
-        hero.magic_attack = BattleChecker.params_change(hero.magic_attack, equipment.magic_attack)
+            hero.mana = BattleChecker.params_change(hero.mana, equipment.mana)
 
-        hero.hero_active_skills['artefacts'].extend(equipment.active_skills)
+            hero.magic_attack = BattleChecker.params_change(hero.magic_attack, equipment.magic_attack)
 
-        hero.hero_passive_skills['artefacts'].extend(equipment.passive_skills)
+            hero.hero_active_skills['artefacts'].extend(equipment.active_skills)
 
-        return hero
+            hero.hero_passive_skills['artefacts'].extend(equipment.passive_skills)
+
+            return hero
+
+        except NotPossibleToUse:
+            return old_hero

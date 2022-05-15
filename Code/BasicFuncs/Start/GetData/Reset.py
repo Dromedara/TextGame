@@ -1,15 +1,15 @@
 import pandas as pd
 
-from COde_1.Classes.MainHero.AdventurerRunner import Adventurer
-from COde_1.Classes.Equipment.ArtefactsService.CreateArtefact import ArtefactCreator
-from COde_1.Classes.Equipment.PotionsService.CreatePotions import PotionsCreator
-from COde_1.Classes.Equipment.ArmorService.CreateArmor import ArmorCreator
-import COde_1.Classes.Equipment.ArmorService.ArmorLinks as ArmorLinks
+from Code.Classes.MainHero.AdventurerRunner import Adventurer
+from Code.Classes.Equipment.ArtefactsService.CreateArtefact import ArtefactCreator
+from Code.Classes.Equipment.PotionsService.CreatePotions import PotionsCreator
+from Code.Classes.Equipment.ArmorService.CreateArmor import ArmorCreator
+import Code.Classes.Equipment.ArmorService.ArmorLinks as ArmorLinks
 
-from COde_1.BasicFuncs.Game.Warehouse.InventorySubFuncs import InventoryChecker
-from COde_1.BasicFuncs.Game.Warehouse.Inventory.Armor import ArmorInventory
+from Code.BasicFuncs.Game.Warehouse.InventorySubFuncs import InventoryChecker
 
-import COde_1.BasicFuncs.Start.GetData.Paths as Paths
+import Code.BasicFuncs.Start.GetData.Paths as Paths
+from Code.Classes.Monster import CreateMonster
 
 
 def adventurer_creator(first_activation=True):
@@ -116,3 +116,11 @@ def armors_creator(first_activation=True):
             armor['pants'][armor_part.id] = armor_part
 
     return armor
+
+
+def monster_creator(adventure_name, serial_num):
+    df = pd.read_csv(Paths.paths['monster'])
+    for i in range(len(df)):
+        if df.iloc[i]['adventure'] == adventure_name and df.iloc[i]['serial_number'] == serial_num:
+            monster = CreateMonster.Creator.create_monster(key=df.iloc[i]['name'], lvl=df.iloc[i]['lvl'])
+            return monster

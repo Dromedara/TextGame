@@ -1,4 +1,4 @@
-import COde_1.Classes.Equipment.PotionsService.PotionsLinks as PotionsLinks
+import Code.Classes.Equipment.PotionsService.PotionsLinks as PotionsLinks
 
 
 class PotionsCreator:

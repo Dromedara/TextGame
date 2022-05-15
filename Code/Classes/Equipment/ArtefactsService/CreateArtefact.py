@@ -1,4 +1,4 @@
-import COde_1.Classes.Equipment.ArtefactsService.ArtefactsLinks as ArtefactsLinks
+import Code.Classes.Equipment.ArtefactsService.ArtefactsLinks as ArtefactsLinks
 
 
 class ArtefactCreator:

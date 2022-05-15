@@ -1,4 +1,4 @@
-from COde_1.BasicFuncs.Game.BattelField.BattleSubFuncs import BattleChecker
+from Code.BasicFuncs.Game.BattelField.BattleSubFuncs import BattleChecker
 
 
 class BattleMod:
@@ -16,6 +16,8 @@ class BattleMod:
     param_savior: {}
 
     battle_armor: {}
+    battle_artefacts: {}
+    battle_potions: {}
 
     def __init__(self, adventurer):
         self.attack = (adventurer.power + adventurer.speed) * adventurer.attack_coeff
@@ -50,6 +52,10 @@ class BattleMod:
             'bib': None,
             'pants': None
         }
+
+        self.battle_artefacts = {}
+
+        self.battle_potions = {}
 
     def remember_params(self):
         self.param_savior['attack'].append(self.attack)

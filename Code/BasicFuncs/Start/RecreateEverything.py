@@ -1,7 +1,7 @@
-from COde_1.BasicFuncs.Game.Warehouse.Inventory.Armor import ArmorInventory
-from COde_1.BasicFuncs.Game.Warehouse.Inventory.Artefacts import ArtefactsInventory
-from COde_1.BasicFuncs.Game.Warehouse.Inventory.Potions import PotionsInventory
-from COde_1.BasicFuncs.Start.GetData import Reset
+from Code.BasicFuncs.Game.Warehouse.Inventory.Armor import ArmorInventory
+from Code.BasicFuncs.Game.Warehouse.Inventory.Artefacts import ArtefactsInventory
+from Code.BasicFuncs.Game.Warehouse.Inventory.Potions import PotionsInventory
+from Code.BasicFuncs.Start.GetData import Reset
 
 
 class RecreateAdventurer:

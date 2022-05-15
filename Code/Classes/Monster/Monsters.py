@@ -1,5 +1,5 @@
 import random
-from COde_1.BasicFuncs.Game.BattelField.BattleSubFuncs import BattleChecker
+from Code.BasicFuncs.Game.BattelField.BattleSubFuncs import BattleChecker
 
 
 class Monster:

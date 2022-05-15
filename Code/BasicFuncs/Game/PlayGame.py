@@ -1,4 +1,4 @@
-from COde_1.BasicFuncs.Game.Shop.Buying import buy_smth
+from Code.BasicFuncs.Game.Shop.Buying import buy_smth
 
 
 def play_it(hero):

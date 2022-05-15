@@ -1,4 +1,4 @@
-from COde_1.Classes.Equipment.ArmorService.ArmorsSubFunc import ArmorChecker
+from Code.Classes.Equipment.ArmorService.ArmorsSubFunc import ArmorChecker
 
 
 class ArmorPart:

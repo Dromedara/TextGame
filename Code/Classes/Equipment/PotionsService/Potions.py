@@ -1,4 +1,4 @@
-from COde_1.Classes.Equipment.PotionsService.PotionsSubFuncs import PotionsChecker
+from Code.Classes.Equipment.PotionsService.PotionsSubFuncs import PotionsChecker
 
 
 class Potion:

@@ -1,13 +1,12 @@
-import COde_1.Locations.Battle.BattleFuncs as BattleFuncs
-import COde_1.Locations.Battle.BattleSubFuncs as BattleSubFuncs
-from COde_1.Subfunctions.Errors import NoHP
+from Code.BasicFuncs.Game.BattelField import BattleFuncs
+from Code.BasicFuncs.Game.HelperFuncs.Errors import NoHP
 
 
 def Battle(adventurer, adventure):
 
-    hero = BattleFuncs.Prepearing.prepare_hero(adventurer)
+    hero = BattleFuncs.Preparing.prepare_hero(adventurer)
 
-    monster = BattleFuncs.Prepearing.prepare_monster(adventure)
+    monster = BattleFuncs.Preparing.prepare_monster(adventure)
 
     hero.remember_params()
 

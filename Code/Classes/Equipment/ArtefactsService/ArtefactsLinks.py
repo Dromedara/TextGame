@@ -1,4 +1,4 @@
-import COde_1.Classes.Equipment.ArtefactsService.Artefacts as Artefacts
+import Code.Classes.Equipment.ArtefactsService.Artefacts as Artefacts
 
 
 artefacts_list = ['simple_amulet', 'super_amulet', 'simple_sword', 'charmed_sword']

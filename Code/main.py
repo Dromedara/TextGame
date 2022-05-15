@@ -1,6 +1,6 @@
-import COde_1.BasicFuncs.Start.StartGame as StartGame
-import COde_1.BasicFuncs.Game.PlayGame as PlayGame
-import COde_1.BasicFuncs.Finish.FinishGame as FinishGame
+import Code.BasicFuncs.Start.StartGame as StartGame
+import Code.BasicFuncs.Game.PlayGame as PlayGame
+import Code.BasicFuncs.Finish.FinishGame as FinishGame
 
 
 def main():

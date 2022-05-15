@@ -1,4 +1,5 @@
-from COde_1.BasicFuncs.Game.BattelField.BattleSubFuncs import BattleChecker
+from Code.BasicFuncs.Game.BattelField.BattleSubFuncs import BattleChecker
+from Code.BasicFuncs.Game.HelperFuncs.Errors import NotPossibleToUse
 
 
 class Drinking:
@@ -9,17 +10,24 @@ class Drinking:
     @staticmethod
     def drink_potion(hero, potion):
 
-        hero.attack = BattleChecker.params_change(hero.attack, potion.attack)
+        old_hero = hero
+        try:
 
-        hero.defence = BattleChecker.params_change(hero.defence, potion.defence)
+            hero.attack = BattleChecker.params_change(hero.attack, potion.attack)
 
-        hero.hp = BattleChecker.hp_change(hero.hp, potion.hp)
+            hero.defence = BattleChecker.params_change(hero.defence, potion.defence)
 
-        hero.mana = BattleChecker.params_change(hero.mana, potion.mana)
+            hero.hp = BattleChecker.hp_change(hero.hp, potion.hp)
 
-        hero.magic_attack = BattleChecker.params_change(hero.magic_attack, potion.magic_attack)
+            hero.mana = BattleChecker.params_change(hero.mana, potion.mana)
 
-        hero.tiks = BattleChecker.tiks_add(hero.tiks, potion.key)
-        hero.tiks[potion.key] = potion.tik
+            hero.magic_attack = BattleChecker.params_change(hero.magic_attack, potion.magic_attack)
 
-        return hero
+            hero.tiks = BattleChecker.tiks_add(hero.tiks, potion.key)
+
+            hero.tiks[potion.key] = potion.tik
+
+            return hero
+
+        except NotPossibleToUse:
+            return old_hero

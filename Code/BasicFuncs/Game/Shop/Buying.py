@@ -1,8 +1,8 @@
-from COde_1.BasicFuncs.Game.Shop.ShopSubFuncs import ShopChecker
-from COde_1.BasicFuncs.Game.Warehouse.Inventory.Armor import ArmorInventory
-from COde_1.BasicFuncs.Game.Warehouse.Inventory.Potions import PotionsInventory
-from COde_1.BasicFuncs.Game.Warehouse.Inventory.Artefacts import ArtefactsInventory
-import COde_1.BasicFuncs.Game.Shop.CreateStuf as CreateStuff
+from Code.BasicFuncs.Game.Shop.ShopSubFuncs import ShopChecker
+from Code.BasicFuncs.Game.Warehouse.Inventory.Armor import ArmorInventory
+from Code.BasicFuncs.Game.Warehouse.Inventory.Potions import PotionsInventory
+from Code.BasicFuncs.Game.Warehouse.Inventory.Artefacts import ArtefactsInventory
+import Code.BasicFuncs.Game.Shop.CreateStuf as CreateStuff
 
 
 def buy_smth(hero):

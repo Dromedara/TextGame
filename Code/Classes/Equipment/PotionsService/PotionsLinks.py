@@ -12,4 +12,3 @@ potions_creator = {
             'protecting_potion': Potions.ProtectingPotion
         }
 
-id_counter = 0

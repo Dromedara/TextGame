@@ -6,4 +6,6 @@ def finish_it(hero):
     print(hero.lvl)
     SaveData.save_hero(hero=hero)
     SaveData.save_artefacts()
+    SaveData.save_armors()
     SaveData.save_potions()
+    SaveData.save_id()

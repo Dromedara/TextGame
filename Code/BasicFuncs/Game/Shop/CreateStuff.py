@@ -8,6 +8,7 @@ from Code.Classes.Equipment.ArtefactsService.CreateArtefact import ArtefactCreat
 
 
 def start_shop():
+
     selling_artefacts = {}
     for artefact in ArtefactsLinks.artefacts_list:
         a = ArtefactCreator.create_artefact(key=artefact)
@@ -18,59 +19,38 @@ def start_shop():
         p = PotionsCreator.create_potion(key=potion)
         selling_potions[p.id] = p
 
-    selling_armors = {
-        'helmet': {},
-        'bib': {},
-        'pants': {}
-    }
+    selling_armors = {}
+    for key in ArmorLinks.parts_dict.keys():
+        selling_armors[key] = {}
 
-    for helmet in ArmorLinks.helmet_list:
-        h = ArmorCreator.create_armor(key=helmet)
-        selling_armors['helmet'][h.id] = h
-
-    for bib in ArmorLinks.bib_list:
-        b = ArmorCreator.create_armor(key=bib)
-        selling_armors['bib'][b.id] = b
-
-    for pant in ArmorLinks.pants_list:
-        p = ArmorCreator.create_armor(key=pant)
-        selling_armors['pants'][p.id] = p
+    for part in ArmorLinks.parts_dict.keys():
+        for key in ArmorLinks.parts_dict[part]:
+            a = ArmorCreator.create_armor(key=key)
+            selling_armors[part][a.id] = a
 
     return selling_artefacts, selling_armors, selling_potions
 
 
-def armor_shop(selling_armors):
+def armor_shop(keyword, part, selling_armors):
 
-    print(selling_armors)
-
-    for key in selling_armors['helmet'].keys():
-        if selling_armors['helmet'][key] is None:
-            selling_armors['helmet'][key] = ArmorLinks.creator_dict[key]()
-
-    for key in selling_armors['bib'].keys():
-        if selling_armors['bib'][key] is None:
-            selling_armors['bib'][key] = ArmorLinks.creator_dict[key]()
-
-    for key in selling_armors['pants'].keys():
-        if selling_armors['pants'][key] is None:
-            selling_armors['pants'][key] = ArmorLinks.creator_dict[key]()
+    a = ArmorCreator.create_armor(key=keyword)
+    selling_armors[part][a.id] = a
 
     return selling_armors
 
 
-def artefacts_shop(selling_artefacts):
+def artefacts_shop(keyword, selling_artefacts):
 
-    for key in selling_artefacts.keys():
-        if selling_artefacts[key] is None:
-            selling_artefacts[key] = ArtefactsLinks.creator_dict[key]()
+    a = ArtefactCreator.create_artefact(key=keyword)
+
+    selling_artefacts[a.id] = a
 
     return selling_artefacts
 
 
-def potions_shop(selling_potions):
+def potions_shop(keyword, selling_potions):
 
-    for key in selling_potions.keys():
-        if selling_potions[key] is None:
-            selling_potions[key] = PotionsLinks.potions_creator[key]()
+    p = PotionsCreator.create_potion(key=keyword)
+    selling_potions[p.id] = p
 
     return selling_potions

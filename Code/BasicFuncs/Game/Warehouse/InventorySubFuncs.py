@@ -1,7 +1,7 @@
 class InventoryChecker:
 
     @staticmethod
-    def add_potion(potions, potion_name):
-        if potions.get(potion_name) is None:
-            potions[potion_name] = []
-        return potions
+    def add(obj_dict, obj):
+        if obj_dict.get(obj) is None:
+            obj_dict[obj] = []
+        return obj_dict

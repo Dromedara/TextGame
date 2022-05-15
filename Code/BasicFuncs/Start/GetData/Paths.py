@@ -7,5 +7,6 @@ paths = {
     'potions': '../Data/Potions/potions.csv',
     'armor_first_activation': '../Data/Armor/basic_armor.csv',
     'armor': '../Data/Armor/armor.csv',
+    'id': '../Data/Hero/id.csv',
     'monster': '../Data/Monsters/monsters.csv'
 }

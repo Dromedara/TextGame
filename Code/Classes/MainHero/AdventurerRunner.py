@@ -15,7 +15,7 @@ class Adventurer:
     wisdom: float
     intellect: float
     stamina: float
-    free: float
+    free: int
 
     attack_coeff: float
     defence_coeff: float
@@ -29,7 +29,7 @@ class Adventurer:
                  _name: str = '?',
                  lvl: int = 1, exp: int = 0, lvl_ch_ed: int = 5, rise_coeff: float = 2,
                  gold: int = 10,
-                 power: int = 1, speed: int = 1, wisdom: int = 1, intellect: int = 1, stamina: int = 1,
+                 power: float = 1, speed: float = 1, wisdom: float = 1, intellect: float = 1, stamina: float = 1,
                  free: int = 0,
                  attack_coeff: float = 1.5, defence_coeff: float = 1.5, hp_coeff: float = 1.5, mana_coeff: float = 1.5):
 

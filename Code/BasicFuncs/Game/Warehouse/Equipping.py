@@ -1,4 +1,4 @@
-import Code.BasicFuncs.Game.Warehouse.BattleInvetory as BattleInventory
+import Code.BasicFuncs.Game.Warehouse.Inventory.Battle as BattleInventory
 
 
 class Choose:
@@ -6,7 +6,7 @@ class Choose:
     @staticmethod
     def choose_artifacts():
 
-        print(* BattleInventory.curr_artefact)
+        print(* )
 
         while True:
             for key in ButtleRunner.artefacts_dict.keys():

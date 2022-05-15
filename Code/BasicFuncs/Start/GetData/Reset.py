@@ -5,8 +5,8 @@ from Code.Classes.Equipment.ArtefactsService.CreateArtefact import ArtefactCreat
 from Code.Classes.Equipment.PotionsService.CreatePotions import PotionsCreator
 from Code.Classes.Equipment.ArmorService.CreateArmor import ArmorCreator
 import Code.Classes.Equipment.ArmorService.ArmorLinks as ArmorLinks
-
 from Code.BasicFuncs.Game.Warehouse.InventorySubFuncs import InventoryChecker
+import Code.Classes.Equipment.IDCounter as ID
 
 import Code.BasicFuncs.Start.GetData.Paths as Paths
 from Code.Classes.Monster import CreateMonster
@@ -22,14 +22,14 @@ def adventurer_creator(first_activation=True):
                       lvl=int(df.iloc[0]['lvl']),
                       gold=int(df.iloc[0]['gold']),
                       exp=int(df.iloc[0]['exp']),
-                      lvl_ch_ed=float(df.iloc[0]['lvl_ch_edge']),
+                      lvl_ch_ed=int(df.iloc[0]['lvl_ch_edge']),
                       rise_coeff=float(df.iloc[0]['rise_coeff']),
                       power=float(df.iloc[0]['power']),
                       speed=float(df.iloc[0]['speed']),
                       wisdom=float(df.iloc[0]['wisdom']),
                       intellect=float(df.iloc[0]['intellect']),
                       stamina=float(df.iloc[0]['stamina']),
-                      free=float(df.iloc[0]['free']),
+                      free=int(df.iloc[0]['free']),
                       attack_coeff=float(df.iloc[0]['attack_coeff']),
                       defence_coeff=float(df.iloc[0]['defence_coeff']),
                       hp_coeff=float(df.iloc[0]['hp_coeff']),
@@ -80,7 +80,7 @@ def potions_creator(first_activation=True):
                                                   hp=float(df.iloc[i]['hp']),
                                                   mana=float(df.iloc[i]['mana']),
                                                   magic_attack=float(df.iloc[i]['magic_attack']))
-            potions = InventoryChecker.add_potion(potions, df.iloc[i]['key'])
+            potions = InventoryChecker.add(potions, df.iloc[i]['key'])
             potions[df.iloc[i]['key']].append(potion)
 
     return potions
@@ -92,11 +92,9 @@ def armors_creator(first_activation=True):
     else:
         df = pd.read_csv(Paths.paths['armor'], index_col=0)
 
-    armor = {
-            'helmet': {},
-            'bib': {},
-            'pants': {}
-        }
+    armor = {}
+    for key in ArmorLinks.parts_dict.keys():
+        armor[key] = {}
 
     for i in range(len(df)):
         armor_part = ArmorCreator.create_armor(key=df.iloc[i]['key'],
@@ -108,12 +106,9 @@ def armors_creator(first_activation=True):
                                                mana=float(df.iloc[i]['mana']),
                                                magic_attack=float(df.iloc[i]['magic_attack']))
 
-        if armor_part.key in ArmorLinks.helmet_list:
-            armor['helmet'][armor_part.id] = armor_part
-        if armor_part.key in ArmorLinks.bib_list:
-            armor['bib'][armor_part.id] = armor_part
-        if armor_part.key in ArmorLinks.pants_list:
-            armor['pants'][armor_part.id] = armor_part
+        for part in ArmorLinks.parts_dict.keys():
+            if armor_part.key in ArmorLinks.parts_dict[part]:
+                armor[part][armor_part.id] = armor_part
 
     return armor
 
@@ -124,3 +119,10 @@ def monster_creator(adventure_name, serial_num):
         if df.iloc[i]['adventure'] == adventure_name and df.iloc[i]['serial_number'] == serial_num:
             monster = CreateMonster.Creator.create_monster(key=df.iloc[i]['name'], lvl=df.iloc[i]['lvl'])
             return monster
+
+
+def id_creator(first_activation):
+    if not first_activation:
+        df = pd.read_csv(Paths.paths['id'])
+        ID.id_creator.id = int(df.iloc[0]['count'])
+

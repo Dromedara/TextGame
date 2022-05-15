@@ -1,4 +1,4 @@
-import Code.BasicFuncs.Finish.SaveData.SaveData as SaveData
+import Code.BasicFuncs.DataOperations.SaveData as SaveData
 
 
 def finish_it(hero):

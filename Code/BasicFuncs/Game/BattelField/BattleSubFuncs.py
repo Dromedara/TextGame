@@ -1,6 +1,7 @@
 from Code.BasicFuncs.Game.HelperFuncs.Errors import NoHP
+from Code.BasicFuncs.Game.HelperFuncs.Errors import MonsterDied
 from Code.BasicFuncs.Game.HelperFuncs.Errors import NotPossibleToUse
-
+import Code.BasicFuncs.DataOperations.SaveData as SaveData
 
 class BattleChecker:
 
@@ -23,11 +24,10 @@ class BattleChecker:
 
     @staticmethod
     def check_hp(hero, monster):
-        if hero.hp <= 0:
+        if monster.hp <= 0.0000000001:
+            raise MonsterDied
+        if hero.hp <= 0.0000000001:
             raise NoHP
-        if monster.hp <= 0:
-            return True
-        return False
 
     @staticmethod
     def tiks_add(tiks, key):
@@ -52,7 +52,11 @@ class Show:
             f"hp: {hero.hp},\nattack: {hero.attack},\ndefence: {hero.defence},\nmana: {hero.mana},\nmagic attack: {hero.magic_attack}\n")
 
 
-class End:
+class Saver:
+
     @staticmethod
-    def end_it():
-        pass
+    def save_changed_data(hero):
+        SaveData.save_hero(hero=hero)
+        SaveData.save_artefacts()
+        SaveData.save_armors()
+        SaveData.save_potions()

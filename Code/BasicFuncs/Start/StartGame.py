@@ -1,8 +1,6 @@
 from Code.BasicFuncs.Start.RecreateEverything import RecreateAdventurer
 from Code.BasicFuncs.Start.RecreateEverything import RecreateEquipment
-from Code.BasicFuncs.Start.GetData.Reset import adventure_creator
-
-import Code.Classes.Equipment.IDCounter as ID
+from Code.BasicFuncs.DataOperations.GetData import adventure_creator
 
 
 def start_it(first_activation=True):
@@ -10,7 +8,5 @@ def start_it(first_activation=True):
     RecreateEquipment.get_equip(first_activation=first_activation)
 
     adventure_creator()
-    
-    print(ID.id_creator.id)
 
     return hero

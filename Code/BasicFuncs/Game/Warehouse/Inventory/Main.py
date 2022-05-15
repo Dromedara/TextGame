@@ -1,5 +1,6 @@
 from Code.BasicFuncs.Game.Warehouse.InventorySubFuncs import InventoryChecker
 import Code.Classes.Equipment.ArmorService.ArmorLinks as ArmorLinks
+from Code.BasicFuncs.Game.Warehouse.Inventory import Battle
 
 
 class MainInventory:
@@ -9,11 +10,8 @@ class MainInventory:
     armor_dict: {}
 
     def __init__(self):
-
         self.artefacts_dict = {}
-
         self.potions_dict = {}
-
         self.armor_dict = {}
         for key in ArmorLinks.parts_dict.keys():
             self.armor_dict[key] = {}
@@ -26,6 +24,10 @@ class MainInventory:
 
     def add_potion(self, potion):
         self.potions_dict[potion.id] = potion
+
+    def del_potions_done(self):
+        for key in Battle.done_potions:
+            del self.potions_dict[key]
 
 
 main_inventory = MainInventory()

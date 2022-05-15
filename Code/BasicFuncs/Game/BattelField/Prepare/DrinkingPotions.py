@@ -11,6 +11,7 @@ class Drinking:
     def drink_potion(hero, potion):
 
         old_hero = hero
+
         try:
 
             hero.attack = BattleChecker.params_change(hero.attack, potion.attack)

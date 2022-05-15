@@ -12,6 +12,14 @@ class NoHP(GameExceptions):
         super().__init__(self.message)
 
 
+class MonsterDied(GameExceptions):
+    message: str
+
+    def __init__(self, message='Monster died!'):
+        self.message = message
+        super().__init__(self.message)
+
+
 class NotPossibleToUse(GameExceptions):
 
     message: str

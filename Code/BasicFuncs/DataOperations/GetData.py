@@ -5,10 +5,9 @@ from Code.Classes.Equipment.ArtefactsService.CreateArtefact import ArtefactCreat
 from Code.Classes.Equipment.PotionsService.CreatePotions import PotionsCreator
 from Code.Classes.Equipment.ArmorService.CreateArmor import ArmorCreator
 import Code.Classes.Equipment.ArmorService.ArmorLinks as ArmorLinks
-from Code.BasicFuncs.Game.Warehouse.InventorySubFuncs import InventoryChecker
 import Code.Classes.Equipment.IDCounter as ID
 
-import Code.BasicFuncs.Start.GetData.Paths as Paths
+import Code.BasicFuncs.DataOperations.Paths as Paths
 from Code.Classes.Monster import CreateMonster
 from Code.BasicFuncs.Game.Guild import GuildLinks
 

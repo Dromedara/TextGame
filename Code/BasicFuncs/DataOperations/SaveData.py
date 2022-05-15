@@ -1,5 +1,5 @@
 import pandas as pd
-import Code.BasicFuncs.Finish.SaveData.Paths as Paths
+import Code.BasicFuncs.DataOperations.Paths as Paths
 from Code.BasicFuncs.Game.Warehouse.Inventory.Main import main_inventory
 import Code.Classes.Equipment.IDCounter as ID
 

@@ -50,7 +50,7 @@ class SimpleSword(Artefact):
 
     @staticmethod
     def straight_sword_attack(hero, monster):
-        monster.hp -= (hero.attack - 0.5 * monster.defence)
+        monster.hp -= (hero.attack - 0.3 * monster.defence)
         monster.defence = BattleChecker.params_change(monster.defence, 0.3 * hero.attack)
         hero.hp -= 1
         return hero, monster
@@ -72,7 +72,7 @@ class CharmedSword(SimpleSword):
 
     @staticmethod
     def forced_sword_attack(hero, monster):
-        monster.hp -= (hero.attack - 0.3 * monster.defence)
+        monster.hp -= (hero.attack - 0.1 * monster.defence)
         monster.defence = BattleChecker.params_change(monster.defence, 0.5 * hero.attack)
         hero.hp -= 1.2
         return hero, monster

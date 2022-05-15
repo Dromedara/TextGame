@@ -1,6 +1,9 @@
 import Code.Classes.Equipment.ArmorService.ArmorLinks as ArmorLinks
 
 
+done_potions = []
+
+
 class BattleInventory:
 
     curr_artefacts: {}
@@ -8,6 +11,7 @@ class BattleInventory:
     curr_armors: {}
 
     def __init__(self):
+        self.done = []
         self.curr_artefacts = {}
         self.curr_potions = {}
         self.curr_armors = {}

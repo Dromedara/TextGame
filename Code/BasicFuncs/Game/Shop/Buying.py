@@ -1,4 +1,5 @@
 from Code.BasicFuncs.Game.Shop.ShopSubFuncs import ShopChecker
+from Code.BasicFuncs.Game.Shop.ShopSubFuncs import Saver
 from Code.BasicFuncs.Game.Warehouse.Inventory.Main import main_inventory
 import Code.BasicFuncs.Game.Shop.CreateStuff as CreateStuff
 
@@ -24,12 +25,16 @@ def buy_smth(hero):
 
         if choice == 'artefacts':
             buy_artefact(hero=hero, selling_artefacts=selling_artefacts)
+            Saver.save_changed_data()
 
         elif choice == 'armor':
             buy_armor(hero=hero, selling_armors=selling_armors)
+            Saver.save_changed_data()
 
         elif choice == 'potions':
             buy_potion(hero=hero, selling_potions=selling_potions)
+            Saver.save_changed_data()
+
         else:
             return hero
 

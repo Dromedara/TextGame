@@ -18,7 +18,7 @@ class BattleMod:
     def __init__(self, adventurer):
         self.attack = (adventurer.power + adventurer.speed) * adventurer.attack_coeff
         self.defence = adventurer.stamina * adventurer.defence_coeff
-        self.hp = (adventurer.stamina + adventurer.power) * 10
+        self.hp = (adventurer.stamina + adventurer.power) * 4
         self.mana = (adventurer.wisdom + adventurer.intellect) * adventurer.mana_coeff
         self.magic_attack = (self.mana * self.attack) / 2
 

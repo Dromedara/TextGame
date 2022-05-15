@@ -1,3 +1,6 @@
+import Code.BasicFuncs.DataOperations.SaveData as SaveData
+
+
 class ShopChecker:
     def __init__(self):
         pass
@@ -7,3 +10,12 @@ class ShopChecker:
         if gold - cost < 0:
             return False
         return True
+
+
+class Saver:
+
+    @staticmethod
+    def save_changed_data(hero):
+        SaveData.save_artefacts()
+        SaveData.save_armors()
+        SaveData.save_potions()

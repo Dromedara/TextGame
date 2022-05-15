@@ -31,6 +31,9 @@ class Artefact:
         self.active_skills = []
         self.passive_skills = []
 
+    def buy_it(self):
+        pass
+
 
 class SimpleSword(Artefact):
 

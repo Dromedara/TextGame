@@ -2,48 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91c92e02-5cf8-485d-ae4a-e44f49b02cfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/BattleInvetory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TextGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TextGame.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Finish/FinishGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Finish/FinishGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Finish/SaveData/SaveData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Finish/SaveData/SaveData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/BattleFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/BattleFuncs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/BattleRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/BattleRunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/BattleSubFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/BattleSubFuncs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/Prepare/BattleMod.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/Prepare/BattleMod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/Prepare/DrinkingPotions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/Prepare/DrinkingPotions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/Prepare/GetArtefacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/Prepare/GetArtefacts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/Prepare/WearArmor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/Prepare/WearArmor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/HelperFuncs/Errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/HelperFuncs/Errors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/PlayGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/PlayGame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Shop/Buying.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Shop/Buying.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Shop/CreateStuf.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Shop/CreateStuf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/Equipping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/Equipping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Start/GetData/Paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Start/GetData/Paths.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Start/GetData/Reset.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Start/GetData/Reset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Start/RecreateEverything.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Start/RecreateEverything.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Start/StartGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Start/StartGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/Armor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/Armor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/ArmorLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/ArmorLinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/CreateArmor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/CreateArmor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/Artefacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/Artefacts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/ArtefactsLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/ArtefactsLinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/CreateArtefact.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/CreateArtefact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/CreatePotions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/CreatePotions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/Potions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/Potions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/PotionsLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/PotionsLinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/MainHero/AdventurerLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/MainHero/AdventurerLinks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Classes/MainHero/AdventurerRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/MainHero/AdventurerRunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/MainHero/BasicSkills.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/MainHero/BasicSkills.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Monster/CreateMonster.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Monster/CreateMonster.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Monster/MonsterLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Monster/MonsterLinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Monster/Monsters.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Monster/Monsters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +24,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>

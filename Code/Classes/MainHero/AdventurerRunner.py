@@ -32,6 +32,7 @@ class Adventurer:
                  power: int = 1, speed: int = 1, wisdom: int = 1, intellect: int = 1, stamina: int = 1,
                  free: int = 0,
                  attack_coeff: float = 1.5, defence_coeff: float = 1.5, hp_coeff: float = 1.5, mana_coeff: float = 1.5):
+
         self.name = _name
         self.lvl = lvl
         self.gold = gold

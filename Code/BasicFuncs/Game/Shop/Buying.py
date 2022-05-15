@@ -27,11 +27,11 @@ def buy_smth(hero):
 
             while True:
                 for key in selling_artefacts.keys():
-                    print(f'{selling_artefacts[key].key}: {selling_artefacts[key].cost}')
-                print('stop')
+                    print(f'{selling_artefacts[key].key}: {selling_artefacts[key].id}: {selling_artefacts[key].cost}')
+                print('stop: -1')
 
-                choice = input()
-                if choice == 'stop':
+                choice = int(input())
+                if choice == -1:
                     break
                 elif ShopChecker.possible_to_buy(hero.gold, selling_artefacts[choice].cost):
                     ArtefactsInventory.artefacts_dict[selling_artefacts[choice].id] = selling_artefacts[choice]
@@ -93,8 +93,8 @@ def buy_smth(hero):
 
             while True:
                 for key in selling_potions.keys():
-                    print(f'{selling_potions[key].key}: {selling_potions[key].cost}')
-                print('stop')
+                    print(f'{selling_potions[key].key}, {selling_potions[key].id}: {selling_potions[key].cost}')
+                print('stop -1')
 
                 choice = int(input())
                 if choice == -1:

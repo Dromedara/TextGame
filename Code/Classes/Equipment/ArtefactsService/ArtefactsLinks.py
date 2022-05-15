@@ -24,4 +24,4 @@ creator_dict = {
         'charmed_sword': Artefacts.CharmedSword
 }
 
-id_counter = 0
+id_counter = 4

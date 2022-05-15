@@ -25,9 +25,13 @@ class Adventurer:
     active_skills = []
     passive_skills = []
 
-    def __init__(self, _name='?', lvl=1, gold=10, exp=0, lvl_ch_ed=5, rise_coeff=2, power=1, speed=1, wisdom=1,
-                 intellect=1, stamina=1, free=0, attack_coeff=1.5, defence_coeff=1.5, hp_coeff=1.5, mana_coeff=1.5):
-
+    def __init__(self,
+                 _name: str = '?',
+                 lvl: int = 1, exp: int = 0, lvl_ch_ed: int = 5, rise_coeff: float = 2,
+                 gold: int = 10,
+                 power: int = 1, speed: int = 1, wisdom: int = 1, intellect: int = 1, stamina: int = 1,
+                 free: int = 0,
+                 attack_coeff: float = 1.5, defence_coeff: float = 1.5, hp_coeff: float = 1.5, mana_coeff: float = 1.5):
         self.name = _name
         self.lvl = lvl
         self.gold = gold

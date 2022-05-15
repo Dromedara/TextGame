@@ -108,16 +108,15 @@ def save_potions():
     }
 
     for key in main_inventory.potions_dict.keys():
-        for potion in main_inventory.potions_dict[key]:
-            param_dict['key'].append(potion.key)
-            param_dict['id'].append(potion.id)
-            param_dict['rarity'].append(potion.rarity)
-            param_dict['tik'].append(potion.tik)
-            param_dict['attack'].append(potion.attack)
-            param_dict['defence'].append(potion.defence)
-            param_dict['hp'].append(potion.hp)
-            param_dict['mana'].append(potion.mana)
-            param_dict['magic_attack'].append(potion.magic_attack)
+        param_dict['key'].append(main_inventory.potions_dict[key].key)
+        param_dict['id'].append(main_inventory.potions_dict[key].id)
+        param_dict['rarity'].append(main_inventory.potions_dict[key].rarity)
+        param_dict['tik'].append(main_inventory.potions_dict[key].tik)
+        param_dict['attack'].append(main_inventory.potions_dict[key].attack)
+        param_dict['defence'].append(main_inventory.potions_dict[key].defence)
+        param_dict['hp'].append(main_inventory.potions_dict[key].hp)
+        param_dict['mana'].append(main_inventory.potions_dict[key].mana)
+        param_dict['magic_attack'].append(main_inventory.potions_dict[key].magic_attack)
 
     df = pd.DataFrame(param_dict)
     df.to_csv(Paths.paths['potions'])

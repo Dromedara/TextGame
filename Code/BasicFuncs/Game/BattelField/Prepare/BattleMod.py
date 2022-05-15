@@ -15,10 +15,6 @@ class BattleMod:
     tiks: {}
     param_savior: {}
 
-    battle_armor: {}
-    battle_artefacts: {}
-    battle_potions: {}
-
     def __init__(self, adventurer):
         self.attack = (adventurer.power + adventurer.speed) * adventurer.attack_coeff
         self.defence = adventurer.stamina * adventurer.defence_coeff

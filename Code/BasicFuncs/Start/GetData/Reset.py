@@ -80,8 +80,7 @@ def potions_creator(first_activation=True):
                                                   hp=float(df.iloc[i]['hp']),
                                                   mana=float(df.iloc[i]['mana']),
                                                   magic_attack=float(df.iloc[i]['magic_attack']))
-            potions = InventoryChecker.add(potions, df.iloc[i]['key'])
-            potions[df.iloc[i]['key']].append(potion)
+            potions[df.iloc[i]['id']] = potion
 
     return potions
 

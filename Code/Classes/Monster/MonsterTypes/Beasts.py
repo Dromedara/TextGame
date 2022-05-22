@@ -16,7 +16,7 @@ class WildDog(Beast):
         self.key = 'wild_dog'
         self.lvl = random.randrange(1, 6, 1)
         self.rarity = random.randrange(1, 6, 1)
-        self.attack = random.randrange(3, 6, 1) * self.rarity * (1 + 0.1 * (self.lvl - 1))
+        self.attack = random.randrange(20, 30, 1) * self.rarity * (1 + 0.1 * (self.lvl - 1))
         self.defence = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1))
         self.hp = 10 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.hp_bonus
         self.mana = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1))

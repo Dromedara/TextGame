@@ -6,12 +6,11 @@ def change_block(choice):
     flag = False
 
     for name in GuildLinks.adventures_names:
-
         if flag:
             GuildLinks.adventures_dict[name].blocked = False
             break
 
-        if GuildLinks.adventures_dict[name] == choice:
+        if name == choice:
             flag = True
 
 
@@ -36,7 +35,7 @@ def choose_adventure(adventure):
             print()
 
         choice = input()
-        if choice != -1:
+        if choice != '':
             adventurer, win = Battle(adventure, choice)
             if win:
                 if not GuildLinks.adventures_dict[choice].done:

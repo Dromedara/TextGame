@@ -3,7 +3,7 @@ import Code.BasicFuncs.DataOperations.Paths as Paths
 from Code.BasicFuncs.Game.Warehouse.Inventory.Main import main_inventory
 from Code.BasicFuncs.Game.Warehouse.Inventory.Battle import battle_inventory
 import Code.Classes.Equipment.IDCounter as ID
-
+import Code.BasicFuncs.Game.Guild.GuildLinks as GuildLinks
 
 def save_hero(hero):
 
@@ -207,3 +207,25 @@ def save_battle_potions():
 
     df = pd.DataFrame(param_dict)
     df.to_csv(Paths.paths['battle_potions'])
+
+
+def save_adventures():
+    param_dict = {
+        'name': [],
+        'gold_award': [],
+        'exp_award': [],
+        'description': [],
+        'done': [],
+        'blocked': []
+    }
+
+    for name in GuildLinks.adventures_names:
+        param_dict['name'].append(GuildLinks.adventures_dict[name].key)
+        param_dict['gold_award'].append(GuildLinks.adventures_dict[name].gold)
+        param_dict['exp_award'].append(GuildLinks.adventures_dict[name].exp)
+        param_dict['description'].append(GuildLinks.adventures_dict[name].description)
+        param_dict['done'].append(GuildLinks.adventures_dict[name].done)
+        param_dict['blocked'].append(GuildLinks.adventures_dict[name].blocked)
+
+    df = pd.DataFrame(param_dict)
+    df.to_csv(Paths.paths['adventures'])

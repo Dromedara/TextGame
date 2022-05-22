@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91c92e02-5cf8-485d-ae4a-e44f49b02cfd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/DataOperations/GetData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/DataOperations/GetData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/DataOperations/Paths.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/DataOperations/Paths.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/BattleRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/BattleRunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/BattleSubFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/BattleSubFuncs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/EndBattle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/EndBattle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/StartBattle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/StartBattle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/DataOperations/SaveData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/DataOperations/SaveData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Finish/FinishGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Finish/FinishGame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Guild/GuildHall.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Guild/GuildHall.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Guild/GuildLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Guild/GuildLinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Start/StartGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Start/StartGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/AdventureDescription/Adventure.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/AdventureDescription/Adventure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/AdventureDescription/CreateAdventure.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/AdventureDescription/CreateAdventure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/Artefacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/Artefacts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/MainHero/AdventurerRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/MainHero/AdventurerRunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Adventures/adventures.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Adventures/adventures.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Armor/armor.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Armor/armor.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Armor/battle_armor.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Armor/battle_armor.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Artefacts/artefacts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Artefacts/artefacts.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Artefacts/battle_artefacts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Artefacts/battle_artefacts.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Hero/main_hero.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Hero/main_hero.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Potions/battle_potions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Potions/battle_potions.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Potions/potions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Potions/potions.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Monster/MonsterTypes/Beasts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Monster/MonsterTypes/Beasts.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

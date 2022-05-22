@@ -17,7 +17,21 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Data\Armor\battle_armor.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Data\Artefacts\artefacts.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Data\Artefacts\battle_artefacts.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -32,6 +46,13 @@
           </value>
         </entry>
         <entry key="\Data\Hero\hero_first_activation.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Data\Hero\id.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -53,6 +74,13 @@
           </value>
         </entry>
         <entry key="\Data\Monsters\monsters.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Data\Potions\battle_potions.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

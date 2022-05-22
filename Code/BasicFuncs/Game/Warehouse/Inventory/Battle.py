@@ -25,7 +25,7 @@ class BattleInventory:
         self.curr_armors[part_name][armor.id] = armor
 
     def add_potion(self, potion):
-        self.curr_potions[potion.key] = potion
+        self.curr_potions[potion.id] = potion
 
 
 battle_inventory = BattleInventory()

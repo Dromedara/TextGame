@@ -21,7 +21,7 @@ class Skeleton(Undead):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana + self.magic_attack_bonus
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         skeleton_active_skills = []
         skeleton_passive_skills = []
@@ -43,7 +43,7 @@ class Deadman(Undead):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana + self.magic_attack_bonus
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         deadman_active_skills = []
         deadman_passive_skills = []
@@ -65,7 +65,7 @@ class DeathKnight(Undead):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana + self.magic_attack_bonus
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         death_knight_active_skills = []
         death_knight_passive_skills = []
@@ -88,7 +88,7 @@ class Lich(Undead):
                     1 + 0.1 * (self.lvl - 1)) + self.mana + self.magic_attack_bonus
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         lich_active_skills = []
         lich_passive_skills = []  # any spell?
@@ -111,7 +111,7 @@ class FrostWyrm(Undead):
                     1 + 0.1 * (self.lvl - 1)) + self.mana + self.magic_attack_bonus
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         frost_wyrm_active_skills = []
         frost_wyrm_passive_skills = []  # freeze?

@@ -118,6 +118,73 @@ def id_creator(first_activation):
         ID.id_creator.id = int(df.iloc[0]['count'])
 
 
+def battle_artefacts_creator(first_activation=True):
+    artefacts = {}
+
+    if not first_activation:
+        df = pd.read_csv(Paths.paths['battle_artefacts'], index_col=0)
+        for i in range(len(df)):
+            artefact = ArtefactCreator.create_artefact(key=df.iloc[i]['key'],
+                                                       _id=int(df.iloc[i]['id']),
+                                                       rarity=int(df.iloc[i]['rarity']),
+                                                       attack=float(df.iloc[i]['attack']),
+                                                       defence=float(df.iloc[i]['defence']),
+                                                       hp=float(df.iloc[i]['hp']),
+                                                       mana=float(df.iloc[i]['mana']),
+                                                       magic_attack=float(df.iloc[i]['magic_attack']))
+            artefacts[df.iloc[i]['id']] = artefact
+
+    return artefacts
+
+
+def battle_armors_creator(first_activation=True):
+    if first_activation:
+        df = pd.read_csv(Paths.paths['armor_first_activation'], index_col=0)
+    else:
+        df = pd.read_csv(Paths.paths['battle_armor'], index_col=0)
+
+    armor = {}
+    for key in ArmorLinks.parts_dict.keys():
+        armor[key] = None
+
+    for i in range(len(df)):
+        armor_part = ArmorCreator.create_armor(key=df.iloc[i]['key'],
+                                               _id=int(df.iloc[i]['id']),
+                                               rarity=int(df.iloc[i]['rarity']),
+                                               attack=float(df.iloc[i]['attack']),
+                                               defence=float(df.iloc[i]['defence']),
+                                               hp=float(df.iloc[i]['hp']),
+                                               mana=float(df.iloc[i]['mana']),
+                                               magic_attack=float(df.iloc[i]['magic_attack']))
+
+        for part_name in ArmorLinks.parts_dict.keys():
+            if armor_part.key in ArmorLinks.parts_dict[part_name]:
+                armor[part_name] = armor_part
+                break
+
+    return armor
+
+
+def battle_potions_creator(first_activation=True):
+    potions = {}
+
+    if not first_activation:
+        df = pd.read_csv(Paths.paths['battle_potions'], index_col=0)
+        for i in range(len(df)):
+            potion = PotionsCreator.create_potion(key=df.iloc[i]['key'],
+                                                  _id=int(df.iloc[i]['id']),
+                                                  rarity=int(df.iloc[i]['rarity']),
+                                                  tik=int(df.iloc[i]['tik']),
+                                                  attack=float(df.iloc[i]['attack']),
+                                                  defence=float(df.iloc[i]['defence']),
+                                                  hp=float(df.iloc[i]['hp']),
+                                                  mana=float(df.iloc[i]['mana']),
+                                                  magic_attack=float(df.iloc[i]['magic_attack']))
+            potions[df.iloc[i]['id']] = potion
+
+    return potions
+
+
 def monster_creator(adventure_name, serial_num):
     df = pd.read_csv(Paths.paths['monster'])
     for i in range(len(df)):

@@ -36,7 +36,7 @@ class HealingPotion(Potion):
         self.id = _id
         self.rarity = _rarity
         self.cost = 5
-        self.hp += PotionsChecker.check_input_data(hp, self.rarity+1, self.rarity+3)
+        self.hp += PotionsChecker.check_input_data(hp, self.rarity*3, self.rarity*4)
 
 
 class BoostingPotion(Potion):
@@ -47,8 +47,8 @@ class BoostingPotion(Potion):
         self.id = _id
         self.rarity = _rarity
         self.cost = 5
-        self.attack += PotionsChecker.check_input_data(attack, self.rarity+1, self.rarity+3)
-        self.defence += PotionsChecker.check_input_data(defence, self.rarity+1, self.rarity+3)
+        self.attack = PotionsChecker.check_input_data(attack, self.rarity*2, self.rarity*5)
+        self.defence = PotionsChecker.check_input_data(defence, self.rarity, self.rarity*2)
 
 
 class ProtectingPotion(Potion):

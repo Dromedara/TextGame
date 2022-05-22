@@ -1,5 +1,6 @@
 import Code.Classes.Equipment.IDCounter as Id
 from Code.BasicFuncs.Game.Warehouse.Inventory.Main import main_inventory
+from Code.BasicFuncs.Game.Warehouse.Inventory.Battle import battle_inventory
 from Code.BasicFuncs.DataOperations import GetData
 
 
@@ -20,6 +21,9 @@ class RecreateEquipment:
         RecreateEquipment.get_artefacts(first_activation)
         RecreateEquipment.get_potions(first_activation)
         RecreateEquipment.get_id_counter(first_activation)
+        RecreateEquipment.get_battle_armors(first_activation)
+        RecreateEquipment.get_battle_arteacts(first_activation)
+        RecreateEquipment.get_battle_potions(first_activation)
 
     @staticmethod
     def get_artefacts(first_activation=True):
@@ -36,3 +40,15 @@ class RecreateEquipment:
     @staticmethod
     def get_id_counter(first_activation=True):
         Id.id_counter = GetData.id_creator(first_activation=first_activation)
+
+    @staticmethod
+    def get_battle_arteacts(first_activation=True):
+        battle_inventory.curr_artefacts = GetData.battle_artefacts_creator(first_activation=first_activation)
+
+    @staticmethod
+    def get_battle_armors(first_activation=True):
+        battle_inventory.curr_armors = GetData.battle_armors_creator(first_activation=first_activation)
+
+    @staticmethod
+    def get_battle_potions(first_activation=True):
+        battle_inventory.curr_potions = GetData.battle_potions_creator(first_activation=first_activation)

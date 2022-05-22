@@ -75,6 +75,7 @@ class Adventurer:
         self.free += (lvl / 10) + (lvl % 10)
 
     def change_lvl(self):
+        print("NEXT LVL")
         self.exp = self.exp - self.lvl_changing_edge
         self.lvl_changing_edge *= self.rise_coeff
         self.free_change(self.lvl)

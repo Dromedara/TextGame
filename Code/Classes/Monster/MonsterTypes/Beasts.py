@@ -23,7 +23,7 @@ class WildDog(Beast):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         wild_dog_active_skills = ['bite_attack']
         wild_dog_passive_skills = []
@@ -51,7 +51,7 @@ class Wolf(Beast):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         wolf_active_skills = []
         wolf_passive_skills = []
@@ -73,7 +73,7 @@ class Lynx(Beast):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         lynx_active_skills = []
         lynx_passive_skills = []
@@ -95,7 +95,7 @@ class Bear(Beast):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         bear_active_skills = []
         bear_passive_skills = []  # stun?
@@ -117,7 +117,7 @@ class Puma(Beast):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         puma_active_skills = []
         puma_passive_skills = []

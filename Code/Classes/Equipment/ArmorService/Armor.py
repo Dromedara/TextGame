@@ -37,8 +37,8 @@ class SimpleHelmet(ArmorPart):
         self.id = _id
         self.rarity = _rarity
         self.key = 'simple_helmet'
-        self.cost = self.rarity * 5
-        self.defence += ArmorChecker.check_input_data(defence, self.rarity, self.rarity * 2)
+        self.cost = self.rarity*5
+        self.defence += ArmorChecker.check_input_data(defence, self.rarity*3, self.rarity*5)
 
 
 class SuperHelmet(SimpleHelmet):
@@ -60,7 +60,7 @@ class SimpleBib(ArmorPart):
         self.rarity = _rarity
         self.key = 'simple_bib'
         self.cost = self.rarity * 5
-        self.defence += ArmorChecker.check_input_data(defence, self.rarity, self.rarity * 2)
+        self.defence += ArmorChecker.check_input_data(defence, self.rarity*5, self.rarity * 6)
 
 
 class CharmedBib(SimpleBib):
@@ -93,4 +93,4 @@ class SimplePants(ArmorPart):
         self.rarity = _rarity
         self.key = 'simple_pants'
         self.cost = self.rarity * 5
-        self.attack += ArmorChecker.check_input_data(defence, self.rarity, self.rarity * 2)
+        self.attack += ArmorChecker.check_input_data(defence, self.rarity*2, self.rarity * 3)

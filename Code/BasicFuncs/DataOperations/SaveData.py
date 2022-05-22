@@ -1,6 +1,7 @@
 import pandas as pd
 import Code.BasicFuncs.DataOperations.Paths as Paths
 from Code.BasicFuncs.Game.Warehouse.Inventory.Main import main_inventory
+from Code.BasicFuncs.Game.Warehouse.Inventory.Battle import battle_inventory
 import Code.Classes.Equipment.IDCounter as ID
 
 
@@ -123,6 +124,86 @@ def save_potions():
 
 
 def save_id():
-    df = pd.read_csv(Paths.paths['id'])
-    df.iloc[0]['count'] = ID.id_creator.id
+    df = pd.DataFrame({'count': [ID.id_creator.id]})
     df.to_csv(Paths.paths['id'])
+
+
+def save_battle_armors():
+    param_dict = {
+        'key': [],
+        'id': [],
+        'rarity': [],
+        'attack': [],
+        'defence': [],
+        'hp': [],
+        'mana': [],
+        'magic_attack': []
+    }
+
+    for part in battle_inventory.curr_armors.keys():
+        if battle_inventory.curr_armors[part] is not None:
+            param_dict['key'].append(battle_inventory.curr_armors[part].key)
+            param_dict['id'].append(battle_inventory.curr_armors[part].id)
+            param_dict['rarity'].append(battle_inventory.curr_armors[part].rarity)
+            param_dict['attack'].append(battle_inventory.curr_armors[part].attack)
+            param_dict['defence'].append(battle_inventory.curr_armors[part].defence)
+            param_dict['hp'].append(battle_inventory.curr_armors[part].hp)
+            param_dict['mana'].append(battle_inventory.curr_armors[part].mana)
+            param_dict['magic_attack'].append(battle_inventory.curr_armors[part].magic_attack)
+
+    df = pd.DataFrame(param_dict)
+    df.to_csv(Paths.paths['battle_armor'])
+
+
+def save_battle_artefacts():
+    param_dict = {
+        'key': [],
+        'id': [],
+        'rarity': [],
+        'attack': [],
+        'defence': [],
+        'hp': [],
+        'mana': [],
+        'magic_attack': []
+    }
+
+    for key in battle_inventory.curr_artefacts.keys():
+        param_dict['key'].append(battle_inventory.curr_artefacts[key].key)
+        param_dict['id'].append(battle_inventory.curr_artefacts[key].id)
+        param_dict['rarity'].append(battle_inventory.curr_artefacts[key].rarity)
+        param_dict['attack'].append(battle_inventory.curr_artefacts[key].attack)
+        param_dict['defence'].append(battle_inventory.curr_artefacts[key].defence)
+        param_dict['hp'].append(battle_inventory.curr_artefacts[key].hp)
+        param_dict['mana'].append(battle_inventory.curr_artefacts[key].mana)
+        param_dict['magic_attack'].append(battle_inventory.curr_artefacts[key].magic_attack)
+
+    df = pd.DataFrame(param_dict)
+    df.to_csv(Paths.paths['battle_artefacts'])
+
+
+def save_battle_potions():
+    param_dict = {
+        'key': [],
+        'id': [],
+        'rarity': [],
+        'tik': [],
+        'attack': [],
+        'defence': [],
+        'hp': [],
+        'mana': [],
+        'magic_attack': []
+    }
+
+    for key in battle_inventory.curr_potions.keys():
+        param_dict['key'].append(battle_inventory.curr_potions[key].key)
+        param_dict['id'].append(battle_inventory.curr_potions[key].id)
+        param_dict['rarity'].append(battle_inventory.curr_potions[key].rarity)
+        param_dict['tik'].append(battle_inventory.curr_potions[key].tik)
+        param_dict['attack'].append(battle_inventory.curr_potions[key].attack)
+        param_dict['defence'].append(battle_inventory.curr_potions[key].defence)
+        param_dict['hp'].append(battle_inventory.curr_potions[key].hp)
+        param_dict['mana'].append(battle_inventory.curr_potions[key].mana)
+        param_dict['magic_attack'].append(battle_inventory.curr_potions[key].magic_attack)
+
+    df = pd.DataFrame(param_dict)
+    df.to_csv(Paths.paths['battle_potions'])

@@ -22,7 +22,7 @@ class Thief(Human):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         thief_active_skills = []
         thief_passive_skills = []
@@ -44,7 +44,7 @@ class Looter(Human):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         looter_active_skills = []
         looter_passive_skills = []
@@ -66,7 +66,7 @@ class Mercenary(Human):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         mercenary_active_skills = []
         mercenary_passive_skills = []
@@ -88,7 +88,7 @@ class Sorcerer(Human):
         self.magic_attack = random.randrange(10, 21, 1) * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         sorcerer_active_skills = []
         sorcerer_passive_skills = []  # any spell?
@@ -110,7 +110,7 @@ class Bounty_Hunter(Human):
         self.magic_attack = random.randrange(1, 3, 1) * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         bounty_hunter_active_skills = []
         bounty_hunter_passive_skills = []  # Stun?

@@ -12,15 +12,15 @@ class Wearing:
         old_hero = hero
 
         try:
-            hero.attack = BattleChecker.use_changes(hero.attack, -equipment.attack)
+            hero.attack = BattleChecker.use_changes(hero.attack, equipment.attack)
 
-            hero.defence = BattleChecker.use_changes(hero.defence, -equipment.defence)
+            hero.defence = BattleChecker.use_changes(hero.defence, equipment.defence)
 
-            hero.hp = BattleChecker.hp_change(hero.hp, -equipment.hp)
+            hero.hp = BattleChecker.hp_change(hero.hp, equipment.hp)
 
-            hero.mana = BattleChecker.use_changes(hero.mana, -equipment.mana)
+            hero.mana = BattleChecker.use_changes(hero.mana, equipment.mana)
 
-            hero.magic_attack = BattleChecker.use_changes(hero.magic_attack, -equipment.magic_attack)
+            hero.magic_attack = BattleChecker.use_changes(hero.magic_attack, equipment.magic_attack)
 
             hero.hero_active_skills['artefacts'].extend(equipment.active_skills)
 

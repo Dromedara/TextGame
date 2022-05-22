@@ -21,7 +21,7 @@ class Werewolf(Relic):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         werewolf_active_skills = []
         werewolf_passive_skills = []  # bleeding?
@@ -43,7 +43,7 @@ class Griffin(Relic):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         griffin_active_skills = []
         griffin_passive_skills = []
@@ -65,7 +65,7 @@ class Stryga(Relic):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         stryga_active_skills = []
         stryga_passive_skills = []
@@ -87,7 +87,7 @@ class Archygryphon(Relic):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         archygryphon_active_skills = []
         archygryphon_passive_skills = []  # poison?
@@ -108,7 +108,7 @@ class Manticore(Relic):
         self.magic_attack = 0 * self.rarity * (1 + 0.1 * (self.lvl - 1)) + self.mana
         self.gold = self.lvl + self.rarity
         self.exp = self.lvl * self.rarity
-        self.loot = [self.gold, self.exp]
+        self.loot = []
 
         manticore_active_skills = []
         manticore_passive_skills = []

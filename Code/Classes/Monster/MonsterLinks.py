@@ -1,14 +1,18 @@
-from Code.Classes.Monster import Monsters
+from Code.Classes.Monster.MonsterTypes import Human
+from Code.Classes.Monster.MonsterTypes import Beasts
+from Code.Classes.Monster.MonsterTypes import Relic
+from Code.Classes.Monster.MonsterTypes import Undead
 
 monsters_creator_dict = {
-            'Chupakabra': Monsters.Chupakabra
-        }
+    'Thief': Human.Thief,
+    'wild_dog': Beasts.WildDog
+}
+
+active_list = ['bite_attack']
+passive_list = []
 
 active_skills_dict = {
-    'strait_physical_attack': Monsters.Chupakabra.strait_physical_attack,
-    'straight_magic_attack': Monsters.Chupakabra.straight_magic_attack
+    'bite_attack': Beasts.WildDog.bite_attack,
 }
 
-passive_skills_dict = {
-    'healing_itself': Monsters.Chupakabra.healing_itself
-}
+passive_skills_dict = {}

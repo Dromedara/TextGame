@@ -14,17 +14,17 @@ class Drinking:
 
         try:
 
-            hero.attack = BattleChecker.params_change(hero.attack, potion.attack)
+            hero.attack = BattleChecker.use_changes(hero.attack, -potion.attack)
 
-            hero.defence = BattleChecker.params_change(hero.defence, potion.defence)
+            hero.defence = BattleChecker.use_changes(hero.defence, -potion.defence)
 
-            hero.hp = BattleChecker.hp_change(hero.hp, potion.hp)
+            hero.hp = BattleChecker.hp_change(hero.hp, -potion.hp)
 
-            hero.mana = BattleChecker.params_change(hero.mana, potion.mana)
+            hero.mana = BattleChecker.use_changes(hero.mana, -potion.mana)
 
-            hero.magic_attack = BattleChecker.params_change(hero.magic_attack, potion.magic_attack)
+            hero.magic_attack = BattleChecker.use_changes(hero.magic_attack, -potion.magic_attack)
 
-            hero.tiks = BattleChecker.tiks_add(hero.tiks, potion.key)
+            hero.tiks = BattleChecker.tiks_add(hero.tiks, -potion.key)
 
             hero.tiks[potion.key] = potion.tik
 

@@ -1,11 +1,7 @@
 import random
-from Code.BasicFuncs.Game.BattelField.BattleSubFuncs import BattleChecker
 
 
 class Monster:
-
-    key: str
-
     lvl: int
     attack: float
     defence: float
@@ -19,13 +15,12 @@ class Monster:
 
     def __init__(self, lvl):
         self.lvl = lvl
-        self.attack = random.randrange(lvl*5, lvl*8, 1)
-        self.defence = random.randrange(lvl*5, lvl*10, 1)
-        self.hp = random.randrange(lvl*10, lvl*12, 1)
-        self.mana = random.randrange(lvl*5, lvl*10, 1)
+        self.attack = random.randrange(lvl * 9, lvl * 11, 1)
+        self.defence = random.randrange(lvl * 9, lvl * 11, 1)
+        self.hp = random.randrange(lvl * 9, lvl * 11, 1)
+        self.mana = random.randrange(lvl * 9, lvl * 11, 1)
         self.magic_attack = self.mana * self.attack
 
         self.active_skill = []
         self.passive_skill = []
         self.loot = []
-

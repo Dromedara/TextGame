@@ -25,15 +25,15 @@ def buy_smth(hero):
 
         if choice == 'artefacts':
             buy_artefact(hero=hero, selling_artefacts=selling_artefacts)
-            Saver.save_changed_data()
+            Saver.save_changed_data(hero)
 
         elif choice == 'armor':
             buy_armor(hero=hero, selling_armors=selling_armors)
-            Saver.save_changed_data()
+            Saver.save_changed_data(hero)
 
         elif choice == 'potions':
             buy_potion(hero=hero, selling_potions=selling_potions)
-            Saver.save_changed_data()
+            Saver.save_changed_data(hero)
 
         else:
             return hero

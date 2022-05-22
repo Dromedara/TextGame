@@ -73,7 +73,7 @@ class CharmedSword(SimpleSword):
     @staticmethod
     def forced_sword_attack(hero, monster):
         monster.hp -= (hero.attack - 0.1 * monster.defence)
-        monster.defence = BattleChecker.params_change(monster.defence, 0.5 * hero.attack)
+        monster.defence = BattleChecker.params_change(monster.defence, -(0.5 * hero.attack))
         hero.hp -= 1.2
         return hero, monster
 
@@ -84,7 +84,7 @@ class CharmedSword(SimpleSword):
 
         if hero.mana == 0:
             hero.hp -= 2
-        hero.mana = BattleChecker.params_change(hero.mana, 0.5)
+        hero.mana = BattleChecker.params_change(hero.mana, -0.5)
         return hero, monster
 
 
@@ -130,6 +130,6 @@ class SuperMagicAmulet(SimpleMagicAmulet):
     @staticmethod
     def super_magic_attack(hero, monster):
         monster.hp -= (hero.magic_attack - 0.3 * monster.defence)
-        monster.defence = BattleChecker.params_change(monster.defence, 0.5 * hero.magic_attack)
+        monster.defence = BattleChecker.params_change(monster.defence, -(0.5 * hero.magic_attack))
         return hero, monster
 

@@ -39,7 +39,7 @@ def adventurer_creator(first_activation=True):
 
 def adventurer_skills(first_activation=True):
     if first_activation:
-        return [], []
+        return ['simple_punch'], []
     else:
         df_active = pd.read_csv(Paths.paths['hero_active_skills'], index_col=0)
         df_passive = pd.read_csv(Paths.paths['hero_passive_skills'], index_col=0)

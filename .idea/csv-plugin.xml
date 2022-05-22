@@ -24,14 +24,14 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\Data\BattleInventory\inventory.csv">
+        <entry key="\Data\Hero\hero_active_skills.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\Data\Hero\id_cretor.csv">
+        <entry key="\Data\Hero\hero_first_activation.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

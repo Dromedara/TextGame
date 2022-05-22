@@ -3,17 +3,25 @@ from Code.BasicFuncs.Game.HelperFuncs.Errors import MonsterDied
 from Code.BasicFuncs.Game.HelperFuncs.Errors import NotPossibleToUse
 import Code.BasicFuncs.DataOperations.SaveData as SaveData
 
+
 class BattleChecker:
 
     def __init__(self):
         pass
 
     @staticmethod
-    def params_change(param, val):
+    def use_changes(param, val):
         if param + val > 0.000000001:
             return param + val
         else:
             raise NotPossibleToUse
+
+    @staticmethod
+    def params_change(param, val):
+        if param + val > 0.000000001:
+            return param + val
+        else:
+            return 0
 
     @staticmethod
     def hp_change(param, val):
@@ -50,6 +58,12 @@ class Show:
         print(hero.hero_passive_skills)
         print(
             f"hp: {hero.hp},\nattack: {hero.attack},\ndefence: {hero.defence},\nmana: {hero.mana},\nmagic attack: {hero.magic_attack}\n")
+
+    @staticmethod
+    def show_monster(monster):
+        print(monster.active_skill)
+        print(
+            f"hp: {monster.hp},\nattack: {monster.attack},\ndefence: {monster.defence},\nmana: {monster.mana},\nmagic attack: {monster.magic_attack}\n")
 
 
 class Saver:

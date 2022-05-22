@@ -109,6 +109,7 @@ class MonsterActions:
     def run_it(hero, monster):
         monster = MonsterActions.passive(monster)
         BattleChecker.check_hp(hero, monster)
+
         hero, monster = MonsterActions.active(hero, monster)
         BattleChecker.check_hp(hero, monster)
         return hero, monster

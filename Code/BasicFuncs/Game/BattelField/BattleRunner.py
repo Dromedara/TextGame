@@ -16,19 +16,23 @@ def Battle(adventurer, adventure):
         while True:
 
             hero.remember_params()
-            Show.show_hero(hero)
 
             hero, monster = BattleFuncs.PassiveActions.run_it(hero, monster)
             
             hero = BattleFuncs.PotionsActions.run_it(hero)
+
             Show.show_hero(hero)
+            Show.show_monster(monster)
 
             hero, monster = BattleFuncs.ActiveActions.run_it(hero, monster)
+
+            Show.show_hero(hero)
+            Show.show_monster(monster)
 
             hero, monster = BattleFuncs.MonsterActions.run_it(hero, monster)
 
             Show.show_hero(hero)
-            print(f'MONSTER: {monster.hp}')
+            Show.show_monster(monster)
 
     except NoHP:
         print('You died')

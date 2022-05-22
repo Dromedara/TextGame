@@ -20,7 +20,7 @@ class BattleMod:
         self.defence = adventurer.stamina * adventurer.defence_coeff
         self.hp = (adventurer.stamina + adventurer.power) * 4
         self.mana = (adventurer.wisdom + adventurer.intellect) * adventurer.mana_coeff
-        self.magic_attack = (self.mana * self.attack) / 2
+        self.magic_attack = (self.mana + self.attack) / 2
 
         self.hero_active_skills = {}
         self.hero_active_skills = BattleChecker.skills_add(self.hero_active_skills, 'basic')

@@ -45,13 +45,13 @@ class SimpleSword(Artefact):
         self.rarity = _rarity
         self.key = 'simple_sword'
         self.cost = self.rarity * 5
-        self.attack += ArtefactChecker.check_input_data(attack, self.rarity, self.rarity * 2)
+        self.attack += ArtefactChecker.check_input_data(attack, self.rarity*10, self.rarity *15)
         self.active_skills.extend(self.active_simple_sword_skills)
 
     @staticmethod
     def straight_sword_attack(hero, monster):
         monster.hp -= (hero.attack - 0.3 * monster.defence)
-        monster.defence = BattleChecker.params_change(monster.defence, 0.3 * hero.attack)
+        monster.defence = BattleChecker.params_change(monster.defence, -(0.3 * hero.attack))
         hero.hp -= 1
         return hero, monster
 
@@ -66,15 +66,14 @@ class CharmedSword(SimpleSword):
         self.rarity = _rarity
         self.key = 'charmed_sword'
         self.cost = self.rarity * 10
-        self.attack += ArtefactChecker.check_input_data(attack, self.rarity * 2, self.rarity * 4)
-        self.magic_attack += ArtefactChecker.check_input_data(magic_attack, self.rarity, self.rarity * 2)
+        self.attack += ArtefactChecker.check_input_data(attack, self.rarity * 15, self.rarity * 20)
+        self.magic_attack += ArtefactChecker.check_input_data(magic_attack, self.rarity*5, self.rarity * 10)
         self.active_skills.extend(self.active_charmed_sword_skills)
 
     @staticmethod
     def forced_sword_attack(hero, monster):
         monster.hp -= (hero.attack - 0.1 * monster.defence)
         monster.defence = BattleChecker.params_change(monster.defence, -(0.5 * hero.attack))
-        hero.hp -= 1.2
         return hero, monster
 
     @staticmethod

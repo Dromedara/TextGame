@@ -38,5 +38,6 @@ class Preparing:
     def prepare_monster(adventure_name, serial_num=1):
 
         monster = monster_creator(adventure_name=adventure_name, serial_num=serial_num)
+        print(monster)
 
         return monster

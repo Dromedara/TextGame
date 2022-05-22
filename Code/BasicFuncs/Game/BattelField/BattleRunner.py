@@ -39,10 +39,8 @@ def Battle(adventurer, adventure):
             Show.show_monster(monster)
 
     except MonsterDied:
-        Ending.win(hero=adventurer, monster=monster)
+        return Ending.end_game(adventurer, monster, True)
     except NoHP:
-        Ending.loose()
-
-    Ending.reequip()
+        return Ending.end_game(adventurer, monster, False)
 
 

@@ -1,1 +1,4 @@
 ,key,id,rarity,attack,defence,hp,mana,magic_attack
+0,simple_helmet,10,1,0,4.0,0,0,0
+1,super_helmet,11,1,0,21.0,0,0,0
+2,simple_bib,12,1,0,5.0,0,0,0

@@ -12,5 +12,5 @@ paths = {
     'battle_armor': '../Data/Armor/battle_armor.csv',
     'id': '../Data/Hero/id.csv',
     'monster': '../Data/Monsters/monsters.csv',
-    'adventures': '../Data/Monsters/adventures.csv'
+    'adventures': '../Data/Adventures/adventures.csv'
 }

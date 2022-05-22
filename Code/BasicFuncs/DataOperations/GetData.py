@@ -4,6 +4,8 @@ from Code.Classes.MainHero.AdventurerRunner import Adventurer
 from Code.Classes.Equipment.ArtefactsService.CreateArtefact import ArtefactCreator
 from Code.Classes.Equipment.PotionsService.CreatePotions import PotionsCreator
 from Code.Classes.Equipment.ArmorService.CreateArmor import ArmorCreator
+from Code.Classes.AdventureDescription.CreateAdventure import AdventureCreator
+
 import Code.Classes.Equipment.ArmorService.ArmorLinks as ArmorLinks
 import Code.Classes.Equipment.IDCounter as ID
 
@@ -196,7 +198,12 @@ def monster_creator(adventure_name, serial_num):
 def adventure_creator():
     df = pd.read_csv(Paths.paths['adventures'])
     for i in range(len(df)):
-        GuildLinks.adventures_list.append(df.iloc[i]['name'])
-        GuildLinks.gold_awards[df.iloc[i]['name']] = df.iloc[i]['gold_award']
-        GuildLinks.exp_awards[df.iloc[i]['name']] = df.iloc[i]['exp_award']
-        GuildLinks.descriptions[df.iloc[i]['name']] = df.iloc[i]['description']
+        adventure = AdventureCreator.create_adventure(key=df.iloc[i]['name'],
+                                                      gold=int(df.iloc[i]['gold_award']),
+                                                      exp=int(df.iloc[i]['exp_award']),
+                                                      description=df.iloc[i]['description'],
+                                                      done=bool(df.iloc[i]['done']),
+                                                      blocked=bool(df.iloc[i]['blocked']))
+        GuildLinks.adventures_dict[adventure.key] = adventure
+        GuildLinks.adventures_names.append(adventure.key)
+

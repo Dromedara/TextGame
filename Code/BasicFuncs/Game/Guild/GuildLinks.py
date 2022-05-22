@@ -1,7 +1,3 @@
-adventures_list = []
+adventures_names = []
 
-descriptions = {}
-
-gold_awards = {}
-
-exp_awards = {}
+adventures_dict = {}

@@ -7,4 +7,6 @@ def start_it(first_activation=True):
     hero = RecreateAdventurer.get_hero(first_activation=first_activation)
     RecreateEquipment.get_equip(first_activation=first_activation)
 
+    adventure_creator()
+
     return hero

@@ -10,12 +10,27 @@ class Ending:
         Battle.done_potions = []
 
     @staticmethod
-    def win(hero, monster):
+    def win(adventurer, monster):
         print('You win')
-        hero.gold += monster.gold
-        hero.change_exp(monster.exp)
+        adventurer.gold += monster.gold
+        adventurer.change_exp(monster.exp)
+
+        return adventurer
 
     @staticmethod
-    def loose():
+    def loose(adventurer):
         print('You loose')
-        pass
+
+    @staticmethod
+    def end_game(adventurer, monster, win):
+        Ending.reequip()
+
+        if win:
+            adventurer = Ending.win(adventurer, monster)
+            return adventurer, True
+        else:
+            Ending.loose(adventurer)
+            return adventurer, False
+
+
+

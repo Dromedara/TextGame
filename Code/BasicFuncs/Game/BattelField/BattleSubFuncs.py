@@ -32,10 +32,10 @@ class BattleChecker:
 
     @staticmethod
     def check_hp(hero, monster):
-        if monster.hp <= 0.0000000001:
-            raise MonsterDied
         if hero.hp <= 0.0000000001:
             raise NoHP
+        elif monster.hp <= 0.0000000001:
+            raise MonsterDied
 
     @staticmethod
     def tiks_add(tiks, key):

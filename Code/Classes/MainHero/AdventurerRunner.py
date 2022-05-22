@@ -55,7 +55,6 @@ class Adventurer:
         self.active_skills = ['simple_punch']
         self.passive_skills = []
 
-
     def power_change(self, val):
         self.power += val
 

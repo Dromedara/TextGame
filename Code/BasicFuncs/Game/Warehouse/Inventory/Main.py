@@ -35,7 +35,13 @@ class MainInventory:
         return self.potions_dict.values()
 
     def get_armors(self):
-        return self.artefacts_dict.values()
+
+        res = []
+
+        for key in ArmorLinks.parts_dict.keys():
+            res.extend(self.armor_dict[key].values())
+
+        return res
 
 
 main_inventory = MainInventory()

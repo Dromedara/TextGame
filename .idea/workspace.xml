@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91c92e02-5cf8-485d-ae4a-e44f49b02cfd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/Inventory/Battle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/Inventory/Battle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/Inventory/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/Inventory/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

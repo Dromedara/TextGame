@@ -27,5 +27,14 @@ class BattleInventory:
     def add_potion(self, potion):
         self.curr_potions[potion.id] = potion
 
+    def get_artefacts(self):
+        return self.curr_artefacts.values()
+
+    def get_potions(self):
+        return self.curr_potions.values()
+
+    def get_armors(self):
+        return self.curr_armors.values()
+
 
 battle_inventory = BattleInventory()

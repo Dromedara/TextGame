@@ -28,5 +28,14 @@ class MainInventory:
         for key in Battle.done_potions:
             del self.potions_dict[key]
 
+    def get_artefacts(self):
+        return self.artefacts_dict.values()
+
+    def get_potions(self):
+        return self.potions_dict.values()
+
+    def get_armors(self):
+        return self.artefacts_dict.values()
+
 
 main_inventory = MainInventory()

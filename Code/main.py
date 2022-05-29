@@ -4,10 +4,9 @@ import Code.BasicFuncs.Finish.FinishGame as FinishGame
 
 
 def main():
-    hero = StartGame.start_it(first_activation=False)
-    print(hero.name)
-    hero = PlayGame.play_it(hero)
-    FinishGame.finish_it(hero)
+    StartGame.start_it(first_activation=False)
+    PlayGame.play_it()
+    FinishGame.finish_it()
 
 
 if __name__ == '__main__':

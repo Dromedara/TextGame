@@ -5,8 +5,12 @@ from Code.BasicFuncs.Game.BattelField.BattleSubFuncs import Show
 from Code.BasicFuncs.Game.BattelField.StartBattle import Preparing
 from Code.BasicFuncs.Game.BattelField.EndBattle import Ending
 
+from Code.Classes.MainHero.Savior import ReadHero
 
-def Battle(adventurer, adventure):
+
+def Battle(adventure):
+
+    adventurer = ReadHero.read_it()
 
     hero = Preparing.prepare_hero(adventurer)
     monster = Preparing.prepare_monster(adventure)
@@ -39,8 +43,8 @@ def Battle(adventurer, adventure):
             Show.show_monster(monster)
 
     except MonsterDied:
-        return Ending.end_game(adventurer, monster, True)
+        return Ending.end_game(monster, True)
     except NoHP:
-        return Ending.end_game(adventurer, monster, False)
+        return Ending.end_game(monster, False)
 
 

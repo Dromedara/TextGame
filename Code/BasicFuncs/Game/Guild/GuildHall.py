@@ -1,6 +1,8 @@
 from Code.BasicFuncs.Game.Guild import GuildLinks
 from Code.BasicFuncs.Game.BattelField.BattleRunner import Battle
 
+from Code.Classes.MainHero.Savior import ReadHero
+
 
 def change_block(choice):
     flag = False
@@ -14,15 +16,16 @@ def change_block(choice):
             flag = True
 
 
-def change_state(adventurer, choice):
-
+def change_state(choice):
+    adventurer = ReadHero.read_it()
     adventurer.gold += GuildLinks.adventures_dict[choice].gold
     adventurer.exp += GuildLinks.adventures_dict[choice].exp
+    ReadHero.save_it()
 
     GuildLinks.adventures_dict[choice].done = True
 
 
-def choose_adventure(adventure):
+def choose_adventure():
 
     while True:
 
@@ -36,12 +39,9 @@ def choose_adventure(adventure):
 
         choice = input()
         if choice != '':
-            adventurer, win = Battle(adventure, choice)
-            if win:
-                if not GuildLinks.adventures_dict[choice].done:
-                    change_state(adventurer, choice)
-                    change_block(choice)
-
-
-
+            if Battle(choice):
+                change_state(choice)
+                change_block(choice)
+        else:
+            break
 

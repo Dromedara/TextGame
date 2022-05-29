@@ -1,10 +1,9 @@
 from Code.BasicFuncs.Game.Shop.Buying import buy_smth
-from Code.BasicFuncs.Finish.FinishGame import finish_it
 from Code.BasicFuncs.Game.Warehouse import EquippingRunner
 from Code.BasicFuncs.Game.Guild import GuildHall
 
 
-def play_it(hero):
+def play_it():
 
     while True:
 
@@ -12,14 +11,11 @@ def play_it(hero):
         choice = input()
 
         if choice == 'buy':
-            hero = buy_smth(hero)
+            buy_smth()
         elif choice == 'equip':
             EquippingRunner.run_it()
         elif choice == 'battle':
-            GuildHall.choose_adventure(hero)
+            GuildHall.choose_adventure()
         else:
-            finish_it(hero)
             break
-
-    return hero
 

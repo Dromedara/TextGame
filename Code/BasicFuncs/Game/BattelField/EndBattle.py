@@ -1,5 +1,6 @@
 from Code.BasicFuncs.Game.Warehouse.Inventory import Battle
 from Code.BasicFuncs.Game.Warehouse.Inventory.Main import main_inventory
+from Code.Classes.MainHero.Savior import ReadHero
 
 
 class Ending:
@@ -15,22 +16,25 @@ class Ending:
         adventurer.gold += monster.gold
         adventurer.change_exp(monster.exp)
 
-        return adventurer
+        ReadHero.save_it()
+
+        return
 
     @staticmethod
-    def loose(adventurer):
+    def loose():
         print('You loose')
 
     @staticmethod
-    def end_game(adventurer, monster, win):
+    def end_game(monster, win):
         Ending.reequip()
+        adventurer = ReadHero.read_it()
 
         if win:
-            adventurer = Ending.win(adventurer, monster)
-            return adventurer, True
+            Ending.win(adventurer, monster)
+            return True
         else:
-            Ending.loose(adventurer)
-            return adventurer, False
+            Ending.loose()
+            return False
 
 
 

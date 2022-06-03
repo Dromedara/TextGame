@@ -15,6 +15,8 @@ class Potion:
     mana: float
     magic_attack: float
 
+    description: str
+
     def __init__(self):
         self.key = ''
         self.id = 0
@@ -27,12 +29,15 @@ class Potion:
         self.mana = 0
         self.magic_attack = 0
 
+        self.description = 'Something unknown! Be careful!'
+
 
 class HealingPotion(Potion):
 
     def __init__(self, _id=0, _rarity=1, hp=0, **kwargs):
         super().__init__()
         self.key = 'healing_potion'
+        self.description = 'Healing potion. Have a buff for hp.'
         self.id = _id
         self.rarity = _rarity
         self.cost = 5
@@ -44,6 +49,7 @@ class BoostingPotion(Potion):
     def __init__(self, _id=0, _rarity=1, attack=0, defence=0, **kwargs):
         super().__init__()
         self.key = 'boosting_potion'
+        self.description = 'Boosting potion. Boost attack and defence.'
         self.id = _id
         self.rarity = _rarity
         self.cost = 5
@@ -56,6 +62,7 @@ class ProtectingPotion(Potion):
     def __init__(self, _id=0, _rarity=1, _tik=1, **kwargs):
         super().__init__()
         self.key = 'protecting_potion'
+        self.description = 'Protect your params for n steps.'
         self.id = _id
         self.rarity = _rarity
         self.tik = _tik

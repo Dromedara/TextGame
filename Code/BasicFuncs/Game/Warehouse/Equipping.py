@@ -1,57 +1,41 @@
 import Code.BasicFuncs.Game.Warehouse.Inventory.Battle as BattleInventory
 import Code.BasicFuncs.Game.Warehouse.Inventory.Main as MainInventory
-from Code.Classes.Equipment.ArtefactsService import ArtefactsLinks
-from Code.Classes.Equipment.ArmorService import ArmorLinks
-from Code.Classes.Equipment.PotionsService import PotionsLinks
 
 
 class Choose:
 
     @staticmethod
-    def choose_artefacts():
-
-        while True:
-            print(MainInventory.main_inventory.artefacts_dict)
-            print(BattleInventory.battle_inventory.curr_artefacts)
-            choice = int(input())
-            if choice == -1:
-                break
-            BattleInventory.battle_inventory.curr_artefacts[choice] = MainInventory.main_inventory.artefacts_dict[choice]
+    def take_artefact(artefact_id):
+        BattleInventory.battle_inventory.curr_artefacts[artefact_id] = \
+            MainInventory.main_inventory.artefacts_dict[artefact_id]
 
     @staticmethod
-    def choose_potions():
-
-        while True:
-            print(MainInventory.main_inventory.potions_dict)
-            print(BattleInventory.battle_inventory.curr_potions)
-
-            choice = int(input())
-            if choice == -1:
-                break
-            if choice == -2:
-                id = int(input())
-                del BattleInventory.battle_inventory.curr_potions[id]
-            else:
-                BattleInventory.battle_inventory.curr_potions[choice] = MainInventory.main_inventory.potions_dict[choice]
+    def artefact_off(artefact_id):
+        print(*BattleInventory.battle_inventory.curr_artefacts)
+        del BattleInventory.battle_inventory.curr_artefacts[artefact_id]
 
     @staticmethod
-    def choose_armors():
+    def take_potion(potion_id):
+        BattleInventory.battle_inventory.curr_potions[potion_id] = \
+            MainInventory.main_inventory.potions_dict[potion_id]
 
-        while True:
-            print(MainInventory.main_inventory.armor_dict)
-            print(BattleInventory.battle_inventory.curr_armors)
+    @staticmethod
+    def potion_off(potion_id):
+        del BattleInventory.battle_inventory.curr_potions[potion_id]
 
-            choice = int(input())
-            part = ''
-
-            if choice == -1:
+    @staticmethod
+    def take_armor(armor_id):
+        part = ''
+        for key in MainInventory.main_inventory.armor_dict.keys():
+            if armor_id in MainInventory.main_inventory.armor_dict[key].keys():
+                part = key
                 break
-            if choice == -2:
-                part = input()
-                BattleInventory.battle_inventory.curr_armors[part] = None
-            else:
-                for key in MainInventory.main_inventory.armor_dict.keys():
-                    if choice in MainInventory.main_inventory.armor_dict[key].keys():
-                        part = key
-                        break
-                BattleInventory.battle_inventory.curr_armors[part] = MainInventory.main_inventory.armor_dict[part][choice]
+        BattleInventory.battle_inventory.curr_armors[part] = MainInventory.main_inventory.armor_dict[part][armor_id]
+
+    @staticmethod
+    def armor_off(armor_id):
+
+        for key in BattleInventory.battle_inventory.curr_armors.keys():
+            if BattleInventory.battle_inventory.curr_armors[key] is not None:
+                if armor_id == BattleInventory.battle_inventory.curr_armors[key].id:
+                    BattleInventory.battle_inventory.curr_armors[key] = None

@@ -12,6 +12,7 @@ def start_shop():
     selling_artefacts = {}
     for artefact in ArtefactsLinks.artefacts_list:
         a = ArtefactCreator.create_artefact(key=artefact)
+        print(a.id)
         selling_artefacts[a.id] = a
 
     selling_potions = {}

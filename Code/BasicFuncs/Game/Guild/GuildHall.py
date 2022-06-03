@@ -20,12 +20,11 @@ def change_state(choice):
     adventurer = ReadHero.read_it()
     adventurer.gold += GuildLinks.adventures_dict[choice].gold
     adventurer.exp += GuildLinks.adventures_dict[choice].exp
-    ReadHero.save_it()
+    ReadHero.save_it(hero=adventurer)
 
     GuildLinks.adventures_dict[choice].done = True
 
-
-def choose_adventure():
+'''def choose_adventure():
 
     while True:
 
@@ -43,5 +42,26 @@ def choose_adventure():
                 change_state(choice)
                 change_block(choice)
         else:
-            break
+            break'''
+
+def all_adventures():
+    l = list()
+    o = list()
+    k = ""
+    for i in GuildLinks.adventures_dict.values():
+        k = str(i.key)
+        o.append(k)
+        k = ""
+        if i.blocked:
+            k = "[blocked]"
+        elif i.done:
+            k = "[done]"
+        o.append(k)
+        l.append(o)
+        o = list()
+        k = ""
+    return l
+
+
+
 

@@ -34,7 +34,13 @@ class BattleInventory:
         return self.curr_potions.values()
 
     def get_armors(self):
-        return self.curr_armors.values()
+        res = []
+
+        for key in self.curr_armors.keys():
+            if self.curr_armors[key] is not None:
+                res.append(self.curr_armors[key])
+
+        return res
 
 
 battle_inventory = BattleInventory()

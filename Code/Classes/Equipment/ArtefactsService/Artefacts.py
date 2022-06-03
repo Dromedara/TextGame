@@ -14,6 +14,8 @@ class Artefact:
     mana: float
     magic_attack: float
 
+    description: str
+
     active_skills: []
     passive_skills: []
 
@@ -28,11 +30,10 @@ class Artefact:
         self.mana = 0
         self.magic_attack = 0
 
+        self.description = 'Something unknown! Be careful!'
+
         self.active_skills = []
         self.passive_skills = []
-
-    def buy_it(self):
-        pass
 
 
 class SimpleSword(Artefact):
@@ -44,6 +45,7 @@ class SimpleSword(Artefact):
         self.id = _id
         self.rarity = _rarity
         self.key = 'simple_sword'
+        self.description = 'Iron sword.'
         self.cost = self.rarity * 5
         self.attack += ArtefactChecker.check_input_data(attack, self.rarity*10, self.rarity *15)
         self.active_skills.extend(self.active_simple_sword_skills)
@@ -65,6 +67,7 @@ class CharmedSword(SimpleSword):
         self.id = _id
         self.rarity = _rarity
         self.key = 'charmed_sword'
+        self.description = 'Charmed forced sword.'
         self.cost = self.rarity * 10
         self.attack += ArtefactChecker.check_input_data(attack, self.rarity * 15, self.rarity * 20)
         self.magic_attack += ArtefactChecker.check_input_data(magic_attack, self.rarity*5, self.rarity * 10)
@@ -96,6 +99,7 @@ class SimpleMagicAmulet(Artefact):
         self.id = _id
         self.rarity = _rarity
         self.key = 'simple_amulet'
+        self.description = 'Simple healing amulet.'
         self.cost = self.rarity * 5
         self.mana += ArtefactChecker.check_input_data(mana, -(self.rarity * 3), -self.rarity)
         self.passive_skills.extend(self.passive_simple_magic_amulet)
@@ -116,6 +120,7 @@ class SuperMagicAmulet(SimpleMagicAmulet):
         self.id = _id
         self.rarity = _rarity
         self.key = 'super_amulet'
+        self.description = 'Super buffing amulet.'
         self.cost = self.rarity * 10
         self.mana += ArtefactChecker.check_input_data(mana, -(self.rarity * 4), -(self.rarity * 2))
         self.passive_skills.extend(self.passive_super_magic_amulet)

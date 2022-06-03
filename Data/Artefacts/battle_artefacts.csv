@@ -1,3 +1,2 @@
 ,key,id,rarity,attack,defence,hp,mana,magic_attack
-0,simple_sword,4,1,10.0,0,0,0.0,0
-1,simple_amulet,15,1,0.0,0,0,-2.0,0
+0,charmed_sword,5,1,292.0,0,0,0,9.0

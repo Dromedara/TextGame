@@ -9,6 +9,8 @@ class PotionsCreator:
         if _id == -1:
             _id = ID.id_creator.create_new()
 
+        PotionsLinks.potions_id.append(_id)
+
         potion = PotionsLinks.potions_creator[key](_rarity=rarity,
                                                    _id=_id,
                                                    _tik=tik,

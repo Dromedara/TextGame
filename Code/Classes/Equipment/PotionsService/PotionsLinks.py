@@ -6,6 +6,8 @@ potions_baffs_dict = {
     'super_protector': Potions.ProtectingPotion.super_protector
 }
 
+potions_id = []
+
 potions_creator = {
             'healing_potion': Potions.HealingPotion,
             'boosting_potion': Potions.BoostingPotion,

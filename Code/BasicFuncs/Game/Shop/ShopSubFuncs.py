@@ -15,7 +15,13 @@ class ShopChecker:
 class Saver:
 
     @staticmethod
-    def save_changed_data():
+    def save_changed_artefacts():
         SaveData.save_artefacts()
+
+    @staticmethod
+    def save_changed_armors():
         SaveData.save_armors()
+
+    @staticmethod
+    def save_changed_potions():
         SaveData.save_potions()

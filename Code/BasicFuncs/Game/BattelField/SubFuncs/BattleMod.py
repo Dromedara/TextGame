@@ -49,3 +49,7 @@ class BattleMod:
         self.param_savior['hp'].append(self.hp)
         self.param_savior['mana'].append(self.mana)
         self.param_savior['magic_attack'].append(self.magic_attack)
+
+    def get_actives(self):
+        return self.hero_active_skills.keys()
+    

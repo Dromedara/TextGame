@@ -11,6 +11,7 @@ active_artefact_dict = {
     'super_magic_attack': Artefacts.SuperMagicAmulet.super_magic_attack
 }
 
+artefacts_id = []
 
 passive_artefact_dict = {
     'simple_magic_baff': Artefacts.SimpleMagicAmulet.simple_magic_baff,

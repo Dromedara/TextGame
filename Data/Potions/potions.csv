@@ -1,4 +1,4 @@
 ,key,id,rarity,tik,attack,defence,hp,mana,magic_attack
-0,healing_potion,8,1,0,0,0,3.0,0,0
-1,healing_potion,9,1,0,0,0,3.0,0,0
-2,protecting_potion,20,1,0,0,0,0.0,0,0
+0,healing_potion,8,1,0,0.0,0.0,3.0,0,0
+1,boosting_potion,7,1,0,4.0,1.0,0.0,0,0
+2,boosting_potion,27,1,0,4.0,1.0,0.0,0,0

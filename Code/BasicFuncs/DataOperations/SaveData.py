@@ -5,6 +5,7 @@ from Code.BasicFuncs.Game.Warehouse.Inventory.Battle import battle_inventory
 import Code.Classes.Equipment.IDCounter as ID
 import Code.BasicFuncs.Game.Guild.GuildLinks as GuildLinks
 
+
 def save_hero(hero):
 
     df = pd.DataFrame({

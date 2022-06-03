@@ -10,6 +10,8 @@ class ArtefactCreator:
         if _id == -1:
             _id = ID.id_creator.create_new()
 
+        ArtefactsLinks.artefacts_id.append(_id)
+
         artefact = ArtefactsLinks.creator_dict[key](_id=_id,
                                                     _rarity=rarity,
                                                     attack=attack,

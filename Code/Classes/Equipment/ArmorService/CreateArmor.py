@@ -10,6 +10,8 @@ class ArmorCreator:
         if _id == -1:
             _id = ID.id_creator.create_new()
 
+        ArmorLinks.armors_id.append(_id)
+
         armor = ArmorLinks.creator_dict[key](_id=_id,
                                              _rarity=rarity,
                                              attack=attack,

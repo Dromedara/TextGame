@@ -6,6 +6,8 @@ parts_dict = {
     'pants': ['simple_pants']
 }
 
+armors_id = []
+
 passive_armor_dict = {
     'simple_passive_attack': Armor.CharmedBib.simple_passive_attack
 }

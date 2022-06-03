@@ -1,0 +1,363 @@
+WindowManager:
+    MainMenu:
+    GameMenu:
+    JustSettings:
+    GuildMenu:
+    BattleMenu:
+    Inventory:
+    Shop:
+    Item_from_inventory:
+    Item_from_shop:
+
+<MainMenu>:
+    name: "main_menu"
+
+    GridLayout:
+        cols: 1
+        pos: (root.width / 2, root.height / 2)
+        spacing: 10
+
+        Label:
+            text: "Grigoria"
+            font_size: 32
+            height: 40
+
+        Button:
+            text: "Play game"
+            on_release:
+                app.root.current = "game_menu"
+                root.manager.transition.direction = 'up'
+
+        Button:
+            text: "Settings"
+            on_release:
+                app.root.current = "settings"
+                root.manager.transition.direction = 'left'
+
+        Button:
+            text: "Quit"
+            on_release:
+                root.exit()
+                app.stop()
+
+
+<GameMenu>:
+    name: "game_menu"
+
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+        spacing: 10
+        pos:(root.width / 2, root.height / 2)
+
+        Label:
+            text: "Menu"
+            font_size: 32
+
+        Button:
+            text: "Go to guild"
+            on_release:
+                app.root.current = "guild"
+                root.manager.transition.direction = 'up'
+
+        Button:
+            text: "Inventory"
+            on_release:
+                app.root.current = "inventory"
+                root.manager.transition.direction = 'left'
+        Button:
+            text: "Shop"
+            on_release:
+                app.root.current = "shop"
+                root.manager.transition.direction = 'left'
+
+        Button:
+            text: "Quit to main menu"
+            on_release:
+                app.root.current = "main_menu"
+                root.manager.transition.direction = 'down'
+
+
+<JustSettings>:
+    name: "settings"
+
+    GridLayout:
+        cols: 1
+        padding: 150, 200
+
+        Button:
+            text: "English"
+            on_release:
+                self.text = "Russian"
+
+        Button:
+            text: "Quit to main menu"
+            on_release:
+                app.root.current = "main_menu"
+                root.manager.transition.direction = 'right'
+
+
+<GuildMenu>:
+    name: "guild"
+
+    BoxLayout:
+        pos:(root.width / 2, root.height / 2)
+        orientation: 'vertical'
+        spacing: 40
+        GridLayout:
+            id: list
+            cols: 2
+            text: root.ShowMissions()
+        Button:
+            text: "Exit to menu"
+            size_hint: (1, 0.2)
+            pos_hint: {'center_x': 0.5, 'center_y': .5}
+            on_release:
+                app.root.current = "game_menu"
+                root.manager.transition.direction = "down"
+
+<Inventory>:
+    name: 'inventory'
+    text: root.show_artefacts()
+    id: Inventory
+    BoxLayout:
+        padding: (root.width / 20, root.height / 20)
+        orientation: "vertical"
+        spacing: 10
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            GridLayout:
+                id: here
+                cols: 7
+                size_hint_y: None
+                height: self.minimum_height
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint: None, None
+            height: 125
+            spacing: 10
+            ToggleButton:
+                text: "artefacts"
+                id: show_artefacts
+                size_hint: None, None
+                on_release:
+                    if self.state == "down": root.show_artefacts()
+                    if self.state == 'normal': root.clear_buttons()
+
+            ToggleButton:
+                text: "armour"
+                id: show_armour
+                size_hint: None, None
+                on_release:
+                    if self.state == "down": root.show_armour()
+                    if self.state == 'normal': root.clear_buttons()
+            ToggleButton:
+                text: "potions"
+                id: show_potions
+                size_hint: None, None
+                on_release:
+                    if self.state == "down": root.show_potions()
+                    if self.state == 'normal': root.clear_buttons()
+            ToggleButton:
+                text: "equipment"
+                id: show_equipment
+                size_hint: None, None
+                on_release:
+                    if self.state == "down": root.show_equipment()
+                    if self.state == 'normal': root.clear_buttons()
+            BoxLayout:
+                orientation: "horizontal"
+                Label:
+                    text: ""
+                    size_hint: None, None
+                    size: 200, 125
+                    id: description_label
+                Button:
+                    text: "Equip"
+                    size_hint: None, None
+                    id: equip_button
+                    on_release:
+                        if self.text == "Unequip" and root.ids.description_label.name != "": root.unequip_item(root.ids.description_label.name)
+                        if self.text == "Equip" and root.ids.description_label.name != "": root.equip_item(root.ids.description_label.name)
+
+
+        Button:
+            text: "Exit to menu"
+            size_hint: (0.6, 0.1)
+            pos_hint: {'center_x': 0.5, 'center_y': .5}
+            on_release:
+                app.root.current = "game_menu"
+                root.manager.transition.direction = "right"
+<Shop>:
+    name: 'shop'
+    text: root.show_artefacts()
+    BoxLayout:
+        padding: (root.width / 20, root.height / 20)
+        orientation: "vertical"
+        spacing: 10
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            GridLayout:
+                id: here
+                cols: 7
+                size_hint_y: None
+                height: self.minimum_height
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint: None, None
+            height: 125
+            spacing: 10
+            ToggleButton:
+                text: "artefacts"
+                id: show_artefacts
+                size_hint: None, None
+                on_release:
+                    if self.state == "down": root.show_artefacts()
+                    if self.state == 'normal': root.clear_buttons()
+
+            ToggleButton:
+                text: "armour"
+                id: show_armour
+                size_hint: None, None
+                on_release:
+                    if self.state == "down": root.show_armour()
+                    if self.state == 'normal': root.clear_buttons()
+            ToggleButton:
+                text: "potions"
+                id: show_potions
+                size_hint: None, None
+                on_release:
+                    if self.state == "down": root.show_potions()
+                    if self.state == 'normal': root.clear_buttons()
+
+            BoxLayout:
+                orientation: "horizontal"
+                Label:
+                    text: ""
+                    size_hint: None, None
+                    size: 200, 125
+                    id: description_label
+                Button:
+                    text: "Buy"
+                    size_hint: None, None
+                    id: buy_button
+                    on_release:
+                        if root.ids.show_armour.state == "down" and root.ids.description_label.name != "": root.buy_armor(root.ids.description_label.name);root.show_armour();root.ids.description_label.text = "";root.ids.description_label.name = ""
+                        if root.ids.show_artefacts.state == "down" and root.ids.description_label.name != "": root.buy_artefact(root.ids.description_label.name);root.show_artefacts();root.ids.description_label.text = "";root.ids.description_label.name = ""
+                        if root.ids.show_potions.state == "down" and root.ids.description_label.name != "": root.buy_potion(root.ids.description_label.name);root.show_potions();root.ids.description_label.text = "";root.ids.description_label.name = ""
+                        root.ids.gold.text = root.amount_of_gold()
+                Label:
+                    size_hint: None, None
+                    id: gold
+                    text: root.amount_of_gold()
+
+        Button:
+            text: "Exit to menu"
+            size_hint: (0.6, 0.1)
+            pos_hint: {'center_x': 0.5, 'center_y': .5}
+            on_release:
+                app.root.current = "game_menu"
+                root.manager.transition.direction = "right"
+
+<Item_from_inventory>:
+    name: "item_from_inventory"
+    size: root.width, root.height
+    spacing: 10
+    pos: (root.width / 2, root.height / 2)
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "1"
+        BoxLayout:
+            Image:
+            Label:
+                text: "2"
+
+        Button:
+            text: "Exit to menu"
+            size_hint: (0.6, 0.1)
+            pos_hint: {'center_x': 0.5, 'center_y': .5}
+            on_release:
+                app.root.current = "inventory"
+                root.manager.transition.direction = "down"
+
+<Item_from_shop>:
+    name: "item_from_shop"
+    size: root.width, root.height
+    spacing: 10
+    pos: (root.width / 2, root.height / 2)
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "1"
+        BoxLayout:
+            Image:
+            Label:
+                text: "2"
+        Button:
+            text: "Buy"
+            size_hint: (0.6, 0.1)
+            pos_hint: {'center_x': 0.5, 'center_y': .5}
+            on_release:
+
+        Button:
+            text: "Exit to menu"
+            size_hint: (0.6, 0.1)
+            pos_hint: {'center_x': 0.5, 'center_y': .5}
+            on_release:
+                app.root.current = "shop"
+                root.manager.transition.direction = "down"
+<BattleMenu>:
+    name: "battle_menu"
+    BoxLayout:
+        pos: (root.width / 2, root.height / 2)
+        orientation: 'vertical'
+        spacing: 40
+        ScrollView:
+            do_scroll_x: False
+            do_scroll_y: True
+            always_overscroll: True
+            Label:
+                id: battle_label
+                size_hint_y: None
+                text: "try"
+                height: self.texture_size[1]
+                text_size: self.width - dp(10), None
+
+
+        GridLayout:
+            cols: 2
+            Button:
+                text: "1"
+                on_release:
+                    root.change_battle_log(1)
+            Button:
+                text: "2"
+            Button:
+                text: "3"
+            Button:
+                text: "4"
+        Button:
+            text: "Exit to guild"
+            size_hint: (1, 0.2)
+            pos_hint: {'center_x': 0.5, 'center_y': .5}
+            on_release:
+                app.root.current = "guild"
+                root.manager.transition.direction = "down"
+
+<ItemButton>:
+    size_hint: (None, None)
+    on_release:
+        self.parent.parent.parent.parent.create_description(self.text, self.id)
+
+<ShopItemButton>:
+    size_hint: (None, None)
+    on_release:
+        self.parent.parent.parent.parent.create_description(self.text, self.id)
+
+<MissionButton>:
+
+
+

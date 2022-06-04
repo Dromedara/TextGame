@@ -1,0 +1,21 @@
+classes package
+===============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   classes.AdventureDescription
+   classes.Equipment
+   classes.MainHero
+   classes.Monster
+
+Module contents
+---------------
+
+.. automodule:: classes
+   :members:
+   :undoc-members:
+   :show-inheritance:

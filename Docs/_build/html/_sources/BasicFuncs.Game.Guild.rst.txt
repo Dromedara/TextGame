@@ -1,0 +1,29 @@
+BasicFuncs.Game.Guild package
+=============================
+
+Submodules
+----------
+
+BasicFuncs.Game.Guild.GuildHall module
+--------------------------------------
+
+.. automodule:: BasicFuncs.Game.Guild.GuildHall
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.Game.Guild.GuildLinks module
+---------------------------------------
+
+.. automodule:: BasicFuncs.Game.Guild.GuildLinks
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: BasicFuncs.Game.Guild
+   :members:
+   :undoc-members:
+   :show-inheritance:

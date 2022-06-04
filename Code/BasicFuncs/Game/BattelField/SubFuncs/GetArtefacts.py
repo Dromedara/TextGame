@@ -17,7 +17,7 @@ class Getting:
 
             hero.defence = BattleChecker.use_changes(hero.defence, equipment.defence)
 
-            hero.hp = BattleChecker.hp_change(hero.hp, equipment.hp)
+            hero.hp = BattleChecker.use_changes(hero.hp, equipment.hp)
 
             hero.mana = BattleChecker.use_changes(hero.mana, equipment.mana)
 

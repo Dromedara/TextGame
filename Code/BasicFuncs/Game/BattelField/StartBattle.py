@@ -1,21 +1,22 @@
 from Code.BasicFuncs.Game.BattelField.SubFuncs.BattleMod import BattleMod
 from Code.BasicFuncs.Game.BattelField.SubFuncs.WearArmor import Wearing
 from Code.BasicFuncs.Game.BattelField.SubFuncs.GetArtefacts import Getting
-
+from Code.Classes.MainHero.Savior import ReadHero
 from Code.BasicFuncs.Game.Warehouse.Inventory import Battle
-
 from Code.BasicFuncs.DataOperations.GetData import monster_creator
 
 
 class Preparing:
     @staticmethod
-    def prepare_hero(adventurer):
-
+    def prepare_hero():
+        adventurer = ReadHero.read_it()
         hero = BattleMod(adventurer)
 
         hero = Preparing.prepare_armor(hero)
 
         hero = Preparing.prepare_artefacts(hero)
+
+        hero.remember_params()
 
         return hero
 

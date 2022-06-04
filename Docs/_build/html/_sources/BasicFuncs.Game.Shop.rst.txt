@@ -1,0 +1,45 @@
+BasicFuncs.Game.Shop package
+============================
+
+Submodules
+----------
+
+BasicFuncs.Game.Shop.Buying module
+----------------------------------
+
+.. automodule:: BasicFuncs.Game.Shop.Buying
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.Game.Shop.CreateStuff module
+---------------------------------------
+
+.. automodule:: BasicFuncs.Game.Shop.CreateStuff
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.Game.Shop.Sellers module
+-----------------------------------
+
+.. automodule:: BasicFuncs.Game.Shop.Sellers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.Game.Shop.ShopSubFuncs module
+----------------------------------------
+
+.. automodule:: BasicFuncs.Game.Shop.ShopSubFuncs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: BasicFuncs.Game.Shop
+   :members:
+   :undoc-members:
+   :show-inheritance:

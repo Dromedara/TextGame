@@ -1,0 +1,45 @@
+classes.Equipment.ArmorService package
+======================================
+
+Submodules
+----------
+
+classes.Equipment.ArmorService.Armor module
+-------------------------------------------
+
+.. automodule:: classes.Equipment.ArmorService.Armor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Equipment.ArmorService.ArmorLinks module
+------------------------------------------------
+
+.. automodule:: classes.Equipment.ArmorService.ArmorLinks
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Equipment.ArmorService.ArmorsSubFunc module
+---------------------------------------------------
+
+.. automodule:: classes.Equipment.ArmorService.ArmorsSubFunc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Equipment.ArmorService.CreateArmor module
+-------------------------------------------------
+
+.. automodule:: classes.Equipment.ArmorService.CreateArmor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: classes.Equipment.ArmorService
+   :members:
+   :undoc-members:
+   :show-inheritance:

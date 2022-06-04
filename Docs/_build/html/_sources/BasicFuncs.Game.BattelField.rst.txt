@@ -1,0 +1,45 @@
+BasicFuncs.Game.BattelField package
+===================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   BasicFuncs.Game.BattelField.SubFuncs
+
+Submodules
+----------
+
+BasicFuncs.Game.BattelField.BattleFuncs module
+----------------------------------------------
+
+.. automodule:: BasicFuncs.Game.BattelField.BattleFuncs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.Game.BattelField.BattleSubFuncs module
+-------------------------------------------------
+
+.. automodule:: BasicFuncs.Game.BattelField.BattleSubFuncs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.Game.BattelField.StartBattle module
+----------------------------------------------
+
+.. automodule:: BasicFuncs.Game.BattelField.StartBattle
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: BasicFuncs.Game.BattelField
+   :members:
+   :undoc-members:
+   :show-inheritance:

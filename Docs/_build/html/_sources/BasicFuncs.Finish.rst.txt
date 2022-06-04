@@ -1,0 +1,21 @@
+BasicFuncs.Finish package
+=========================
+
+Submodules
+----------
+
+BasicFuncs.Finish.FinishGame module
+-----------------------------------
+
+.. automodule:: BasicFuncs.Finish.FinishGame
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: BasicFuncs.Finish
+   :members:
+   :undoc-members:
+   :show-inheritance:

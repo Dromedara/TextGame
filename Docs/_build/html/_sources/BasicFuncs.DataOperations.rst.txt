@@ -1,0 +1,37 @@
+BasicFuncs.DataOperations package
+=================================
+
+Submodules
+----------
+
+BasicFuncs.DataOperations.GetData module
+----------------------------------------
+
+.. automodule:: BasicFuncs.DataOperations.GetData
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.DataOperations.Paths module
+--------------------------------------
+
+.. automodule:: BasicFuncs.DataOperations.Paths
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.DataOperations.SaveData module
+-----------------------------------------
+
+.. automodule:: BasicFuncs.DataOperations.SaveData
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: BasicFuncs.DataOperations
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -2,39 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91c92e02-5cf8-485d-ae4a-e44f49b02cfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Shop/Sellers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/kivy_fail.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/DataOperations/SaveData.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/DataOperations/SaveData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/SubFuncs/BattleMod.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/SubFuncs/BattleMod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Guild/GuildHall.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Guild/GuildHall.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/PlayGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/PlayGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Shop/Buying.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Shop/Buying.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Shop/CreateStuff.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Shop/CreateStuff.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Shop/ShopSubFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Shop/ShopSubFuncs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/Equipping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/Equipping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/EquippingRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/EquippingRunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/Inventory/Battle.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/Inventory/Battle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/Inventory/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/Warehouse/Inventory/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Start/StartGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Start/StartGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/Armor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/Armor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/ArmorLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/ArmorLinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/CreateArmor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArmorService/CreateArmor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/Artefacts.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/Artefacts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/ArtefactsLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/ArtefactsLinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/CreateArtefact.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/ArtefactsService/CreateArtefact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/CreatePotions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/CreatePotions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/Potions.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/Potions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/PotionsLinks.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Equipment/PotionsService/PotionsLinks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Classes/MainHero/Savior.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/MainHero/Savior.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Armor/armor.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Armor/armor.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Armor/battle_armor.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Armor/battle_armor.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Artefacts/artefacts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Artefacts/artefacts.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Artefacts/battle_artefacts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Artefacts/battle_artefacts.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Hero/id.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Hero/id.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Hero/main_hero.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Hero/main_hero.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Potions/battle_potions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Potions/battle_potions.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Potions/potions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Potions/potions.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/AdventureDescription/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/Equipment/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/MainHero/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/Monster/MonsterTypes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/Monster/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/Classes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/doctrees/environment.pickle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/doctrees/index.doctree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/.buildinfo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_sources/index.rst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/_sphinx_javascript_frameworks_compat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/alabaster.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/basic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/doctools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/documentation_options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/file.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/jquery-3.6.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/language_data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/pygments.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/searchtools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/underscore-1.13.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/_static/underscore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/genindex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/objects.inv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/_build/html/searchindex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/conf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/index.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/main.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/make.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Docs/modules.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/BattleFuncs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/BasicFuncs/Game/BattelField/BattleFuncs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Classes/Monster/CreateMonster.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Classes/Monster/CreateMonster.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -8,6 +8,7 @@ WindowManager:
     Shop:
     Item_from_inventory:
     Item_from_shop:
+    BattleResult:
 
 <MainMenu>:
     name: "main_menu"
@@ -191,7 +192,7 @@ WindowManager:
                 root.manager.transition.direction = "right"
 <Shop>:
     name: 'shop'
-    text: root.show_artefacts()
+    text:
     BoxLayout:
         padding: (root.width / 20, root.height / 20)
         orientation: "vertical"
@@ -216,6 +217,7 @@ WindowManager:
                 on_release:
                     if self.state == "down": root.show_artefacts()
                     if self.state == 'normal': root.clear_buttons()
+                    root.ids.gold.text = root.amount_of_gold()
 
             ToggleButton:
                 text: "armour"
@@ -224,6 +226,7 @@ WindowManager:
                 on_release:
                     if self.state == "down": root.show_armour()
                     if self.state == 'normal': root.clear_buttons()
+                    root.ids.gold.text = root.amount_of_gold()
             ToggleButton:
                 text: "potions"
                 id: show_potions
@@ -231,6 +234,7 @@ WindowManager:
                 on_release:
                     if self.state == "down": root.show_potions()
                     if self.state == 'normal': root.clear_buttons()
+                    root.ids.gold.text = root.amount_of_gold()
 
             BoxLayout:
                 orientation: "horizontal"
@@ -251,7 +255,7 @@ WindowManager:
                 Label:
                     size_hint: None, None
                     id: gold
-                    text: root.amount_of_gold()
+                    text: "Gold: \n"
 
         Button:
             text: "Exit to menu"
@@ -260,6 +264,11 @@ WindowManager:
             on_release:
                 app.root.current = "game_menu"
                 root.manager.transition.direction = "right"
+                root.ids.gold.text = ""
+                root.ids.show_potions.state = "normal"
+                root.ids.show_artefacts.state = "normal"
+                root.ids.show_armour.state = "normal"
+                root.ids.here.clear_widgets()
 
 <Item_from_inventory>:
     name: "item_from_inventory"
@@ -311,41 +320,82 @@ WindowManager:
                 root.manager.transition.direction = "down"
 <BattleMenu>:
     name: "battle_menu"
+    text: root.all_for_start()
+    BoxLayout:
+        size_hint: (None, None)
+        pos: (0, root.height * 8 / 5)
+        size: (300, 100)
+        orientation: "vertical"
+        BoxLayout:
+            Label:
+                text: "Monster HP: "
+            ProgressBar:
+                id: monster_hp
+                max: 500
+                value:100
+        BoxLayout:
+            Label:
+                text: "Hero HP: "
+            ProgressBar:
+                id: hero_hp
+                max: 1000
+                value: 200
     BoxLayout:
         pos: (root.width / 2, root.height / 2)
         orientation: 'vertical'
         spacing: 40
         ScrollView:
+            size_hint: 1, 6
+            text: "1"
             do_scroll_x: False
             do_scroll_y: True
             always_overscroll: True
             Label:
                 id: battle_label
                 size_hint_y: None
-                text: "try"
+                text: "Battle have started"
                 height: self.texture_size[1]
                 text_size: self.width - dp(10), None
 
+        BoxLayout:
+            id: actions
+            Label:
+                text: "Actions:"
+            BoxLayout:
+                id: list_of_actions
 
-        GridLayout:
-            cols: 2
-            Button:
-                text: "1"
-                on_release:
-                    root.change_battle_log(1)
-            Button:
-                text: "2"
-            Button:
-                text: "3"
-            Button:
-                text: "4"
+
+        BoxLayout:
+            id: actions
+            Label:
+                text: "Potions:"
+            BoxLayout:
+                id: list_of_potions
         Button:
-            text: "Exit to guild"
-            size_hint: (1, 0.2)
+            text: "End battle"
             pos_hint: {'center_x': 0.5, 'center_y': .5}
             on_release:
                 app.root.current = "guild"
+                root.ids.battle_label.text = ""
                 root.manager.transition.direction = "down"
+                root.all_for_start()
+
+<BattleResult>:
+    name: "battle_result"
+    text: root.see_result()
+    BoxLayout:
+        pos: (root.width / 2, root.height / 2)
+        orientation: "vertical"
+        Label:
+            id: result_label
+        Button:
+            size_hint: (0.6, 0.1)
+            text: "Exit to menu"
+            pos_hint: {'center_x': 0.5, 'center_y': .5}
+            on_release:
+                app.root.current = "guild"
+                root.manager.transition.direction = "up"
+                root.see_result()
 
 <ItemButton>:
     size_hint: (None, None)
@@ -358,6 +408,32 @@ WindowManager:
         self.parent.parent.parent.parent.create_description(self.text, self.id)
 
 <MissionButton>:
+    on_release:
+        if not "[blocked]" in self.text: app.root.current = "battle_menu";root.parent.parent.parent.start_mission(self.name)
 
+<SkillButton>:
+    on_release:
+        root.parent.parent.parent.parent.active_skill(self.text)
 
+<PotionButton>:
+    on_release:
+        root.parent.parent.parent.parent.drink_potion(self.text, self.name)
+        root.parent.parent.parent.parent.add_potion_buttons()
 
+<StartBattleButton>:
+    id: start_battle_button
+    on_release:
+        self.size_hint = (0, 0)
+        self.size = (0, 0)
+        y: 5000
+        root.parent.start_the_battle()
+        self.parent.remove_widget(start_battle_button)
+
+<SeeResultButton>:
+    id: see_result_button
+    on_release:
+        opacity: "disabled"
+        self.size_hint = (0, 0)
+        self.size = (0, 0)
+        root.parent.result_go()
+        self.parent.remove_widget(see_result_button)

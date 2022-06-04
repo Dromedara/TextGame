@@ -1,0 +1,33 @@
+BasicFuncs.Game package
+=======================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   BasicFuncs.Game.BattelField
+   BasicFuncs.Game.Guild
+   BasicFuncs.Game.HelperFuncs
+   BasicFuncs.Game.Shop
+   BasicFuncs.Game.Warehouse
+
+Submodules
+----------
+
+BasicFuncs.Game.PlayGame module
+-------------------------------
+
+.. automodule:: BasicFuncs.Game.PlayGame
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: BasicFuncs.Game
+   :members:
+   :undoc-members:
+   :show-inheritance:

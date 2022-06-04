@@ -1,0 +1,45 @@
+BasicFuncs.Game.BattelField.SubFuncs package
+============================================
+
+Submodules
+----------
+
+BasicFuncs.Game.BattelField.SubFuncs.BattleMod module
+-----------------------------------------------------
+
+.. automodule:: BasicFuncs.Game.BattelField.SubFuncs.BattleMod
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.Game.BattelField.SubFuncs.DrinkingPotions module
+-----------------------------------------------------------
+
+.. automodule:: BasicFuncs.Game.BattelField.SubFuncs.DrinkingPotions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.Game.BattelField.SubFuncs.GetArtefacts module
+--------------------------------------------------------
+
+.. automodule:: BasicFuncs.Game.BattelField.SubFuncs.GetArtefacts
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.Game.BattelField.SubFuncs.WearArmor module
+-----------------------------------------------------
+
+.. automodule:: BasicFuncs.Game.BattelField.SubFuncs.WearArmor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: BasicFuncs.Game.BattelField.SubFuncs
+   :members:
+   :undoc-members:
+   :show-inheritance:

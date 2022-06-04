@@ -10,8 +10,16 @@ class Beast(Monster):
 
 
 class WildDog(Beast):
+    """Wild dog. Simple monster which is not very dangerous.
+
+    """
     
     def __init__(self, lvl):
+        """Initializing dog.
+
+        :param lvl: lvl of a dog.
+        """
+
         super().__init__(lvl)
         self.key = 'wild_dog'
         self.lvl = random.randrange(1, 6, 1)
@@ -33,8 +41,14 @@ class WildDog(Beast):
 
     @staticmethod
     def bite_attack(hero, monster):
-        hero.hp -= (monster.attack - 0.5 * hero.defence)
-        hero.defence = BattleChecker.params_change(hero.defence, -((monster.lvl % 10) + (monster.lvl / 10)))
+        """Simple special attack of wild dog.
+
+        :param hero: the attacked person
+        :param monster: the wild dog
+        :return: hero and monster after attack
+        """
+        hero.hp = BattleChecker.params_change(hero.hp, -(monster.attack - 0.5 * hero.defence), hero.param_savior['hp'][0])
+        hero.defence = BattleChecker.params_change(hero.defence, -((monster.lvl % 10) + (monster.lvl / 10)), hero.param_savior['defence'][0])
         return hero, monster
 
 

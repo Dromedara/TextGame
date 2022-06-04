@@ -1,0 +1,53 @@
+classes.Monster.MonsterTypes package
+====================================
+
+Submodules
+----------
+
+classes.Monster.MonsterTypes.Beasts module
+------------------------------------------
+
+.. automodule:: classes.Monster.MonsterTypes.Beasts
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Monster.MonsterTypes.Human module
+-----------------------------------------
+
+.. automodule:: classes.Monster.MonsterTypes.Human
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Monster.MonsterTypes.Monsters module
+--------------------------------------------
+
+.. automodule:: classes.Monster.MonsterTypes.Monsters
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Monster.MonsterTypes.Relic module
+-----------------------------------------
+
+.. automodule:: classes.Monster.MonsterTypes.Relic
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Monster.MonsterTypes.Undead module
+------------------------------------------
+
+.. automodule:: classes.Monster.MonsterTypes.Undead
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: classes.Monster.MonsterTypes
+   :members:
+   :undoc-members:
+   :show-inheritance:

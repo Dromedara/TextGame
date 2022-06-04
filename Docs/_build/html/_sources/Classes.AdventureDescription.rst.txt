@@ -1,0 +1,29 @@
+classes.AdventureDescription package
+====================================
+
+Submodules
+----------
+
+classes.AdventureDescription.Adventure module
+---------------------------------------------
+
+.. automodule:: classes.AdventureDescription.Adventure
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.AdventureDescription.CreateAdventure module
+---------------------------------------------------
+
+.. automodule:: classes.AdventureDescription.CreateAdventure
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: classes.AdventureDescription
+   :members:
+   :undoc-members:
+   :show-inheritance:

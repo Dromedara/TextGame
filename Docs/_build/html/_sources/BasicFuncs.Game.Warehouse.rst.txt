@@ -1,0 +1,37 @@
+BasicFuncs.Game.Warehouse package
+=================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   BasicFuncs.Game.Warehouse.Inventory
+
+Submodules
+----------
+
+BasicFuncs.Game.Warehouse.Equipping module
+------------------------------------------
+
+.. automodule:: BasicFuncs.Game.Warehouse.Equipping
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.Game.Warehouse.EquippingRunner module
+------------------------------------------------
+
+.. automodule:: BasicFuncs.Game.Warehouse.EquippingRunner
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: BasicFuncs.Game.Warehouse
+   :members:
+   :undoc-members:
+   :show-inheritance:

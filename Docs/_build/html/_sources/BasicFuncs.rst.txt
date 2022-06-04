@@ -1,0 +1,21 @@
+BasicFuncs package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   BasicFuncs.DataOperations
+   BasicFuncs.Finish
+   BasicFuncs.Game
+   BasicFuncs.Start
+
+Module contents
+---------------
+
+.. automodule:: BasicFuncs
+   :members:
+   :undoc-members:
+   :show-inheritance:

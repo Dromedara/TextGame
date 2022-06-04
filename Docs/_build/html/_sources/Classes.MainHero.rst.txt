@@ -1,0 +1,53 @@
+classes.MainHero package
+========================
+
+Submodules
+----------
+
+classes.MainHero.AdventurerLinks module
+---------------------------------------
+
+.. automodule:: classes.MainHero.AdventurerLinks
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.MainHero.AdventurerRunner module
+----------------------------------------
+
+.. automodule:: classes.MainHero.AdventurerRunner
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.MainHero.AdventurerSubFuncs module
+------------------------------------------
+
+.. automodule:: classes.MainHero.AdventurerSubFuncs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.MainHero.BasicSkills module
+-----------------------------------
+
+.. automodule:: classes.MainHero.BasicSkills
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.MainHero.Savior module
+------------------------------
+
+.. automodule:: classes.MainHero.Savior
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: classes.MainHero
+   :members:
+   :undoc-members:
+   :show-inheritance:

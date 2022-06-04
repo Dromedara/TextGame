@@ -1,0 +1,37 @@
+classes.Monster package
+=======================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   classes.Monster.MonsterTypes
+
+Submodules
+----------
+
+classes.Monster.CreateMonster module
+------------------------------------
+
+.. automodule:: classes.Monster.CreateMonster
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Monster.MonsterLinks module
+-----------------------------------
+
+.. automodule:: classes.Monster.MonsterLinks
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: classes.Monster
+   :members:
+   :undoc-members:
+   :show-inheritance:

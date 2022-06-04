@@ -1,0 +1,21 @@
+BasicFuncs.Game.HelperFuncs package
+===================================
+
+Submodules
+----------
+
+BasicFuncs.Game.HelperFuncs.Errors module
+-----------------------------------------
+
+.. automodule:: BasicFuncs.Game.HelperFuncs.Errors
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: BasicFuncs.Game.HelperFuncs
+   :members:
+   :undoc-members:
+   :show-inheritance:

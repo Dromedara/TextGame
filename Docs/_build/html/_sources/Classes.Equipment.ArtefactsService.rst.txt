@@ -1,0 +1,45 @@
+classes.Equipment.ArtefactsService package
+==========================================
+
+Submodules
+----------
+
+classes.Equipment.ArtefactsService.Artefacts module
+---------------------------------------------------
+
+.. automodule:: classes.Equipment.ArtefactsService.Artefacts
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Equipment.ArtefactsService.ArtefactsLinks module
+--------------------------------------------------------
+
+.. automodule:: classes.Equipment.ArtefactsService.ArtefactsLinks
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Equipment.ArtefactsService.ArtefactsSubFuncs module
+-----------------------------------------------------------
+
+.. automodule:: classes.Equipment.ArtefactsService.ArtefactsSubFuncs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Equipment.ArtefactsService.CreateArtefact module
+--------------------------------------------------------
+
+.. automodule:: classes.Equipment.ArtefactsService.CreateArtefact
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: classes.Equipment.ArtefactsService
+   :members:
+   :undoc-members:
+   :show-inheritance:

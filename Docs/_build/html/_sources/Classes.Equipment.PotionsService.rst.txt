@@ -1,0 +1,45 @@
+classes.Equipment.PotionsService package
+========================================
+
+Submodules
+----------
+
+classes.Equipment.PotionsService.CreatePotions module
+-----------------------------------------------------
+
+.. automodule:: classes.Equipment.PotionsService.CreatePotions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Equipment.PotionsService.Potions module
+-----------------------------------------------
+
+.. automodule:: classes.Equipment.PotionsService.Potions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Equipment.PotionsService.PotionsLinks module
+----------------------------------------------------
+
+.. automodule:: classes.Equipment.PotionsService.PotionsLinks
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+classes.Equipment.PotionsService.PotionsSubFuncs module
+-------------------------------------------------------
+
+.. automodule:: classes.Equipment.PotionsService.PotionsSubFuncs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: classes.Equipment.PotionsService
+   :members:
+   :undoc-members:
+   :show-inheritance:

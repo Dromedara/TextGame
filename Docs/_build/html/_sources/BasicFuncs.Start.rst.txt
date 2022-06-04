@@ -1,0 +1,29 @@
+BasicFuncs.Start package
+========================
+
+Submodules
+----------
+
+BasicFuncs.Start.RecreateEverything module
+------------------------------------------
+
+.. automodule:: BasicFuncs.Start.RecreateEverything
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+BasicFuncs.Start.StartGame module
+---------------------------------
+
+.. automodule:: BasicFuncs.Start.StartGame
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: BasicFuncs.Start
+   :members:
+   :undoc-members:
+   :show-inheritance:

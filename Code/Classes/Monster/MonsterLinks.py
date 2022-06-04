@@ -3,6 +3,9 @@ from Code.Classes.Monster.MonsterTypes import Beasts
 from Code.Classes.Monster.MonsterTypes import Relic
 from Code.Classes.Monster.MonsterTypes import Undead
 
+'''Links for operations with monsters
+'''
+
 monsters_creator_dict = {
     'Thief': Human.Thief,
     'wild_dog': Beasts.WildDog

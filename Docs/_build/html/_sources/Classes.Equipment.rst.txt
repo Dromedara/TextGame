@@ -1,0 +1,31 @@
+classes.Equipment package
+=========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   classes.Equipment.ArmorService
+   classes.Equipment.ArtefactsService
+   classes.Equipment.PotionsService
+
+Submodules
+----------
+
+classes.Equipment.IDCounter module
+----------------------------------
+
+.. automodule:: classes.Equipment.IDCounter
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: classes.Equipment
+   :members:
+   :undoc-members:
+   :show-inheritance:

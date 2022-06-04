@@ -53,7 +53,7 @@ class SimpleSword(Artefact):
     @staticmethod
     def straight_sword_attack(hero, monster):
         monster.hp -= (hero.attack - 0.3 * monster.defence)
-        monster.defence = BattleChecker.params_change(monster.defence, -(0.3 * hero.attack))
+        monster.defence = BattleChecker.params_change(monster.defence, -(0.3 * hero.attack), hero.param_savior['defence'][0])
         hero.hp -= 1
         return hero, monster
 
@@ -75,18 +75,18 @@ class CharmedSword(SimpleSword):
 
     @staticmethod
     def forced_sword_attack(hero, monster):
-        monster.hp -= (hero.attack - 0.1 * monster.defence)
-        monster.defence = BattleChecker.params_change(monster.defence, -(0.5 * hero.attack))
+        monster.hp = BattleChecker.params_change(hero.hp, -(hero.attack - 0.1 * monster.defence), hero.param_savior['hp'][0])
+        monster.defence = BattleChecker.params_change(monster.defence, -(0.5 * hero.attack), hero.param_savior['defence'][0])
         return hero, monster
 
     @staticmethod
     def charmed_sword_attack(hero, monster):
         monster.hp -= (hero.attack - 0.2 * monster.defence)
-        monster.defence = BattleChecker.params_change(monster.defence, 0.3 * hero.attack)
+        monster.defence = BattleChecker.params_change(monster.defence, 0.3 * hero.attack, hero.param_savior['defence'][0])
 
         if hero.mana == 0:
-            hero.hp -= 2
-        hero.mana = BattleChecker.params_change(hero.mana, -0.5)
+            hero.hp = BattleChecker.params_change(hero.hp, -2, hero.param_savior['hp'][0])
+        hero.mana = BattleChecker.params_change(hero.mana, -0.5, hero.param_savior['mana'][0])
         return hero, monster
 
 
@@ -106,7 +106,7 @@ class SimpleMagicAmulet(Artefact):
 
     @staticmethod
     def simple_magic_baff(hero, monster):
-        hero.hp *= 1.2
+        hero.hp = BattleChecker.params_change(hero.hp, 0.2*hero.hp, hero.param_savior['hp'][0])
         return hero, monster
 
 
@@ -128,12 +128,12 @@ class SuperMagicAmulet(SimpleMagicAmulet):
 
     @staticmethod
     def super_magic_baff(hero, monster):
-        hero.hp *= 1.5
+        hero.hp = BattleChecker.params_change(hero.hp, 0.5*hero.hp, hero.param_savior['hp'][0])
         return hero, monster
 
     @staticmethod
     def super_magic_attack(hero, monster):
-        monster.hp -= (hero.magic_attack - 0.3 * monster.defence)
-        monster.defence = BattleChecker.params_change(monster.defence, -(0.5 * hero.magic_attack))
+        monster.hp = BattleChecker.params_change(hero.hp, -(hero.magic_attack - 0.3 * monster.defence), hero.param_savior['hp'][0])
+        monster.defence = BattleChecker.params_change(monster.defence, -(0.5 * hero.magic_attack), hero.param_savior['defence'][0])
         return hero, monster
 
